@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Factory\**" />
+    <Compile Remove="Interfaces\Factory\**" />
+    <EmbeddedResource Remove="Factory\**" />
+    <EmbeddedResource Remove="Interfaces\Factory\**" />
+    <None Remove="Factory\**" />
+    <None Remove="Interfaces\Factory\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BotAdmin.Business\AppDiarista.Business.csproj" />
+    <ProjectReference Include="..\BotAdmin.Common\AppDiarista.Common.csproj" />
+    <ProjectReference Include="..\BotAdmin.ControleAcesso\AppDiarista.ControleAcesso.csproj" />
+    <ProjectReference Include="..\BotAdmin.Data\AppDiarista.Data.csproj" />
+    <ProjectReference Include="..\BotAdmin.DTO\AppDiarista.DTO.csproj" />
+    <ProjectReference Include="..\BotAdmin.Logs\AppDiarista.Logs.csproj" />
+    <ProjectReference Include="..\BotAdmin.Proxy\AppDiarista.Proxy.csproj" />
+    <ProjectReference Include="..\BotAdmin.Resource\AppDiarista.Resource.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <PlatformTarget>x64</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BotAdmin.Common\AppDiarista.Common.csproj" />
+    <ProjectReference Include="..\BotAdmin.ControleAcesso\AppDiarista.ControleAcesso.csproj" />
+    <ProjectReference Include="..\BotAdmin.Data\AppDiarista.Data.csproj" />
+    <ProjectReference Include="..\BotAdmin.Logs\AppDiarista.Logs.csproj" />
+    <ProjectReference Include="..\BotAdmin.Proxy\AppDiarista.Proxy.csproj" />
+    <ProjectReference Include="..\BotAdmin.ServiceApplication\AppDiarista.ServiceApplication.csproj" />
+  </ItemGroup>
+</Project>

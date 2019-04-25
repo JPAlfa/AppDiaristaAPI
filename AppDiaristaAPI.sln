@@ -3,31 +3,31 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28809.33
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.API", "BotAdmin.API\AppDiarista.API.csproj", "{76B1FF05-7AD2-4707-8989-AE1E5067FC59}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.API", "AppDiarista.API\AppDiarista.API.csproj", "{76B1FF05-7AD2-4707-8989-AE1E5067FC59}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Common", "BotAdmin.Common\AppDiarista.Common.csproj", "{CB61D586-DA2B-4937-B770-6A47C1116117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Common", "AppDiarista.Common\AppDiarista.Common.csproj", "{CB61D586-DA2B-4937-B770-6A47C1116117}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.ControleAcesso", "BotAdmin.ControleAcesso\AppDiarista.ControleAcesso.csproj", "{F344EA0F-5BE7-4398-874F-AE619CA293FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.ControleAcesso", "AppDiarista.ControleAcesso\AppDiarista.ControleAcesso.csproj", "{F344EA0F-5BE7-4398-874F-AE619CA293FC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Data", "BotAdmin.Data\AppDiarista.Data.csproj", "{9CF8892E-F6FF-4609-BFC3-90998AA48606}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Data", "AppDiarista.Data\AppDiarista.Data.csproj", "{9CF8892E-F6FF-4609-BFC3-90998AA48606}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.DTO", "BotAdmin.DTO\AppDiarista.DTO.csproj", "{99DD5436-43B3-492C-B4CF-05C4B75F9304}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.DTO", "AppDiarista.DTO\AppDiarista.DTO.csproj", "{99DD5436-43B3-492C-B4CF-05C4B75F9304}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Mapping", "BotAdmin.Mapping\AppDiarista.Mapping.csproj", "{4EF0BF2A-3771-4E40-BE2B-AD0FDD449182}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Mapping", "AppDiarista.Mapping\AppDiarista.Mapping.csproj", "{4EF0BF2A-3771-4E40-BE2B-AD0FDD449182}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Logs", "BotAdmin.Logs\AppDiarista.Logs.csproj", "{3E7F0299-22B1-4FBD-9268-0F9981F943E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Logs", "AppDiarista.Logs\AppDiarista.Logs.csproj", "{3E7F0299-22B1-4FBD-9268-0F9981F943E5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.IOC", "BotAdmin.IOC\AppDiarista.IOC.csproj", "{511E3FA8-CB9C-40F0-8963-AB712D545B99}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.IOC", "AppDiarista.IOC\AppDiarista.IOC.csproj", "{511E3FA8-CB9C-40F0-8963-AB712D545B99}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Proxy", "BotAdmin.Proxy\AppDiarista.Proxy.csproj", "{62539D40-8AD8-4141-9379-97F4B94F279A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Proxy", "AppDiarista.Proxy\AppDiarista.Proxy.csproj", "{62539D40-8AD8-4141-9379-97F4B94F279A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Resource", "BotAdmin.Resource\AppDiarista.Resource.csproj", "{BF062ED6-56D1-49FD-9FBE-7B5EE6876333}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Resource", "AppDiarista.Resource\AppDiarista.Resource.csproj", "{BF062ED6-56D1-49FD-9FBE-7B5EE6876333}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.ServiceApplication", "BotAdmin.ServiceApplication\AppDiarista.ServiceApplication.csproj", "{21E03641-24A7-4AC5-A326-ACFE11C2CBAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.ServiceApplication", "AppDiarista.ServiceApplication\AppDiarista.ServiceApplication.csproj", "{21E03641-24A7-4AC5-A326-ACFE11C2CBAD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Business", "BotAdmin.Business\AppDiarista.Business.csproj", "{F71B26C1-06CD-48FC-83C3-31634985129A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Business", "AppDiarista.Business\AppDiarista.Business.csproj", "{F71B26C1-06CD-48FC-83C3-31634985129A}"
 EndProject
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AppDiarista.BancoDados", "BotAdmin.BancoDados\AppDiarista.BancoDados.sqlproj", "{4345C7EB-AB82-4042-B308-961D0136E3D3}"
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "AppDiarista.BancoDados", "AppDiarista.BancoDados\AppDiarista.BancoDados.sqlproj", "{4345C7EB-AB82-4042-B308-961D0136E3D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

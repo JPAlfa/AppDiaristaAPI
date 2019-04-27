@@ -11,7 +11,6 @@ using Autofac;
 using AppDiarista.IOC;
 using AppDiarista.Common.ExtensionMethods;
 using AppDiarista.API.Middlewares;
-using AppDiarista.ControleAcesso.Extensions;
 using AppDiarista.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Authorization;
@@ -53,9 +52,7 @@ namespace AppDiarista.API
             services.AddOptions();
 
             ConfigureLogging(configuration);
-
-            services.AddCustomJwtBearerAuthentication(configuration);
-
+            
             ConfigurarConnectionStrings(services);
         }
 
@@ -75,7 +72,7 @@ namespace AppDiarista.API
         {
             string externoConnectionString = configuration.GetSection("ConnectionStrings:Externo").Value;
 
-            services.AddDbContext<ExternoContext>(options => options.UseSqlServer(externoConnectionString));
+            services.AddDbContext<AppDiaristaContext>(options => options.UseSqlServer(externoConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

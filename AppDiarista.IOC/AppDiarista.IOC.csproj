@@ -13,11 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BotAdmin.Common\AppDiarista.Common.csproj" />
-    <ProjectReference Include="..\BotAdmin.ControleAcesso\AppDiarista.ControleAcesso.csproj" />
-    <ProjectReference Include="..\BotAdmin.Data\AppDiarista.Data.csproj" />
-    <ProjectReference Include="..\BotAdmin.Logs\AppDiarista.Logs.csproj" />
-    <ProjectReference Include="..\BotAdmin.Proxy\AppDiarista.Proxy.csproj" />
-    <ProjectReference Include="..\BotAdmin.ServiceApplication\AppDiarista.ServiceApplication.csproj" />
+    <ProjectReference Include="..\AppDiarista.Common\AppDiarista.Common.csproj" />
+    <ProjectReference Include="..\AppDiarista.Data\AppDiarista.Data.csproj" />
+    <ProjectReference Include="..\AppDiarista.Logs\AppDiarista.Logs.csproj" />
+    <ProjectReference Include="..\AppDiarista.Proxy\AppDiarista.Proxy.csproj" />
+    <ProjectReference Include="..\AppDiarista.ServiceApplication\AppDiarista.ServiceApplication.csproj" />
   </ItemGroup>
 </Project>

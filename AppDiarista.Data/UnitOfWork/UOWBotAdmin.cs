@@ -6,13 +6,13 @@ using AppDiarista.Data.Models;
 
 namespace AppDiarista.Data.UnitOfWork
 {
-    public class UOWAppDiarista : ExternoContext, IUOWAppDiarista
+    public class UOWAppDiarista : AppDiaristaContext, IUOWAppDiarista
     {
         #region Propriedades
         #endregion
 
         #region Construtores
-        public UOWAppDiarista(DbContextOptions<ExternoContext> options) : base(options)
+        public UOWAppDiarista(DbContextOptions<AppDiaristaContext> options) : base(options)
         {
 
         }

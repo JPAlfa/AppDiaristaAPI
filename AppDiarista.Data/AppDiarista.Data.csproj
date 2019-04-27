@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BotAdmin.DTO\AppDiarista.DTO.csproj" />
-    <ProjectReference Include="..\BotAdmin.Logs\AppDiarista.Logs.csproj" />
+    <ProjectReference Include="..\AppDiarista.DTO\AppDiarista.DTO.csproj" />
+    <ProjectReference Include="..\AppDiarista.Logs\AppDiarista.Logs.csproj" />
   </ItemGroup>
 
   <ItemGroup>

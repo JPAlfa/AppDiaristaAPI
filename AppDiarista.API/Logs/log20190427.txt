@@ -1,0 +1,226 @@
+27-Apr-2019 00:59:49.839 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-Apr-2019 00:59:51.794 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-Apr-2019 00:59:51.794 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-Apr-2019 00:59:52.055 -03:00 [INF] Request finished in 217.1504ms 200 
+27-Apr-2019 00:59:52.124 -03:00 [WRN] Failed to determine the https port for redirect.
+27-Apr-2019 00:59:52.479 -03:00 [INF] Request finished in 688.9169ms 404 
+27-Apr-2019 01:00:55.995 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:00:56.083 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+27-Apr-2019 01:00:56.715 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+27-Apr-2019 01:01:44.793 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 48703.7393ms
+27-Apr-2019 01:03:33.545 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/contratante, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The entity type 'Diarista' requires a primary key to be defined.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model)
+   at Microsoft.EntityFrameworkCore.Internal.SqlServerModelValidator.Validate(IModel model)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.CreateModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.<>c__DisplayClass5_0.<GetModel>b__1()
+   at System.Lazy`1.ViaFactory(LazyThreadSafetyMode mode)
+   at System.Lazy`1.ExecutionAndPublication(LazyHelper executionAndPublication, Boolean useDefaultConstructor)
+   at System.Lazy`1.CreateValue()
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, IConventionSetBuilder conventionSetBuilder, IModelValidator validator)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel()
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.EntityFrameworkCore.Infrastructure.EntityFrameworkServicesBuilder.<>c.<TryAddCoreServices>b__7_1(IServiceProvider p)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitFactory(FactoryCallSite factoryCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScoped(ScopedCallSite scopedCallSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(IServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass1_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngine.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_InternalServiceProvider()
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.EntryWithoutDetectChanges[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.DbContext.SetEntityState[TEntity](TEntity entity, EntityState entityState)
+   at Microsoft.EntityFrameworkCore.DbContext.Add[TEntity](TEntity entity)
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.Add(TEntity entity)
+   at AppDiarista.ServiceApplication.ContratanteService.InserirBanco(CadastroContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\ContratanteService.cs:line 55
+   at AppDiarista.ServiceApplication.ContratanteService.Inserir(CadastroContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\ContratanteService.cs:line 43
+   at AppDiarista.API.Controllers.ContratanteController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ContratanteController.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ContratanteController.Post(CadastroContratanteDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ContratanteController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-Apr-2019 01:03:37.370 -03:00 [INF] Request finished in 161368.4686ms 400 application/json
+27-Apr-2019 01:03:40.262 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:03:40.263 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+27-Apr-2019 01:03:40.308 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+27-Apr-2019 01:03:51.966 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 11702.5471ms
+27-Apr-2019 01:04:21.302 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-Apr-2019 01:04:22.239 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-Apr-2019 01:04:22.239 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-Apr-2019 01:04:22.332 -03:00 [INF] Request finished in 80.3821ms 200 
+27-Apr-2019 01:04:22.356 -03:00 [WRN] Failed to determine the https port for redirect.
+27-Apr-2019 01:04:22.538 -03:00 [INF] Request finished in 301.8749ms 404 
+27-Apr-2019 01:04:48.202 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:04:48.274 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+27-Apr-2019 01:04:48.663 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+27-Apr-2019 01:04:57.913 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-Apr-2019 01:05:02.037 -03:00 [ERR] Failed executing DbCommand (139ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Contratan__IdEnd__25869641". The conflict occurred in database "AppDiarista", table "dbo.Endereco", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:7f7afe4a-7661-4dfe-aaed-4c7487507b2a
+Error Number:547,State:0,Class:16
+27-Apr-2019 01:05:02.129 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Contratan__IdEnd__25869641". The conflict occurred in database "AppDiarista", table "dbo.Endereco", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Contratan__IdEnd__25869641". The conflict occurred in database "AppDiarista", table "dbo.Endereco", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+27-Apr-2019 01:05:02.968 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 14689.9519ms
+27-Apr-2019 01:05:02.976 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-Apr-2019 01:05:41.212 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/contratante, metodo = POST, claimsUsuario =  }
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: The INSERT statement conflicted with the FOREIGN KEY constraint "FK__Contratan__IdEnd__25869641". The conflict occurred in database "AppDiarista", table "dbo.Endereco", column 'Id'.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AppDiarista.Data.UnitOfWork.UOWAppDiarista.SaveChangesAsync() in C:\AppDiaristaAPI\AppDiarista.Data\UnitOfWork\UOWBotAdmin.cs:line 28
+   at AppDiarista.ServiceApplication.ContratanteService.InserirBanco(CadastroContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\ContratanteService.cs:line 56
+   at AppDiarista.ServiceApplication.ContratanteService.Inserir(CadastroContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\ContratanteService.cs:line 43
+   at AppDiarista.API.Controllers.ContratanteController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ContratanteController.cs:line 45
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ContratanteController.Post(CadastroContratanteDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ContratanteController.cs:line 45
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-Apr-2019 01:05:46.367 -03:00 [INF] Request finished in 58162.2944ms 400 application/json
+27-Apr-2019 01:11:10.459 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-Apr-2019 01:11:11.919 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-Apr-2019 01:11:11.919 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-Apr-2019 01:11:12.041 -03:00 [INF] Request finished in 111.09ms 200 
+27-Apr-2019 01:11:12.117 -03:00 [WRN] Failed to determine the https port for redirect.
+27-Apr-2019 01:11:12.439 -03:00 [INF] Request finished in 520.3272ms 404 
+27-Apr-2019 01:12:13.369 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-Apr-2019 01:12:14.327 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-Apr-2019 01:12:14.327 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-Apr-2019 01:12:14.407 -03:00 [INF] Request finished in 80.0699ms 200 
+27-Apr-2019 01:12:14.433 -03:00 [WRN] Failed to determine the https port for redirect.
+27-Apr-2019 01:12:14.619 -03:00 [INF] Request finished in 296.205ms 404 
+27-Apr-2019 01:12:31.586 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:12:31.587 -03:00 [INF] Request finished in 0.7251ms 404 
+27-Apr-2019 01:12:31.614 -03:00 [INF] Connection id "0HLMAOQ3KJRFE", Request id "0HLMAOQ3KJRFE:00000002": the application completed without reading the entire request body.
+27-Apr-2019 01:12:39.701 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:12:39.701 -03:00 [INF] Request finished in 0.4693ms 404 
+27-Apr-2019 01:12:39.702 -03:00 [INF] Connection id "0HLMAOQ3KJRFD", Request id "0HLMAOQ3KJRFD:00000002": the application completed without reading the entire request body.
+27-Apr-2019 01:12:44.520 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+27-Apr-2019 01:12:44.521 -03:00 [INF] Request finished in 0.7918ms 404 
+27-Apr-2019 01:12:44.521 -03:00 [INF] Connection id "0HLMAOQ3KJRFE", Request id "0HLMAOQ3KJRFE:00000003": the application completed without reading the entire request body.
+27-Apr-2019 01:13:00.976 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 340
+27-Apr-2019 01:13:01.061 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+27-Apr-2019 01:13:01.631 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+27-Apr-2019 01:13:18.064 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-Apr-2019 01:13:38.901 -03:00 [INF] Executed DbCommand (100ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-Apr-2019 01:13:52.439 -03:00 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-Apr-2019 01:13:55.257 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 53616.3845ms.
+27-Apr-2019 01:13:55.270 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-Apr-2019 01:13:55.292 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 54225.792400000006ms
+27-Apr-2019 01:13:55.299 -03:00 [INF] Request finished in 54320.0488ms 200 application/json; charset=utf-8

@@ -4,10 +4,6 @@ using AppDiarista.Common.Interfaces;
 using AppDiarista.Common.Notification;
 using AppDiarista.ServiceApplication;
 using AppDiarista.ServiceApplication.Interfaces;
-using AppDiarista.ControleAcesso.Factory;
-using AppDiarista.ControleAcesso.Interfaces.Factory;
-using AppDiarista.ControleAcesso.Providers;
-using AppDiarista.ControleAcesso.Interfaces.Providers;
 using AppDiarista.Business;
 using AppDiarista.Business.Interfaces;
 using AppDiarista.Data.UnitOfWork;
@@ -37,9 +33,6 @@ namespace AppDiarista.IOC
             // Proxy
             RegistrarProxy(builder);
 
-            // Controle de Acesso
-            RegistrarControleAcesso(builder);
-
             //WCF
             RegistrarWCF(builder);
 
@@ -56,6 +49,7 @@ namespace AppDiarista.IOC
         private static void RegistrarServiceApplication(ContainerBuilder builder)
         {
             builder.RegisterType<IntencaoService>().As<IIntencaoService>().InstancePerLifetimeScope();
+            builder.RegisterType<ContratanteService>().As<IContratanteService>().InstancePerLifetimeScope();
         }
 
         private static void RegistrarFactory(ContainerBuilder builder)
@@ -71,6 +65,7 @@ namespace AppDiarista.IOC
         {
             builder.RegisterType<UOWAppDiarista>().As<IUOWAppDiarista>().InstancePerLifetimeScope();
             builder.RegisterType<IntencaoData>().As<IIntencaoData>().InstancePerLifetimeScope();
+            builder.RegisterType<ContratanteData>().As<IContratanteData>().InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(RepositorioBase<,>)).As(typeof(IRepositorioBase<,>)).InstancePerLifetimeScope();
         }
 
@@ -89,11 +84,6 @@ namespace AppDiarista.IOC
         private void RegistrarWCF(ContainerBuilder builder)
         {
             
-        }
-
-        private static void RegistrarControleAcesso(ContainerBuilder builder)
-        {
-            builder.RegisterType<UsuarioFactory>().As<IUsuarioFactory>().InstancePerLifetimeScope();
         }
     }
 }

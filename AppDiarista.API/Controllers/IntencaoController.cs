@@ -16,7 +16,6 @@ namespace AppDiarista.API.Controllers
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("AllowAllHeaders")]
-    [Authorize(Policy = "UsuarioN2")]
     public class IntencaoController : ApiBaseController
     {
         #region Propriedades
@@ -39,6 +38,7 @@ namespace AppDiarista.API.Controllers
 
         #region Métodos Públicos
 
+        [AllowAnonymous]
         [HttpPost]
         public async Task<IActionResult> Post(IntencaoDTO model)
         {

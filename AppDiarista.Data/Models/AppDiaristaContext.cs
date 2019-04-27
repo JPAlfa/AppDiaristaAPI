@@ -4,26 +4,31 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace AppDiarista.Data.Models
 {
-    public partial class ExternoContext : DbContext
+    public partial class AppDiaristaContext : DbContext
     {
-        public ExternoContext()
+        public AppDiaristaContext()
         {
         }
 
-        public ExternoContext(DbContextOptions<ExternoContext> options)
+        public AppDiaristaContext(DbContextOptions<AppDiaristaContext> options)
             : base(options)
         {
         }
 
         
         public virtual DbSet<Intent> Intent { get; set; }
+        public virtual DbSet<Contratante> Contratante { get; set; }
+        public virtual DbSet<Diarista> Diarista { get; set; }
+        public virtual DbSet<Endereco> Endereco { get; set; }
+        public virtual DbSet<Servico> Servico { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Server=172.16.0.27\\DESSQL001;Database=Externo;user id=usrSysOmint;password=o7DOtUJe;MultipleActiveResultSets=True;");
+                optionsBuilder.UseSqlServer("Server=(LocalDb)\\MSSQLLocalDB;Database=AppDiarista;MultipleActiveResultSets=True;");
             }
         }
 

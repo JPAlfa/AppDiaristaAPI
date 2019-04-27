@@ -7,8 +7,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.API", "AppDiari
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Common", "AppDiarista.Common\AppDiarista.Common.csproj", "{CB61D586-DA2B-4937-B770-6A47C1116117}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.ControleAcesso", "AppDiarista.ControleAcesso\AppDiarista.ControleAcesso.csproj", "{F344EA0F-5BE7-4398-874F-AE619CA293FC}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.Data", "AppDiarista.Data\AppDiarista.Data.csproj", "{9CF8892E-F6FF-4609-BFC3-90998AA48606}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppDiarista.DTO", "AppDiarista.DTO\AppDiarista.DTO.csproj", "{99DD5436-43B3-492C-B4CF-05C4B75F9304}"
@@ -43,10 +41,6 @@ Global
 		{CB61D586-DA2B-4937-B770-6A47C1116117}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CB61D586-DA2B-4937-B770-6A47C1116117}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CB61D586-DA2B-4937-B770-6A47C1116117}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F344EA0F-5BE7-4398-874F-AE619CA293FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F344EA0F-5BE7-4398-874F-AE619CA293FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F344EA0F-5BE7-4398-874F-AE619CA293FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F344EA0F-5BE7-4398-874F-AE619CA293FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{9CF8892E-F6FF-4609-BFC3-90998AA48606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9CF8892E-F6FF-4609-BFC3-90998AA48606}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9CF8892E-F6FF-4609-BFC3-90998AA48606}.Release|Any CPU.ActiveCfg = Release|Any CPU

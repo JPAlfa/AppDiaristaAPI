@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -10,6 +10,6 @@
     <PackageReference Include="System.ServiceModel.Http" Version="4.5.3" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BotAdmin.Resource\AppDiarista.Resource.csproj" />
+    <ProjectReference Include="..\AppDiarista.Resource\AppDiarista.Resource.csproj" />
   </ItemGroup>
 </Project>

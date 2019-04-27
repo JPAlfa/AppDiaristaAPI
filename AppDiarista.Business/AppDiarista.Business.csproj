@@ -5,10 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BotAdmin.Common\AppDiarista.Common.csproj" />
-    <ProjectReference Include="..\BotAdmin.Data\AppDiarista.Data.csproj" />
-    <ProjectReference Include="..\BotAdmin.DTO\AppDiarista.DTO.csproj" />
-    <ProjectReference Include="..\BotAdmin.Proxy\AppDiarista.Proxy.csproj" />
+    <ProjectReference Include="..\AppDiarista.Common\AppDiarista.Common.csproj" />
+    <ProjectReference Include="..\AppDiarista.Data\AppDiarista.Data.csproj" />
+    <ProjectReference Include="..\AppDiarista.DTO\AppDiarista.DTO.csproj" />
+    <ProjectReference Include="..\AppDiarista.Proxy\AppDiarista.Proxy.csproj" />
   </ItemGroup>
 
   <ItemGroup>

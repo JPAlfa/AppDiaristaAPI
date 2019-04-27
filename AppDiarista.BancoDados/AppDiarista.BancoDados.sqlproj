@@ -60,4 +60,7 @@
     <Folder Include="Scripts_Manuais" />
     <Folder Include="Scripts_Manuais\API_1.0.0.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts_Manuais\API_1.0.0.0\DDL_Primeiras_Tabelas_Do_Banco.sql" />
+  </ItemGroup>
 </Project>

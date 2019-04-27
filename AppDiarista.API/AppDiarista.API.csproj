@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
@@ -39,14 +39,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\BotAdmin.Common\AppDiarista.Common.csproj" />
-    <ProjectReference Include="..\BotAdmin.ControleAcesso\AppDiarista.ControleAcesso.csproj" />
-    <ProjectReference Include="..\BotAdmin.DTO\AppDiarista.DTO.csproj" />
-    <ProjectReference Include="..\BotAdmin.IOC\AppDiarista.IOC.csproj" />
-    <ProjectReference Include="..\BotAdmin.Logs\AppDiarista.Logs.csproj" />
-    <ProjectReference Include="..\BotAdmin.Mapping\AppDiarista.Mapping.csproj" />
-    <ProjectReference Include="..\BotAdmin.Resource\AppDiarista.Resource.csproj" />
-    <ProjectReference Include="..\BotAdmin.ServiceApplication\AppDiarista.ServiceApplication.csproj" />
+    <ProjectReference Include="..\AppDiarista.Common\AppDiarista.Common.csproj" />
+    <ProjectReference Include="..\AppDiarista.DTO\AppDiarista.DTO.csproj" />
+    <ProjectReference Include="..\AppDiarista.IOC\AppDiarista.IOC.csproj" />
+    <ProjectReference Include="..\AppDiarista.Logs\AppDiarista.Logs.csproj" />
+    <ProjectReference Include="..\AppDiarista.Mapping\AppDiarista.Mapping.csproj" />
+    <ProjectReference Include="..\AppDiarista.Resource\AppDiarista.Resource.csproj" />
+    <ProjectReference Include="..\AppDiarista.ServiceApplication\AppDiarista.ServiceApplication.csproj" />
   </ItemGroup>
 
   <ItemGroup>

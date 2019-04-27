@@ -11,6 +11,10 @@ namespace AppDiarista.Data.UnitOfWork.Interfaces
     {
         #region Entidades do banco
         
+        DbSet<Contratante> Contratante { get; set; }
+        DbSet<Diarista> Diarista { get; set; }
+        DbSet<Servico> Servico { get; set; }
+        DbSet<Endereco> Endereco { get; set; }
         DbSet<Intent> Intent { get; set; }
 
         #endregion

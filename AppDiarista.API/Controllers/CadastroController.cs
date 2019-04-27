@@ -20,7 +20,7 @@ namespace AppDiarista.API.Controllers
     {
         #region Propriedades
 
-        private readonly IContratanteService contratanteService;
+        private readonly ICadastroService cadastroService;
 
         #endregion
 
@@ -29,9 +29,9 @@ namespace AppDiarista.API.Controllers
         public CadastroController(
             INotificador notificador,
             ILogger<ApiBaseController> logger,
-            IContratanteService contratanteService) : base(notificador, logger)
+            ICadastroService cadastroService) : base(notificador, logger)
         {
-            this.contratanteService = contratanteService;
+            this.cadastroService = cadastroService;
         }
 
         #endregion
@@ -42,7 +42,7 @@ namespace AppDiarista.API.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> Post(CadastroContratanteDTO model)
         {
-            return await CreateResponse(async () => await contratanteService.Inserir(model));
+            return await CreateResponse(async () => await cadastroService.Inserir(model));
         }
 
         //[HttpGet]

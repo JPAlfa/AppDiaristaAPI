@@ -70,7 +70,7 @@ namespace AppDiarista.API
 
         private void ConfigurarConnectionStrings(IServiceCollection services)
         {
-            string externoConnectionString = configuration.GetSection("ConnectionStrings:Externo").Value;
+            string externoConnectionString = configuration.GetSection("ConnectionStrings:AppDiaristaDB").Value;
 
             services.AddDbContext<AppDiaristaContext>(options => options.UseSqlServer(externoConnectionString));
         }

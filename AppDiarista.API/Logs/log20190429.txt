@@ -1,0 +1,278 @@
+29-Apr-2019 19:46:46.613 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 19:46:51.750 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 19:46:51.750 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 19:46:52.159 -03:00 [INF] Request finished in 388.7667ms 200 
+29-Apr-2019 19:46:52.457 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 19:46:54.317 -03:00 [INF] Request finished in 2571.7539ms 404 
+29-Apr-2019 19:52:25.075 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 19:52:25.171 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 19:52:33.731 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+29-Apr-2019 19:53:04.696 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+29-Apr-2019 19:53:05.293 -03:00 [INF] Executed DbCommand (138ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 19:53:05.479 -03:00 [INF] Executed DbCommand (77ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 19:53:05.489 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 31749.274ms.
+29-Apr-2019 19:53:05.501 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+29-Apr-2019 19:53:05.528 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 40353.4387ms
+29-Apr-2019 19:53:05.535 -03:00 [INF] Request finished in 40460.4827ms 200 application/json; charset=utf-8
+29-Apr-2019 20:52:01.286 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 20:52:02.909 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 20:52:02.909 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 20:52:03.076 -03:00 [INF] Request finished in 152.9243ms 200 
+29-Apr-2019 20:52:03.157 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 20:52:03.532 -03:00 [INF] Request finished in 624.8519ms 404 
+29-Apr-2019 20:52:38.584 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 20:52:38.685 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 20:52:39.504 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+29-Apr-2019 20:52:58.120 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+29-Apr-2019 20:53:05.386 -03:00 [INF] Executed DbCommand (3,295ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 20:53:16.231 -03:00 [INF] Executed DbCommand (963ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 20:53:21.440 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 41925.446800000005ms.
+29-Apr-2019 20:53:21.457 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+29-Apr-2019 20:53:21.483 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 42793.974ms
+29-Apr-2019 20:53:21.493 -03:00 [INF] Request finished in 42909.8657ms 200 application/json; charset=utf-8
+29-Apr-2019 21:21:20.504 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:21:22.093 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 21:21:22.093 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:21:22.297 -03:00 [INF] Request finished in 149.3573ms 200 
+29-Apr-2019 21:21:22.349 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:21:22.690 -03:00 [INF] Request finished in 600.5498ms 404 
+29-Apr-2019 21:21:38.108 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:21:38.223 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:21:57.787 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 19553.4722ms
+29-Apr-2019 21:22:00.407 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/cadastro, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = CadastroService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.ICadastroService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = UOWAppDiarista (ReflectionActivator), Services = [AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) (See inner exception for details.) (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = UOWAppDiarista (ReflectionActivator), Services = [AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotEmpty(String value, String parameterName)
+   at Microsoft.EntityFrameworkCore.SqlServerDbContextOptionsExtensions.UseSqlServer(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 sqlServerOptionsAction)
+   at AppDiarista.API.Startup.<>c__DisplayClass6_0.<ConfigurarConnectionStrings>b__0(DbContextOptionsBuilder options) in C:\AppDiaristaAPI\AppDiarista.API\Startup.cs:line 85
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass1_0`2.<AddDbContext>b__0(IServiceProvider p, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.DbContextOptionsFactory[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass10_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Autofac.Core.Activators.Delegate.DelegateActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ConstructorParameterBinding.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ConstructorParameterBinding.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+29-Apr-2019 21:22:00.883 -03:00 [INF] Request finished in 22770.868ms 400 application/json
+29-Apr-2019 21:22:00.916 -03:00 [INF] Connection id "0HLMD072TU2BP", Request id "0HLMD072TU2BP:00000002": the application completed without reading the entire request body.
+29-Apr-2019 21:26:56.510 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:26:57.977 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:26:57.977 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 21:26:58.138 -03:00 [INF] Request finished in 147.3642ms 200 
+29-Apr-2019 21:26:58.206 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:26:58.577 -03:00 [INF] Request finished in 602.8102ms 404 
+29-Apr-2019 21:27:08.859 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:27:08.975 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:29:35.563 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:29:36.186 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:29:36.186 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:29:36.218 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:29:36.333 -03:00 [INF] Request finished in 148.878ms 404 
+29-Apr-2019 21:29:36.386 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:29:36.419 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 29.9948ms
+29-Apr-2019 21:29:36.446 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/cadastro, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = CadastroService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.ICadastroService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = UOWAppDiarista (ReflectionActivator), Services = [AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) (See inner exception for details.) (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = UOWAppDiarista (ReflectionActivator), Services = [AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = DbContextOptions`1 (DelegateActivator), Services = [Microsoft.EntityFrameworkCore.DbContextOptions`1[[AppDiarista.Data.Models.AppDiaristaContext, AppDiarista.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> Value cannot be null.
+Parameter name: connectionString (See inner exception for details.) ---> System.ArgumentNullException: Value cannot be null.
+Parameter name: connectionString
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotEmpty(String value, String parameterName)
+   at Microsoft.EntityFrameworkCore.SqlServerDbContextOptionsExtensions.UseSqlServer(DbContextOptionsBuilder optionsBuilder, String connectionString, Action`1 sqlServerOptionsAction)
+   at AppDiarista.API.Startup.<>c__DisplayClass5_0.<ConfigurarConnectionStrings>b__0(DbContextOptionsBuilder options) in C:\AppDiaristaAPI\AppDiarista.API\Startup.cs:line 79
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass1_0`2.<AddDbContext>b__0(IServiceProvider p, DbContextOptionsBuilder b)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.DbContextOptionsFactory[TContext](IServiceProvider applicationServiceProvider, Action`2 optionsAction)
+   at Microsoft.Extensions.DependencyInjection.EntityFrameworkServiceCollectionExtensions.<>c__DisplayClass10_0`1.<AddCoreServices>b__0(IServiceProvider p)
+   at Autofac.Core.Activators.Delegate.DelegateActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ConstructorParameterBinding.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ConstructorParameterBinding.Instantiate()
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+29-Apr-2019 21:29:36.711 -03:00 [INF] Request finished in 527.0701ms 400 application/json
+29-Apr-2019 21:29:36.734 -03:00 [INF] Connection id "0HLMD0BM850CF", Request id "0HLMD0BM850CF:00000001": the application completed without reading the entire request body.
+29-Apr-2019 21:30:15.586 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:30:16.766 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:30:16.766 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 21:30:16.881 -03:00 [INF] Request finished in 102.3519ms 200 
+29-Apr-2019 21:30:16.915 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:30:17.116 -03:00 [INF] Request finished in 353.4947ms 404 
+29-Apr-2019 21:30:22.042 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:30:22.127 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:30:22.806 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+29-Apr-2019 21:30:27.465 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+29-Apr-2019 21:30:29.758 -03:00 [INF] Executed DbCommand (312ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:30:30.736 -03:00 [INF] Executed DbCommand (296ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:30:31.080 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8262.4826000000012ms.
+29-Apr-2019 21:30:31.115 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+29-Apr-2019 21:30:31.143 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 9012.4332000000013ms
+29-Apr-2019 21:30:31.151 -03:00 [INF] Request finished in 9109.0979ms 200 application/json; charset=utf-8
+29-Apr-2019 21:33:43.782 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:33:44.888 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 21:33:44.888 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:33:45.012 -03:00 [INF] Request finished in 108.4403ms 200 
+29-Apr-2019 21:33:45.047 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:33:45.260 -03:00 [INF] Request finished in 374.2693ms 404 
+29-Apr-2019 21:34:04.168 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:34:04.245 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:34:04.840 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+29-Apr-2019 21:34:16.837 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+29-Apr-2019 21:34:26.380 -03:00 [INF] Executed DbCommand (218ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:34:26.658 -03:00 [INF] Executed DbCommand (120ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:34:26.678 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 21828.534200000002ms.
+29-Apr-2019 21:34:26.705 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+29-Apr-2019 21:34:26.750 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 22499.0174ms
+29-Apr-2019 21:34:26.765 -03:00 [INF] Request finished in 22596.2608ms 200 application/json; charset=utf-8
+29-Apr-2019 21:34:57.079 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+29-Apr-2019 21:34:58.206 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+29-Apr-2019 21:34:58.206 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+29-Apr-2019 21:34:58.322 -03:00 [INF] Request finished in 102.363ms 200 
+29-Apr-2019 21:34:58.348 -03:00 [WRN] Failed to determine the https port for redirect.
+29-Apr-2019 21:34:58.596 -03:00 [INF] Request finished in 393.9546ms 404 
+29-Apr-2019 21:35:02.056 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 380
+29-Apr-2019 21:35:02.139 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+29-Apr-2019 21:35:02.639 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+29-Apr-2019 21:35:05.355 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+29-Apr-2019 21:35:10.780 -03:00 [INF] Executed DbCommand (94ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:35:10.953 -03:00 [INF] Executed DbCommand (81ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+29-Apr-2019 21:35:10.968 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8320.1054ms.
+29-Apr-2019 21:35:10.986 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+29-Apr-2019 21:35:11.008 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 8865.3162000000011ms
+29-Apr-2019 21:35:11.015 -03:00 [INF] Request finished in 8959.3427ms 200 application/json; charset=utf-8

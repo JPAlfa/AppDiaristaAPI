@@ -1,0 +1,357 @@
+26-Apr-2019 11:44:22.676 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 11:44:22.846 -03:00 [INF] Creating key "b0932fe9-7c79-4f4a-a4e8-64681d8c8620" with creation date "2019-04-26T14:44:22.8381476+00:00", activation date "2019-04-26T14:44:22.8243223+00:00", and expiration date "2019-07-25T14:44:22.8243223+00:00".
+26-Apr-2019 11:44:23.110 -03:00 [INF] Writing data to file 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys\key-b0932fe9-7c79-4f4a-a4e8-64681d8c8620.xml'.
+26-Apr-2019 11:44:25.480 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 11:44:25.480 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 11:44:25.847 -03:00 [INF] Request finished in 365.0488ms 200 
+26-Apr-2019 11:44:26.199 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 11:44:27.174 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:44:27.928 -03:00 [INF] Request finished in 2449.8148ms 400 application/json
+26-Apr-2019 11:44:28.698 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/favicon.ico  
+26-Apr-2019 11:44:28.764 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/favicon.ico, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:44:28.765 -03:00 [INF] Request finished in 67.4913ms 400 application/json
+26-Apr-2019 11:56:48.390 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 11:56:49.391 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 11:56:49.391 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 11:56:49.502 -03:00 [INF] Request finished in 84.6838ms 200 
+26-Apr-2019 11:56:49.528 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 11:56:49.857 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:56:50.151 -03:00 [INF] Request finished in 764.337ms 400 application/json
+26-Apr-2019 11:56:50.240 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/favicon.ico  
+26-Apr-2019 11:56:50.330 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/favicon.ico, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:56:50.333 -03:00 [INF] Request finished in 92.429ms 400 application/json
+26-Apr-2019 11:58:10.265 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 11:58:10.331 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/contratante, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:58:10.332 -03:00 [INF] Request finished in 67.5154ms 400 application/json
+26-Apr-2019 11:58:10.351 -03:00 [INF] Connection id "0HLMAATKFOJ9E", Request id "0HLMAATKFOJ9E:00000001": the application completed without reading the entire request body.
+26-Apr-2019 11:58:35.684 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 11:58:35.774 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/contratante, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:58:35.776 -03:00 [INF] Request finished in 91.688ms 400 application/json
+26-Apr-2019 11:58:35.777 -03:00 [INF] Connection id "0HLMAATKFOJ9E", Request id "0HLMAATKFOJ9E:00000002": the application completed without reading the entire request body.
+26-Apr-2019 11:59:54.818 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 11:59:55.728 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 11:59:55.728 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 11:59:55.829 -03:00 [INF] Request finished in 90.7734ms 200 
+26-Apr-2019 11:59:55.849 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 11:59:56.090 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:59:56.316 -03:00 [INF] Request finished in 593.0878ms 400 application/json
+26-Apr-2019 11:59:56.426 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/favicon.ico  
+26-Apr-2019 11:59:56.489 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/favicon.ico, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 11:59:56.490 -03:00 [INF] Request finished in 64.1225ms 400 application/json
+26-Apr-2019 12:00:15.933 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 12:00:16.020 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/contratante, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 12:00:16.021 -03:00 [INF] Request finished in 88.147ms 400 application/json
+26-Apr-2019 12:00:16.044 -03:00 [INF] Connection id "0HLMAAVC12ORK", Request id "0HLMAAVC12ORK:00000002": the application completed without reading the entire request body.
+26-Apr-2019 12:01:17.828 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:01:18.780 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:01:18.780 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:01:18.864 -03:00 [INF] Request finished in 73.1924ms 200 
+26-Apr-2019 12:01:18.888 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:01:19.127 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 12:01:19.395 -03:00 [INF] Request finished in 617.7203ms 400 application/json
+26-Apr-2019 12:01:20.481 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/favicon.ico  
+26-Apr-2019 12:01:20.528 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/favicon.ico, metodo = GET, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 12:01:20.530 -03:00 [INF] Request finished in 48.3077ms 400 application/json
+26-Apr-2019 12:01:30.506 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/intencao application/json 377
+26-Apr-2019 12:01:30.575 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/intencao, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 12:01:30.575 -03:00 [INF] Request finished in 69.6017ms 400 application/json
+26-Apr-2019 12:01:30.597 -03:00 [INF] Connection id "0HLMAB04P17HO", Request id "0HLMAB04P17HO:00000002": the application completed without reading the entire request body.
+26-Apr-2019 12:02:13.196 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/intencao application/json 377
+26-Apr-2019 12:02:44.486 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/intencao, metodo = POST, claimsUsuario =  }
+System.InvalidOperationException: The AuthorizationPolicy named: 'UsuarioN2' was not found.
+   at Microsoft.AspNetCore.Authorization.AuthorizationPolicy.CombineAsync(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authorizeData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.GetFilter(IAuthorizationPolicyProvider policyProvider, IEnumerable`1 authData)
+   at Microsoft.AspNetCore.Mvc.Internal.AuthorizationApplicationModelProvider.OnProvidersExecuting(ApplicationModelProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.BuildModel()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.GetDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionDescriptorProvider.OnProvidersExecuting(ActionDescriptorProviderContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.UpdateCollection()
+   at Microsoft.AspNetCore.Mvc.Internal.ActionDescriptorCollectionProvider.get_ActionDescriptors()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.GetTreeRouter()
+   at Microsoft.AspNetCore.Mvc.Internal.AttributeRoute.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Routing.RouteCollection.RouteAsync(RouteContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+26-Apr-2019 12:02:53.882 -03:00 [INF] Request finished in 40683.832ms 400 application/json
+26-Apr-2019 12:02:53.882 -03:00 [INF] Connection id "0HLMAB04P17HP", Request id "0HLMAB04P17HP:00000003": the application completed without reading the entire request body.
+26-Apr-2019 12:03:10.422 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 12:05:05.840 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:05:07.563 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:05:07.563 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:05:13.799 -03:00 [INF] Request finished in 6234.8126ms 200 
+26-Apr-2019 12:05:13.909 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:05:16.308 -03:00 [INF] Request finished in 8748.6244ms 404 
+26-Apr-2019 12:05:27.392 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 12:05:30.185 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:05:30.786 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+26-Apr-2019 12:05:30.826 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 635.424ms
+26-Apr-2019 12:05:30.830 -03:00 [INF] Request finished in 3437.8789ms 400 application/json; charset=utf-8
+26-Apr-2019 12:06:14.115 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 12:06:16.101 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:06:16.109 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+26-Apr-2019 12:06:16.109 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 7.5793ms
+26-Apr-2019 12:06:16.109 -03:00 [INF] Request finished in 1994.4082ms 400 application/json; charset=utf-8
+26-Apr-2019 12:07:09.533 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 377
+26-Apr-2019 12:07:11.492 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:07:11.638 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+26-Apr-2019 12:07:36.317 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 24824.3319ms
+26-Apr-2019 12:10:08.436 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:10:09.492 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:10:09.492 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:10:12.477 -03:00 [INF] Request finished in 2984.2511ms 200 
+26-Apr-2019 12:10:12.519 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:10:12.788 -03:00 [INF] Request finished in 3299.6702ms 404 
+26-Apr-2019 12:10:20.129 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+26-Apr-2019 12:10:21.006 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:10:21.469 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+26-Apr-2019 12:13:55.975 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:13:57.245 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:13:57.245 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:14:23.862 -03:00 [INF] Request finished in 26605.3399ms 200 
+26-Apr-2019 12:14:23.913 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:14:24.152 -03:00 [INF] Request finished in 26907.3558ms 404 
+26-Apr-2019 12:14:29.706 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+26-Apr-2019 12:14:29.795 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:14:30.321 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+26-Apr-2019 12:15:09.898 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 40095.8061ms
+26-Apr-2019 12:19:18.345 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:19:19.516 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:19:19.516 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:19:19.637 -03:00 [INF] Request finished in 99.8867ms 200 
+26-Apr-2019 12:19:19.667 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:19:19.933 -03:00 [INF] Request finished in 423.6715ms 404 
+26-Apr-2019 12:19:39.393 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/contratante application/json 340
+26-Apr-2019 12:19:39.468 -03:00 [INF] Route matched with {action = "Post", controller = "Contratante"}. Executing action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API)
+26-Apr-2019 12:19:39.939 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+26-Apr-2019 12:19:53.151 -03:00 [INF] Executed action AppDiarista.API.Controllers.ContratanteController.Post (AppDiarista.API) in 13680.197100000001ms
+26-Apr-2019 12:21:45.969 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+26-Apr-2019 12:21:47.019 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+26-Apr-2019 12:21:47.019 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+26-Apr-2019 12:21:47.108 -03:00 [INF] Request finished in 89.1359ms 200 
+26-Apr-2019 12:21:47.132 -03:00 [WRN] Failed to determine the https port for redirect.
+26-Apr-2019 12:21:47.344 -03:00 [INF] Request finished in 328.8037ms 404 
+26-Apr-2019 12:21:48.986 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/intencao application/json 340
+26-Apr-2019 12:21:49.101 -03:00 [INF] Route matched with {action = "Post", controller = "Intencao"}. Executing action AppDiarista.API.Controllers.IntencaoController.Post (AppDiarista.API)
+26-Apr-2019 12:21:49.573 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+26-Apr-2019 12:21:49.612 -03:00 [INF] Executed action AppDiarista.API.Controllers.IntencaoController.Post (AppDiarista.API) in 506.90270000000004ms
+26-Apr-2019 12:21:49.619 -03:00 [INF] Request finished in 633.0614ms 400 application/json; charset=utf-8

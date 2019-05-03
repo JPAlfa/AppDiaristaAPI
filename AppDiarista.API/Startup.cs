@@ -70,9 +70,9 @@ namespace AppDiarista.API
 
         private void ConfigurarConnectionStrings(IServiceCollection services)
         {
-            string externoConnectionString = configuration.GetSection("ConnectionStrings:Externo").Value;
+            string appDiaristaDBConnectionString = configuration.GetSection("ConnectionStrings:AppDiaristaDB").Value;
 
-            services.AddDbContext<AppDiaristaContext>(options => options.UseSqlServer(externoConnectionString));
+            services.AddDbContext<AppDiaristaContext>(options => options.UseSqlServer(appDiaristaDBConnectionString));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

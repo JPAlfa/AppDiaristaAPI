@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Serilog;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.Configuration;
+using System.IO;
 
 namespace AppDiarista.API
 {

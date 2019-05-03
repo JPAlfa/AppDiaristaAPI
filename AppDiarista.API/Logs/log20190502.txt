@@ -1,0 +1,28 @@
+02-May-2019 23:24:49.222 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+02-May-2019 23:24:51.549 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+02-May-2019 23:24:51.549 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+02-May-2019 23:24:51.738 -03:00 [INF] Request finished in 173.4771ms 200 
+02-May-2019 23:24:51.856 -03:00 [WRN] Failed to determine the https port for redirect.
+02-May-2019 23:24:52.292 -03:00 [INF] Request finished in 746.1142ms 404 
+02-May-2019 23:25:35.543 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro application/json 367
+02-May-2019 23:25:35.707 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+02-May-2019 23:25:36.582 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+02-May-2019 23:25:36.925 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+02-May-2019 23:25:44.837 -03:00 [INF] Executed DbCommand (108ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+02-May-2019 23:25:45.091 -03:00 [INF] Executed DbCommand (100ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+02-May-2019 23:25:45.107 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8516.4775ms.
+02-May-2019 23:25:45.135 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+02-May-2019 23:25:45.198 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 9484.9289ms
+02-May-2019 23:25:45.210 -03:00 [INF] Request finished in 9667.69ms 200 application/json; charset=utf-8

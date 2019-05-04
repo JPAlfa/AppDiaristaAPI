@@ -104,5 +104,14 @@ namespace AppDiarista.Resource {
                 return ResourceManager.GetString("ErroItemRecebidoInvalido", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Senha informada não está correta.
+        /// </summary>
+        public static string ErroSenhaIncorreta {
+            get {
+                return ResourceManager.GetString("ErroSenhaIncorreta", resourceCulture);
+            }
+        }
     }
 }

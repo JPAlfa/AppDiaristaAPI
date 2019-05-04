@@ -132,4 +132,7 @@
   <data name="ErroItemRecebidoInvalido" xml:space="preserve">
     <value>O item recebido é inválido</value>
   </data>
+  <data name="ErroSenhaIncorreta" xml:space="preserve">
+    <value>Senha informada não está correta</value>
+  </data>
 </root>

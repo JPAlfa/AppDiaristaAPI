@@ -38,11 +38,18 @@ namespace AppDiarista.API.Controllers
 
         #region Métodos Públicos
 
-        [HttpPost]
+        [HttpPost("Contratante")]
         [AllowAnonymous]
         public async Task<IActionResult> Post(CadastroContratanteDTO model)
         {
-            return await CreateResponse(async () => await cadastroService.Inserir(model));
+            return await CreateResponse(async () => await cadastroService.InserirContratante(model));
+        }
+
+        [HttpPost("Diarista")]
+        [AllowAnonymous]
+        public async Task<IActionResult> Post(CadastroDiaristaDTO model)
+        {
+            return await CreateResponse(async () => await cadastroService.InserirDiarista(model));
         }
 
         //[HttpGet]

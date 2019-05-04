@@ -43,7 +43,7 @@ namespace AppDiarista.Business
             var itemJaExiste = await this.intencaoData.Listar(w => w.Name == novoItem.Name).AnyAsync();
             if (itemJaExiste)
             {
-                notificacoes.Add("novoItem", Resource.Mensagens.ErroIntencaoJaCadastrada);
+                //notificacoes.Add("novoItem", Resource.Mensagens.ErroIntencaoJaCadastrada);
             }
 
             notificador.AdicionarListaNotificacoes(notificacoes);

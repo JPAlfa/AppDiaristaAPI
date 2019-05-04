@@ -7,12 +7,11 @@ using System.Text;
 
 namespace AppDiarista.Mapping.Profiles
 {
-    public class EnderecoProfile : Profile
+    public class DiaristaProfile : Profile
     {
-        public EnderecoProfile()
+        public DiaristaProfile()
         {
-            CreateMap<CadastroContratanteDTO, Endereco>().ReverseMap();
-            CreateMap<CadastroDiaristaDTO, Endereco>().ReverseMap();
+            CreateMap<CadastroDiaristaDTO, Diarista>().ReverseMap();
         }
     }
 }

@@ -15,9 +15,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Mensagens.Designer.cs">
-      <DependentUpon>Mensagens.resx</DependentUpon>
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DependentUpon>Mensagens.resx</DependentUpon>
     </Compile>
   </ItemGroup>
 </Project>

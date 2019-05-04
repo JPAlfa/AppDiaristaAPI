@@ -43,14 +43,22 @@ namespace AppDiarista.ServiceApplication
         public async Task<string> Autenticar(LoginDTO model)
         {
             var diarista = await this.diaristaData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
-            var contratante = await this.contratanteData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
             if (diarista != null && diarista.Senha == criptografiaService.HashearSenha(model.Senha))
                 return GerarTokenString(model);
-            else if (contratante != null && contratante.Senha.Trim() == criptografiaService.HashearSenha(model.Senha))
-                return GerarTokenString(model);
-            else
-                notificador.AdicionarNotificacao(new Common.Notification.Notificacao("novoItem", Resource.Mensagens.ErroEmailNaoCadastrado));
 
+            var contratante = await this.contratanteData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
+            if (contratante != null && contratante.Senha.Trim() == criptografiaService.HashearSenha(model.Senha))
+                return GerarTokenString(model);
+
+            return AnalisarErroNoLogin(diarista, contratante);
+        }
+
+        private string AnalisarErroNoLogin(Data.Models.Diarista diarista, Data.Models.Contratante contratante)
+        {
+            if (contratante == null && diarista == null)
+                notificador.AdicionarNotificacao(new Common.Notification.Notificacao("novoItem", Resource.Mensagens.ErroEmailNaoCadastrado));
+            else
+                notificador.AdicionarNotificacao(new Common.Notification.Notificacao("novoItem", Resource.Mensagens.ErroSenhaIncorreta));
             return string.Empty;
         }
 

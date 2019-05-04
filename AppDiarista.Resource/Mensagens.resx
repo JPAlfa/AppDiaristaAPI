@@ -117,46 +117,16 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ErroBotJaCadastrado" xml:space="preserve">
-    <value>Bot já cadastrado</value>
-  </data>
-  <data name="ErroBotNaoCadastrado" xml:space="preserve">
-    <value>Bot não está cadastrado</value>
-  </data>
   <data name="ErroCamposObrigatorios" xml:space="preserve">
     <value>Verifique os campos obrigatórios</value>
   </data>
-  <data name="ErroEntidadeJaCadastrada" xml:space="preserve">
-    <value>Entidade já está cadastrada</value>
-  </data>
-  <data name="ErroEntidadeNaoCadastrada" xml:space="preserve">
-    <value>Entidade não está cadastrada</value>
-  </data>
-  <data name="ErroGerarToken" xml:space="preserve">
-    <value>Não foi possível gerar token</value>
-  </data>
-  <data name="ErroGerarTokenUsuarioNaoEncontrado" xml:space="preserve">
-    <value>Usuário não encontrado para a geração do token</value>
-  </data>
-  <data name="ErroIntencaoJaCadastrada" xml:space="preserve">
-    <value>Intenção já está cadastrada</value>
-  </data>
-  <data name="ErroIntencaoNaoCadastrada" xml:space="preserve">
-    <value>Intenção não está cadastrada</value>
-  </data>
-  <data name="ErroIntencaoNaoCadastradaNoLuis" xml:space="preserve">
-    <value>Intenção não cadastrada no LUIS.</value>
+  <data name="ErroEmailJaCadastrado" xml:space="preserve">
+    <value>Este email já está cadastrado</value>
   </data>
   <data name="ErroInternoNaAPI" xml:space="preserve">
     <value>Erro ao tentar executar a solicitação</value>
   </data>
   <data name="ErroItemRecebidoInvalido" xml:space="preserve">
     <value>O item recebido é inválido</value>
-  </data>
-  <data name="ErroLuisJaCadastrado" xml:space="preserve">
-    <value>Aplicação Luis já está cadastrada</value>
-  </data>
-  <data name="ErroLuisNaoCadastrado" xml:space="preserve">
-    <value>Aplicação Luis não está cadastrada</value>
   </data>
 </root>

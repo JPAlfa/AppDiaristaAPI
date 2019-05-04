@@ -60,6 +60,7 @@ namespace AppDiarista.IOC
         private static void RegistrarBusiness(ContainerBuilder builder)
         {
             builder.RegisterType<IntencaoBusiness>().As<IIntencaoBusiness>().InstancePerLifetimeScope();
+            builder.RegisterType<CadastroBusiness>().As<ICadastroBusiness>().InstancePerLifetimeScope();
         }
 
         private static void RegistrarData(ContainerBuilder builder)
@@ -67,6 +68,7 @@ namespace AppDiarista.IOC
             builder.RegisterType<UOWAppDiarista>().As<IUOWAppDiarista>().InstancePerLifetimeScope();
             builder.RegisterType<IntencaoData>().As<IIntencaoData>().InstancePerLifetimeScope();
             builder.RegisterType<ContratanteData>().As<IContratanteData>().InstancePerLifetimeScope();
+            builder.RegisterType<DiaristaData>().As<IDiaristaData>().InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(RepositorioBase<,>)).As(typeof(IRepositorioBase<,>)).InstancePerLifetimeScope();
         }
 

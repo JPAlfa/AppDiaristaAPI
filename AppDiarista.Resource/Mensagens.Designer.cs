@@ -61,24 +61,6 @@ namespace AppDiarista.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bot já cadastrado.
-        /// </summary>
-        public static string ErroBotJaCadastrado {
-            get {
-                return ResourceManager.GetString("ErroBotJaCadastrado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Bot não está cadastrado.
-        /// </summary>
-        public static string ErroBotNaoCadastrado {
-            get {
-                return ResourceManager.GetString("ErroBotNaoCadastrado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Verifique os campos obrigatórios.
         /// </summary>
         public static string ErroCamposObrigatorios {
@@ -88,65 +70,11 @@ namespace AppDiarista.Resource {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Entidade já está cadastrada.
+        ///   Looks up a localized string similar to Este email já está cadastrado.
         /// </summary>
-        public static string ErroEntidadeJaCadastrada {
+        public static string ErroEmailJaCadastrado {
             get {
-                return ResourceManager.GetString("ErroEntidadeJaCadastrada", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Entidade não está cadastrada.
-        /// </summary>
-        public static string ErroEntidadeNaoCadastrada {
-            get {
-                return ResourceManager.GetString("ErroEntidadeNaoCadastrada", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Não foi possível gerar token.
-        /// </summary>
-        public static string ErroGerarToken {
-            get {
-                return ResourceManager.GetString("ErroGerarToken", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Usuário não encontrado para a geração do token.
-        /// </summary>
-        public static string ErroGerarTokenUsuarioNaoEncontrado {
-            get {
-                return ResourceManager.GetString("ErroGerarTokenUsuarioNaoEncontrado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Intenção já está cadastrada.
-        /// </summary>
-        public static string ErroIntencaoJaCadastrada {
-            get {
-                return ResourceManager.GetString("ErroIntencaoJaCadastrada", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Intenção não está cadastrada.
-        /// </summary>
-        public static string ErroIntencaoNaoCadastrada {
-            get {
-                return ResourceManager.GetString("ErroIntencaoNaoCadastrada", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Intenção não cadastrada no LUIS..
-        /// </summary>
-        public static string ErroIntencaoNaoCadastradaNoLuis {
-            get {
-                return ResourceManager.GetString("ErroIntencaoNaoCadastradaNoLuis", resourceCulture);
+                return ResourceManager.GetString("ErroEmailJaCadastrado", resourceCulture);
             }
         }
         
@@ -165,24 +93,6 @@ namespace AppDiarista.Resource {
         public static string ErroItemRecebidoInvalido {
             get {
                 return ResourceManager.GetString("ErroItemRecebidoInvalido", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aplicação Luis já está cadastrada.
-        /// </summary>
-        public static string ErroLuisJaCadastrado {
-            get {
-                return ResourceManager.GetString("ErroLuisJaCadastrado", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Aplicação Luis não está cadastrada.
-        /// </summary>
-        public static string ErroLuisNaoCadastrado {
-            get {
-                return ResourceManager.GetString("ErroLuisNaoCadastrado", resourceCulture);
             }
         }
     }

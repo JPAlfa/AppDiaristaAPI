@@ -79,6 +79,15 @@ namespace AppDiarista.Resource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Este email ainda não está cadastrado.
+        /// </summary>
+        public static string ErroEmailNaoCadastrado {
+            get {
+                return ResourceManager.GetString("ErroEmailNaoCadastrado", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Erro ao tentar executar a solicitação.
         /// </summary>
         public static string ErroInternoNaAPI {

@@ -13,6 +13,7 @@ using Microsoft.Extensions.Logging;
 
 namespace AppDiarista.API.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("AllowAllHeaders")]
@@ -46,7 +47,6 @@ namespace AppDiarista.API.Controllers
         }
 
         [HttpPost("Diarista")]
-        [AllowAnonymous]
         public async Task<IActionResult> Post(CadastroDiaristaDTO model)
         {
             return await CreateResponse(async () => await cadastroService.InserirDiarista(model));

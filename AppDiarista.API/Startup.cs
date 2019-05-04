@@ -14,6 +14,8 @@ using AppDiarista.API.Middlewares;
 using AppDiarista.Data.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using System;
 
 namespace AppDiarista.API
 {
@@ -50,6 +52,23 @@ namespace AppDiarista.API
             }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddOptions();
+
+            services.AddAuthentication(options => {
+                options.DefaultAuthenticateScheme = "JwtBearer";
+                options.DefaultChallengeScheme = "JwtBearer";
+            }).AddJwtBearer("JwtBearer", options =>
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey (System.Text.Encoding.UTF8.GetBytes(configuration.GetSection("JwtConfiguration:Secret").Value)),
+                    ClockSkew = TimeSpan.FromMinutes(5),
+                    ValidIssuer = configuration.GetSection("JwtConfiguration:Issuer").Value,
+                    ValidAudience = configuration.GetSection("JwtConfiguration:Audience").Value
+        }
+            );
 
             ConfigureLogging(configuration);
             

@@ -123,6 +123,9 @@
   <data name="ErroEmailJaCadastrado" xml:space="preserve">
     <value>Este email já está cadastrado</value>
   </data>
+  <data name="ErroEmailNaoCadastrado" xml:space="preserve">
+    <value>Este email ainda não está cadastrado</value>
+  </data>
   <data name="ErroInternoNaAPI" xml:space="preserve">
     <value>Erro ao tentar executar a solicitação</value>
   </data>

@@ -8,6 +8,6 @@ namespace AppDiarista.ServiceApplication.Interfaces
 {
     public interface IAuthenticationService
     {
-        Task<string> Autenticar(LoginDTO model);
+        Task<UsuarioLogadoDTO> Autenticar(LoginDTO model);
     }
 }

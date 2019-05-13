@@ -12,6 +12,7 @@ using System.Linq;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 
 namespace AppDiarista.ServiceApplication
 {
@@ -22,6 +23,7 @@ namespace AppDiarista.ServiceApplication
         private readonly IContratanteData contratanteData;
         private readonly ICriptografiaService criptografiaService;
         private readonly IConfiguration configuration;
+        private readonly IMapper mapper;
         #endregion
 
         #region Construtores
@@ -29,37 +31,61 @@ namespace AppDiarista.ServiceApplication
             IDiaristaData diaristaData,
             IContratanteData contratanteData,
             ICriptografiaService criptografiaService,
-            IConfiguration configuration) : base(notificador)
+            IConfiguration configuration,
+            IMapper mapper) : base(notificador)
         {
             this.diaristaData = diaristaData;
             this.contratanteData = contratanteData;
             this.criptografiaService = criptografiaService;
             this.configuration = configuration;
+            this.mapper = mapper;
         }
         #endregion
 
         #region Métodos Públicos
 
-        public async Task<string> Autenticar(LoginDTO model)
+        public async Task<UsuarioLogadoDTO> Autenticar(LoginDTO model)
         {
             var diarista = await this.diaristaData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
             if (diarista != null && diarista.Senha == criptografiaService.HashearSenha(model.Senha))
-                return GerarTokenString(model);
+                return LogarDiarista(model, mapper.Map<DiaristaDTO>(diarista));
 
             var contratante = await this.contratanteData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
             if (contratante != null && contratante.Senha.Trim() == criptografiaService.HashearSenha(model.Senha))
-                return GerarTokenString(model);
+                return LogarContratante(model, mapper.Map<ContratanteDTO>(contratante));
 
             return AnalisarErroNoLogin(diarista, contratante);
         }
 
-        private string AnalisarErroNoLogin(Data.Models.Diarista diarista, Data.Models.Contratante contratante)
+        #endregion
+
+        #region Métodos Privados
+
+        private UsuarioLogadoDTO LogarContratante(LoginDTO model, ContratanteDTO contratante)
+        {
+            return new UsuarioLogadoDTO()
+            {
+                Token = GerarTokenString(model),
+                Contratante = contratante
+            };
+        }
+
+        private UsuarioLogadoDTO LogarDiarista(LoginDTO model, DiaristaDTO diarista)
+        {
+            return new UsuarioLogadoDTO()
+            {
+                Token = GerarTokenString(model),
+                Diarista = diarista
+            };
+        }
+
+        private UsuarioLogadoDTO AnalisarErroNoLogin(Data.Models.Diarista diarista, Data.Models.Contratante contratante)
         {
             if (contratante == null && diarista == null)
                 notificador.AdicionarNotificacao(new Common.Notification.Notificacao("novoItem", Resource.Mensagens.ErroEmailNaoCadastrado));
             else
                 notificador.AdicionarNotificacao(new Common.Notification.Notificacao("novoItem", Resource.Mensagens.ErroSenhaIncorreta));
-            return string.Empty;
+            return null;
         }
 
         private string GerarTokenString(LoginDTO model)
@@ -102,10 +128,6 @@ namespace AppDiarista.ServiceApplication
                         new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                     };
         }
-
-        #endregion
-
-        #region Métodos Privados
 
         #endregion
 

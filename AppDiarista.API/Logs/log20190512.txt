@@ -1,0 +1,328 @@
+12-May-2019 21:19:03.667 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 21:19:07.220 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 21:19:07.220 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 21:19:07.713 -03:00 [INF] Request finished in 476.3445ms 200 
+12-May-2019 21:19:08.263 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 21:19:08.899 -03:00 [INF] Request finished in 1684.1919ms 404 
+12-May-2019 21:20:45.517 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+12-May-2019 21:20:45.938 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+12-May-2019 21:20:46.359 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+12-May-2019 21:20:46.489 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 21:20:46.516 -03:00 [INF] Authorization failed.
+12-May-2019 21:20:46.536 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+12-May-2019 21:20:46.549 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+12-May-2019 21:20:46.567 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+12-May-2019 21:20:46.575 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 77.9188ms
+12-May-2019 21:20:46.582 -03:00 [INF] Request finished in 1064.1757ms 401 
+12-May-2019 21:20:54.277 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+12-May-2019 21:20:54.284 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+12-May-2019 21:20:55.314 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+12-May-2019 21:20:55.793 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 21:20:56.752 -03:00 [INF] Executed DbCommand (127ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 21:20:57.043 -03:00 [INF] Executed DbCommand (184ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 21:20:57.247 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1924.7678ms.
+12-May-2019 21:20:57.268 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 21:20:57.291 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 3006.4866ms
+12-May-2019 21:20:57.302 -03:00 [INF] Request finished in 3025.0031ms 200 application/json; charset=utf-8
+12-May-2019 21:21:16.937 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+12-May-2019 21:21:16.977 -03:00 [INF] Successfully validated the token.
+12-May-2019 21:21:16.979 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 21:21:16.979 -03:00 [INF] Authorization was successful.
+12-May-2019 21:21:17.057 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["'São Paulo'"]) - Validation state: "Valid"
+12-May-2019 21:21:37.348 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 21:21:38.495 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+12-May-2019 21:21:38.780 -03:00 [INF] Successfully validated the token.
+12-May-2019 21:21:38.787 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 21:21:39.020 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 21:21:39.040 -03:00 [INF] Authorization was successful.
+12-May-2019 21:21:39.212 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["São Paulo"]) - Validation state: "Valid"
+12-May-2019 21:21:39.473 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 21:21:39.820 -03:00 [INF] Executed DbCommand (24ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+12-May-2019 21:21:39.960 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 21:21:39.968 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 21:21:39.969 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+12-May-2019 21:21:39.969 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 21:21:39.970 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 21:21:40.049 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+12-May-2019 21:21:40.165 -03:00 [INF] Executed action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 941.2928ms.
+12-May-2019 21:21:40.186 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 21:21:40.233 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 1208.1939ms
+12-May-2019 21:21:40.247 -03:00 [INF] Request finished in 1755.8396ms 200 application/json; charset=utf-8
+12-May-2019 21:22:04.929 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 21:22:09.147 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 21:22:09.147 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 21:22:09.433 -03:00 [INF] Request finished in 286.536ms 200 
+12-May-2019 21:22:09.697 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 21:22:10.180 -03:00 [INF] Request finished in 1037.3886ms 404 
+12-May-2019 21:23:35.306 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+12-May-2019 21:23:35.761 -03:00 [INF] Successfully validated the token.
+12-May-2019 21:23:35.944 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 21:23:35.973 -03:00 [INF] Authorization was successful.
+12-May-2019 21:23:36.775 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["São Paulo"]) - Validation state: "Valid"
+12-May-2019 21:23:48.032 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 21:23:48.959 -03:00 [INF] Executed DbCommand (186ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+12-May-2019 21:23:54.156 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 21:23:54.165 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 21:23:54.166 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+12-May-2019 21:23:54.166 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 21:23:54.167 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 21:23:54.326 -03:00 [INF] Executed DbCommand (137ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+12-May-2019 21:23:59.018 -03:00 [INF] Executed action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22193.0033ms.
+12-May-2019 21:23:59.040 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 21:23:59.093 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 23105.529300000002ms
+12-May-2019 21:23:59.150 -03:00 [INF] Request finished in 23805.9308ms 200 application/json; charset=utf-8
+12-May-2019 21:39:54.991 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 360
+12-May-2019 21:39:55.007 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 21:39:55.009 -03:00 [INF] Authorization failed.
+12-May-2019 21:39:55.009 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+12-May-2019 21:39:55.013 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+12-May-2019 21:39:55.021 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+12-May-2019 21:39:55.021 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 14.034400000000002ms
+12-May-2019 21:39:55.022 -03:00 [INF] Request finished in 30.8522ms 401 
+12-May-2019 21:39:55.051 -03:00 [INF] Connection id "0HLMN744J64S3", Request id "0HLMN744J64S3:00000001": the application completed without reading the entire request body.
+12-May-2019 21:41:11.153 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 21:41:13.237 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 21:41:13.237 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 21:41:13.511 -03:00 [INF] Request finished in 274.7055ms 200 
+12-May-2019 21:41:13.773 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 21:41:14.344 -03:00 [INF] Request finished in 1111.5454ms 404 
+12-May-2019 21:41:40.200 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 360
+12-May-2019 21:41:40.339 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 21:41:40.376 -03:00 [INF] Authorization failed.
+12-May-2019 21:41:40.381 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+12-May-2019 21:41:40.390 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+12-May-2019 21:41:40.401 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+12-May-2019 21:41:40.406 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 61.6935ms
+12-May-2019 21:41:40.411 -03:00 [INF] Request finished in 210.7559ms 401 
+12-May-2019 21:41:40.436 -03:00 [INF] Connection id "0HLMN7EPISCAC", Request id "0HLMN7EPISCAC:00000002": the application completed without reading the entire request body.
+12-May-2019 21:42:15.401 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 21:42:16.853 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 21:42:16.853 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 21:42:17.099 -03:00 [INF] Request finished in 248.0692ms 200 
+12-May-2019 21:42:17.445 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 21:42:17.793 -03:00 [INF] Request finished in 943.5571ms 404 
+12-May-2019 21:42:22.876 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 360
+12-May-2019 21:42:23.016 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 21:42:24.209 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroDiaristaDTO"]) - Validation state: "Valid"
+12-May-2019 21:42:24.602 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 21:42:25.485 -03:00 [INF] Executed DbCommand (90ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Diarista] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+12-May-2019 21:42:25.870 -03:00 [INF] Executed DbCommand (163ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 21:42:26.176 -03:00 [INF] Executed DbCommand (115ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Diarista] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Nota], [PrecoDiaria], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [dbo].[Diarista]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 21:42:26.186 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1968.0001000000002ms.
+12-May-2019 21:42:26.203 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 21:42:26.239 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 3216.8447ms
+12-May-2019 21:42:26.251 -03:00 [INF] Request finished in 3375.1926ms 200 application/json; charset=utf-8
+12-May-2019 22:01:39.253 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 22:01:40.066 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 365
+12-May-2019 22:01:40.170 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 22:01:40.422 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 22:01:40.746 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+12-May-2019 22:01:40.767 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 339.8113ms
+12-May-2019 22:01:40.778 -03:00 [INF] Request finished in 714.8199ms 400 application/json; charset=utf-8
+12-May-2019 22:02:02.669 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 365
+12-May-2019 22:02:02.671 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 22:02:02.718 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroDiaristaDTO"]) - Validation state: "Valid"
+12-May-2019 22:02:03.019 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:02:03.409 -03:00 [INF] Executed DbCommand (42ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Diarista] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+12-May-2019 22:02:03.601 -03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:02:03.679 -03:00 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Diarista] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Nota], [PrecoDiaria], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [dbo].[Diarista]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:02:03.690 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 963.16550000000007ms.
+12-May-2019 22:02:03.694 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:02:03.702 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 1031.258ms
+12-May-2019 22:02:03.708 -03:00 [INF] Request finished in 1039.1714ms 200 application/json; charset=utf-8
+12-May-2019 22:03:02.729 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 22:03:04.205 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 22:03:04.205 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 22:03:04.400 -03:00 [INF] Request finished in 195.5633ms 200 
+12-May-2019 22:03:04.621 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 22:03:04.982 -03:00 [INF] Request finished in 780.6896ms 404 
+12-May-2019 22:03:25.676 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 365
+12-May-2019 22:03:25.833 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 22:03:26.797 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroDiaristaDTO"]) - Validation state: "Valid"
+12-May-2019 22:03:27.231 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:03:27.891 -03:00 [INF] Executed DbCommand (115ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Diarista] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+12-May-2019 22:03:27.998 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1189.5243ms.
+12-May-2019 22:03:28.022 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:03:28.070 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 2232.0049ms
+12-May-2019 22:03:28.086 -03:00 [INF] Request finished in 2409.5337ms 400 application/json; charset=utf-8
+12-May-2019 22:05:15.873 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 381
+12-May-2019 22:05:15.874 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 22:05:15.922 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroDiaristaDTO"]) - Validation state: "Valid"
+12-May-2019 22:05:15.924 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:05:16.130 -03:00 [INF] Executed DbCommand (202ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Diarista] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+12-May-2019 22:05:16.518 -03:00 [INF] Executed DbCommand (116ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:05:16.828 -03:00 [INF] Executed DbCommand (102ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Diarista] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Nota], [PrecoDiaria], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [dbo].[Diarista]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:05:16.840 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 918.25830000000008ms.
+12-May-2019 22:05:16.841 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:05:16.842 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 967.86430000000007ms
+12-May-2019 22:05:16.842 -03:00 [INF] Request finished in 969.3356ms 200 application/json; charset=utf-8
+12-May-2019 22:29:15.390 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+12-May-2019 22:29:15.514 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+12-May-2019 22:29:15.816 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+12-May-2019 22:29:15.824 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 22:29:15.834 -03:00 [INF] Authorization failed.
+12-May-2019 22:29:15.837 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+12-May-2019 22:29:15.841 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+12-May-2019 22:29:15.862 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+12-May-2019 22:29:15.862 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 37.644800000000004ms
+12-May-2019 22:29:15.863 -03:00 [INF] Request finished in 473.1821ms 401 
+12-May-2019 22:30:14.200 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/contratante application/json 386
+12-May-2019 22:30:14.213 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+12-May-2019 22:30:14.278 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.CadastroContratanteDTO"]) - Validation state: "Valid"
+12-May-2019 22:30:14.290 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:30:14.415 -03:00 [INF] Executed DbCommand (70ms) [Parameters=[@__email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Contratante] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+12-May-2019 22:30:14.519 -03:00 [INF] Executed DbCommand (92ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:30:14.712 -03:00 [INF] Executed DbCommand (137ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+12-May-2019 22:30:14.716 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 438.13710000000003ms.
+12-May-2019 22:30:14.716 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:30:14.716 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 502.9705ms
+12-May-2019 22:30:14.717 -03:00 [INF] Request finished in 516.6015ms 200 application/json; charset=utf-8
+12-May-2019 22:30:45.863 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+12-May-2019 22:30:45.871 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+12-May-2019 22:30:45.922 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+12-May-2019 22:30:45.930 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:30:46.067 -03:00 [INF] Executed DbCommand (94ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 22:30:46.187 -03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 22:30:46.240 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 317.60020000000003ms.
+12-May-2019 22:30:46.240 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:30:46.240 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 369.2669ms
+12-May-2019 22:30:46.255 -03:00 [INF] Request finished in 379.6364ms 200 application/json; charset=utf-8
+12-May-2019 22:30:59.602 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+12-May-2019 22:30:59.696 -03:00 [INF] Successfully validated the token.
+12-May-2019 22:30:59.697 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+12-May-2019 22:30:59.698 -03:00 [INF] Authorization was successful.
+12-May-2019 22:30:59.735 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["São Paulo"]) - Validation state: "Valid"
+12-May-2019 22:31:03.449 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 22:31:03.559 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+12-May-2019 22:31:03.581 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 22:31:03.586 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 22:31:03.587 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+12-May-2019 22:31:03.587 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+12-May-2019 22:31:03.587 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+12-May-2019 22:31:03.674 -03:00 [INF] Executed DbCommand (78ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+12-May-2019 22:31:03.781 -03:00 [INF] Executed action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4045.6872000000003ms.
+12-May-2019 22:31:03.781 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 22:31:03.790 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 4092.4246000000003ms
+12-May-2019 22:31:03.791 -03:00 [INF] Request finished in 4188.9945ms 200 application/json; charset=utf-8

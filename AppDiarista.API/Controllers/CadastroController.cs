@@ -13,7 +13,6 @@ using Microsoft.Extensions.Logging;
 
 namespace AppDiarista.API.Controllers
 {
-    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     [EnableCors("AllowAllHeaders")]
@@ -41,40 +40,18 @@ namespace AppDiarista.API.Controllers
 
         [HttpPost("Contratante")]
         [AllowAnonymous]
-        public async Task<IActionResult> Post(CadastroContratanteDTO model)
+        public async Task<IActionResult> Post([FromBody]CadastroContratanteDTO model)
         {
             return await CreateResponse(async () => await cadastroService.InserirContratante(model));
         }
 
         [HttpPost("Diarista")]
-        public async Task<IActionResult> Post(CadastroDiaristaDTO model)
+        [AllowAnonymous]
+        public async Task<IActionResult> Post([FromBody]CadastroDiaristaDTO model)
         {
             return await CreateResponse(async () => await cadastroService.InserirDiarista(model));
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Get()
-        //{
-        //    return await CreateResponse(async () => await intencaoService.Listar());
-        //}
-
-        //[HttpGet("filtrar/{botId}")]
-        //public async Task<IActionResult> GetFilteredIntents(string botId)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.ListarPorBot(botId));
-        //}
-
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> Get(int id)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.RetornarPorId(id));
-        //}
-
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> Put(int id, IntencaoDTO model)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.Alterar(id, model));
-        //}
         #endregion
     }
 }

@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace AppDiarista.Data.Models
+namespace AppDiarista.DTO
 {
-    [Table("Diarista", Schema = "dbo")]
-    public partial class Diarista
+    public class DiaristaDTO
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -17,6 +15,6 @@ namespace AppDiarista.Data.Models
         public string Telefone { get; set; }
         public int IdEndereco { get; set; }
         public double PrecoDiaria { get; set; }
-        public double Nota { get; set; }
+        public float Nota { get; set; }
     }
 }

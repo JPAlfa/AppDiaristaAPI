@@ -1,0 +1,261 @@
+10-May-2019 22:19:26.579 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10-May-2019 22:19:29.560 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+10-May-2019 22:19:29.560 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+10-May-2019 22:19:29.761 -03:00 [INF] Request finished in 184.9964ms 200 
+10-May-2019 22:19:30.087 -03:00 [WRN] Failed to determine the https port for redirect.
+10-May-2019 22:19:30.505 -03:00 [INF] Request finished in 947.8375ms 404 
+10-May-2019 22:19:40.607 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:19:40.766 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:19:40.796 -03:00 [INF] Authorization failed.
+10-May-2019 22:19:40.804 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+10-May-2019 22:19:40.818 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+10-May-2019 22:19:40.837 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+10-May-2019 22:19:40.843 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 70.701000000000008ms
+10-May-2019 22:19:40.849 -03:00 [INF] Request finished in 241.9741ms 401 
+10-May-2019 22:19:52.810 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+10-May-2019 22:19:52.819 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+10-May-2019 22:19:53.510 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+10-May-2019 22:19:53.796 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+10-May-2019 22:19:54.419 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+10-May-2019 22:19:54.555 -03:00 [INF] Executed DbCommand (93ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+10-May-2019 22:19:54.717 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1202.4471ms.
+10-May-2019 22:19:54.729 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+10-May-2019 22:19:54.747 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 1927.9022ms
+10-May-2019 22:19:54.759 -03:00 [INF] Request finished in 1948.914ms 200 application/json; charset=utf-8
+10-May-2019 22:20:20.420 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:20:20.487 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:20:20.488 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:20:20.488 -03:00 [INF] Authorization was successful.
+10-May-2019 22:20:20.502 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 13.7324ms
+10-May-2019 22:20:20.635 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27São Paulo%27, metodo = GET, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - 45d04c73-1092-48b7-bee1-adce5f7e7795","exp - 1557539394","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = BuscaDiaristaService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IBuscaDiaristaService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+10-May-2019 22:20:20.832 -03:00 [INF] Request finished in 412.6176ms 400 application/json
+10-May-2019 22:20:39.257 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:20:39.257 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:20:39.258 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:20:39.258 -03:00 [INF] Authorization was successful.
+10-May-2019 22:20:39.260 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 2.5821ms
+10-May-2019 22:20:39.326 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27São Paulo%27, metodo = GET, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - 45d04c73-1092-48b7-bee1-adce5f7e7795","exp - 1557539394","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = BuscaDiaristaService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IBuscaDiaristaService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+10-May-2019 22:20:39.327 -03:00 [INF] Request finished in 70.1784ms 400 application/json
+10-May-2019 22:20:56.042 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:20:56.043 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:20:56.043 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:20:56.043 -03:00 [INF] Authorization was successful.
+10-May-2019 22:20:56.060 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 17.363400000000002ms
+10-May-2019 22:23:00.541 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27São Paulo%27, metodo = GET, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - 45d04c73-1092-48b7-bee1-adce5f7e7795","exp - 1557539394","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = BuscaDiaristaService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IBuscaDiaristaService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.BuscaDiaristaService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IEnderecoData enderecoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista, AppDiarista.Data.Interfaces.IDiaristaData, AppDiarista.Data.Interfaces.IEnderecoData, AutoMapper.IMapper)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+10-May-2019 22:23:00.543 -03:00 [INF] Request finished in 124498.5922ms 400 application/json
+10-May-2019 22:23:04.070 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:23:04.094 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:23:04.095 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:23:04.095 -03:00 [INF] Authorization was successful.
+10-May-2019 22:23:04.096 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 1.5979ms
+10-May-2019 22:23:49.886 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10-May-2019 22:23:51.296 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+10-May-2019 22:23:51.296 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+10-May-2019 22:23:51.476 -03:00 [INF] Request finished in 166.5857ms 200 
+10-May-2019 22:23:51.653 -03:00 [WRN] Failed to determine the https port for redirect.
+10-May-2019 22:23:51.996 -03:00 [INF] Request finished in 703.276ms 404 
+10-May-2019 22:24:53.336 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:24:53.639 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:24:53.738 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:24:53.764 -03:00 [INF] Authorization was successful.
+10-May-2019 22:24:54.219 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["'São Paulo'"]) - Validation state: "Valid"
+10-May-2019 22:24:59.050 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+10-May-2019 22:24:59.592 -03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+10-May-2019 22:24:59.662 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:24:59.671 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:24:59.671 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+10-May-2019 22:24:59.672 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:24:59.672 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:24:59.754 -03:00 [INF] Executed DbCommand (71ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+10-May-2019 22:25:00.001 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Diarista.Nota'. The expected type was 'System.Single' but the actual value was of type 'System.Double'. ---> System.InvalidCastException: Unable to cast object of type 'System.Double' to type 'System.Single'.
+   at System.Data.SqlClient.SqlBuffer.get_Single()
+   at System.Data.SqlClient.SqlDataReader.GetFloat(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.WhereSelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Diarista.Nota'. The expected type was 'System.Single' but the actual value was of type 'System.Double'. ---> System.InvalidCastException: Unable to cast object of type 'System.Double' to type 'System.Single'.
+   at System.Data.SqlClient.SqlBuffer.get_Single()
+   at System.Data.SqlClient.SqlDataReader.GetFloat(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.WhereSelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+10-May-2019 22:25:00.579 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 6837.0776000000005ms
+10-May-2019 22:25:00.591 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+10-May-2019 22:26:11.013 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10-May-2019 22:26:12.319 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+10-May-2019 22:26:12.319 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+10-May-2019 22:26:12.473 -03:00 [INF] Request finished in 153.5105ms 200 
+10-May-2019 22:26:12.748 -03:00 [WRN] Failed to determine the https port for redirect.
+10-May-2019 22:26:13.024 -03:00 [INF] Request finished in 708.7636ms 404 
+10-May-2019 22:27:06.720 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:27:06.964 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:27:07.048 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:27:07.068 -03:00 [INF] Authorization was successful.
+10-May-2019 22:27:07.485 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["'São Paulo'"]) - Validation state: "Valid"
+10-May-2019 22:27:15.279 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+10-May-2019 22:27:15.965 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+10-May-2019 22:27:16.049 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:27:16.061 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:27:16.062 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+10-May-2019 22:27:16.062 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:27:16.062 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:27:16.235 -03:00 [INF] Executed DbCommand (151ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+10-May-2019 22:27:16.443 -03:00 [INF] Executed action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8948.2547000000013ms.
+10-May-2019 22:27:16.467 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+10-May-2019 22:27:16.514 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 9458.8603ms
+10-May-2019 22:27:16.527 -03:00 [INF] Request finished in 9807.5122ms 200 application/json; charset=utf-8
+10-May-2019 22:27:52.716 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:27:52.736 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:27:52.737 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:27:52.738 -03:00 [INF] Authorization was successful.
+10-May-2019 22:27:52.781 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["'São Paulo'"]) - Validation state: "Valid"
+10-May-2019 22:29:00.698 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+10-May-2019 22:29:02.129 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+10-May-2019 22:29:02.129 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+10-May-2019 22:29:02.276 -03:00 [INF] Request finished in 146.4029ms 200 
+10-May-2019 22:29:02.499 -03:00 [WRN] Failed to determine the https port for redirect.
+10-May-2019 22:29:02.885 -03:00 [INF] Request finished in 758.685ms 404 
+10-May-2019 22:29:37.042 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=%27S%C3%A3o%20Paulo%27  
+10-May-2019 22:29:37.332 -03:00 [INF] Successfully validated the token.
+10-May-2019 22:29:37.498 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+10-May-2019 22:29:37.513 -03:00 [INF] Authorization was successful.
+10-May-2019 22:29:38.039 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["'São Paulo'"]) - Validation state: "Valid"
+10-May-2019 22:29:41.563 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+10-May-2019 22:29:42.153 -03:00 [INF] Executed DbCommand (121ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+10-May-2019 22:29:43.665 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:29:43.670 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:29:43.671 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+10-May-2019 22:29:43.671 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+10-May-2019 22:29:43.672 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+10-May-2019 22:29:43.747 -03:00 [INF] Executed DbCommand (65ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]

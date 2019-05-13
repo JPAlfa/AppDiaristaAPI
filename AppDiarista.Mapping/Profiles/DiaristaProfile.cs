@@ -12,6 +12,7 @@ namespace AppDiarista.Mapping.Profiles
         public DiaristaProfile()
         {
             CreateMap<CadastroDiaristaDTO, Diarista>().ReverseMap();
+            CreateMap<DiaristaDTO, Diarista>().ReverseMap();
         }
     }
 }

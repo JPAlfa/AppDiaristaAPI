@@ -36,7 +36,7 @@ namespace AppDiarista.API.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        public async Task<IActionResult> Token(LoginDTO model)
+        public async Task<IActionResult> Token([FromBody]LoginDTO model)
         {
             return await CreateResponse(async () => await authenticationService.Autenticar(model));
         }

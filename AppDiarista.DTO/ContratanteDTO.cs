@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppDiarista.DTO
 {
-    public class DiaristaDTO
+    public class ContratanteDTO
     {
         public int Id { get; set; }
         public string Nome { get; set; }
@@ -13,7 +13,5 @@ namespace AppDiarista.DTO
         public DateTime DataNascimento { get; set; }
         public string Telefone { get; set; }
         public int IdEndereco { get; set; }
-        public double PrecoDiaria { get; set; }
-        public float Nota { get; set; }
     }
 }

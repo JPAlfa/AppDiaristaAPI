@@ -326,3 +326,52 @@ FROM [dbo].[Diarista] AS [x]
 12-May-2019 22:31:03.781 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
 12-May-2019 22:31:03.790 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 4092.4246000000003ms
 12-May-2019 22:31:03.791 -03:00 [INF] Request finished in 4188.9945ms 200 application/json; charset=utf-8
+12-May-2019 23:22:55.511 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 23:23:05.420 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 23:23:06.661 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 23:23:06.936 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 23:23:07.403 -03:00 [INF] Request finished in 745.0584ms 404 
+12-May-2019 23:23:50.858 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 23:23:52.637 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 23:23:52.637 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 23:23:52.851 -03:00 [INF] Request finished in 215.7421ms 200 
+12-May-2019 23:23:53.092 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 23:23:53.476 -03:00 [INF] Request finished in 843.8342ms 404 
+12-May-2019 23:32:34.235 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+12-May-2019 23:32:34.348 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+12-May-2019 23:32:35.345 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+12-May-2019 23:32:35.885 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 23:32:37.109 -03:00 [INF] Executed DbCommand (216ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 23:32:37.466 -03:00 [INF] Executed DbCommand (224ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 23:32:37.817 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2457.9077ms.
+12-May-2019 23:32:37.841 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 23:32:37.884 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 3529.8176000000003ms
+12-May-2019 23:32:37.920 -03:00 [INF] Request finished in 3685.0142ms 200 application/json; charset=utf-8
+12-May-2019 23:33:58.486 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+12-May-2019 23:34:00.156 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+12-May-2019 23:34:00.156 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+12-May-2019 23:34:00.326 -03:00 [INF] Request finished in 172.2378ms 200 
+12-May-2019 23:34:00.613 -03:00 [WRN] Failed to determine the https port for redirect.
+12-May-2019 23:34:00.994 -03:00 [INF] Request finished in 843.2705ms 404 
+12-May-2019 23:34:41.452 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+12-May-2019 23:34:41.564 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+12-May-2019 23:34:42.251 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+12-May-2019 23:34:42.540 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+12-May-2019 23:34:43.265 -03:00 [INF] Executed DbCommand (76ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 23:34:43.446 -03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+12-May-2019 23:34:43.680 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1418.295ms.
+12-May-2019 23:34:43.708 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+12-May-2019 23:34:43.757 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2188.0747ms
+12-May-2019 23:34:43.773 -03:00 [INF] Request finished in 2320.4539ms 200 application/json; charset=utf-8

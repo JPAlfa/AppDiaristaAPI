@@ -12,6 +12,7 @@ namespace AppDiarista.Mapping.Profiles
         public ContratanteProfile()
         {
             CreateMap<CadastroContratanteDTO, Contratante>().ReverseMap();
+            CreateMap<ContratanteDTO, Contratante>().ReverseMap();
         }
     }
 }

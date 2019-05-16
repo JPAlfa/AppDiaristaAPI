@@ -11,8 +11,12 @@ namespace AppDiarista.Mapping.Profiles
     {
         public EnderecoProfile()
         {
-            CreateMap<CadastroContratanteDTO, Endereco>().ReverseMap();
-            CreateMap<CadastroDiaristaDTO, Endereco>().ReverseMap();
+            CreateMap<ContratanteEEnderecoDTO, Endereco>()
+                .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.IdEndereco))
+                .ReverseMap();
+            CreateMap<DiaristaEEnderecoDTO, Endereco>()
+                .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.IdEndereco))
+                .ReverseMap();
         }
     }
 }

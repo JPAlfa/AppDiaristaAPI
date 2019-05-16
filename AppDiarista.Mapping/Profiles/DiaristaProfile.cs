@@ -11,7 +11,9 @@ namespace AppDiarista.Mapping.Profiles
     {
         public DiaristaProfile()
         {
-            CreateMap<CadastroDiaristaDTO, Diarista>().ReverseMap();
+            CreateMap<DiaristaEEnderecoDTO, Diarista>()
+                .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.IdDiarista))
+                .ReverseMap();
             CreateMap<DiaristaDTO, Diarista>().ReverseMap();
         }
     }

@@ -45,7 +45,7 @@ namespace AppDiarista.ServiceApplication
 
         #region Métodos Públicos
 
-        public async Task<int> InserirContratante(CadastroContratanteDTO item)
+        public async Task<int> InserirContratante(ContratanteEEnderecoDTO item)
         {
             if (!(await cadastroBusiness.VerificaPermiteCadastrarContratanteBanco(item.Email)))
                 return 0; 
@@ -54,7 +54,7 @@ namespace AppDiarista.ServiceApplication
             return await InserirContratanteBanco(item, enderecoCriar); ;
         }
 
-        public async Task<int> InserirDiarista(CadastroDiaristaDTO item)
+        public async Task<int> InserirDiarista(DiaristaEEnderecoDTO item)
         {
             if (!(await cadastroBusiness.VerificaPermiteCadastrarDiaristaBanco(item.Email)))
                 return 0;
@@ -67,7 +67,7 @@ namespace AppDiarista.ServiceApplication
 
         #region Métodos Privados
 
-        private async Task<int> InserirContratanteBanco(CadastroContratanteDTO item, Data.Models.Endereco enderecoCriar)
+        private async Task<int> InserirContratanteBanco(ContratanteEEnderecoDTO item, Data.Models.Endereco enderecoCriar)
         {
             var contratanteCriar = mapper.Map<Data.Models.Contratante>(item);
             contratanteCriar.IdEndereco = enderecoCriar.Id;
@@ -77,7 +77,7 @@ namespace AppDiarista.ServiceApplication
             return contratanteCriar.Id;
         }
 
-        private async Task<int> InserirDiaristaBanco(CadastroDiaristaDTO item, Data.Models.Endereco enderecoCriar)
+        private async Task<int> InserirDiaristaBanco(DiaristaEEnderecoDTO item, Data.Models.Endereco enderecoCriar)
         {
             var diaristaCriar = mapper.Map<Data.Models.Diarista>(item);
             diaristaCriar.IdEndereco = enderecoCriar.Id;
@@ -88,7 +88,7 @@ namespace AppDiarista.ServiceApplication
             return diaristaCriar.Id;
         }
 
-        private async Task<Data.Models.Endereco> InserirEnderecoBanco(CadastroContratanteDTO item)
+        private async Task<Data.Models.Endereco> InserirEnderecoBanco(ContratanteEEnderecoDTO item)
         {
             var enderecoCriar = mapper.Map<Data.Models.Endereco>(item);
             this.uowAppDiarista.Endereco.Add(enderecoCriar);
@@ -96,7 +96,7 @@ namespace AppDiarista.ServiceApplication
             return enderecoCriar;
         }
 
-        private async Task<Data.Models.Endereco> InserirEnderecoBanco(CadastroDiaristaDTO item)
+        private async Task<Data.Models.Endereco> InserirEnderecoBanco(DiaristaEEnderecoDTO item)
         {
             var enderecoCriar = mapper.Map<Data.Models.Endereco>(item);
             this.uowAppDiarista.Endereco.Add(enderecoCriar);

@@ -40,14 +40,14 @@ namespace AppDiarista.API.Controllers
 
         [HttpPost("Contratante")]
         [AllowAnonymous]
-        public async Task<IActionResult> Post([FromBody]CadastroContratanteDTO model)
+        public async Task<IActionResult> Post([FromBody]ContratanteEEnderecoDTO model)
         {
             return await CreateResponse(async () => await cadastroService.InserirContratante(model));
         }
 
         [HttpPost("Diarista")]
         [AllowAnonymous]
-        public async Task<IActionResult> Post([FromBody]CadastroDiaristaDTO model)
+        public async Task<IActionResult> Post([FromBody]DiaristaEEnderecoDTO model)
         {
             return await CreateResponse(async () => await cadastroService.InserirDiarista(model));
         }

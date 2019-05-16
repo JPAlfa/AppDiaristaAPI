@@ -49,6 +49,7 @@ namespace AppDiarista.IOC
         private static void RegistrarServiceApplication(ContainerBuilder builder)
         {
             builder.RegisterType<IntencaoService>().As<IIntencaoService>().InstancePerLifetimeScope();
+            builder.RegisterType<PerfilService>().As<IPerfilService>().InstancePerLifetimeScope();
             builder.RegisterType<BuscaDiaristaService>().As<IBuscaDiaristaService>().InstancePerLifetimeScope();
             builder.RegisterType<CadastroService>().As<ICadastroService>().InstancePerLifetimeScope();
             builder.RegisterType<CriptografiaService>().As<ICriptografiaService>().InstancePerLifetimeScope();

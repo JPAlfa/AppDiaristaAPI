@@ -7,7 +7,7 @@ namespace AppDiarista.DTO
     public class UsuarioLogadoDTO
     {
         public string Token { get; set; }
-        public DiaristaDTO Diarista { get; set; }
-        public ContratanteDTO Contratante { get; set; }
+        public DiaristaEEnderecoDTO Diarista { get; set; }
+        public ContratanteEEnderecoDTO Contratante { get; set; }
     }
 }

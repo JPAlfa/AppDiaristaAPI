@@ -1,0 +1,26 @@
+15-May-2019 18:37:49.541 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+15-May-2019 18:37:51.768 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+15-May-2019 18:37:51.768 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+15-May-2019 18:37:52.008 -03:00 [INF] Request finished in 222.9946ms 200 
+15-May-2019 18:37:52.274 -03:00 [WRN] Failed to determine the https port for redirect.
+15-May-2019 18:37:52.646 -03:00 [INF] Request finished in 881.2699ms 404 
+15-May-2019 18:40:57.135 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+15-May-2019 18:40:57.224 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+15-May-2019 18:40:57.948 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+15-May-2019 18:40:58.197 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+15-May-2019 18:40:58.725 -03:00 [INF] Executed DbCommand (83ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+15-May-2019 18:40:58.917 -03:00 [INF] Executed DbCommand (149ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+15-May-2019 18:40:59.096 -03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+15-May-2019 18:40:59.176 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1221.9054ms.
+15-May-2019 18:40:59.189 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+15-May-2019 18:40:59.229 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2001.2387ms
+15-May-2019 18:40:59.237 -03:00 [INF] Request finished in 2103.6203ms 200 application/json; charset=utf-8

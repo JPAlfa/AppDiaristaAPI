@@ -1,0 +1,1271 @@
+16-May-2019 09:36:53.430 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 09:36:57.143 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 09:36:57.143 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 09:36:57.627 -03:00 [INF] Request finished in 484.9478ms 200 
+16-May-2019 09:36:58.400 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 09:36:59.161 -03:00 [INF] Request finished in 2023.8212ms 404 
+16-May-2019 09:41:45.708 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:41:45.834 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:41:46.744 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:41:47.093 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:41:47.918 -03:00 [INF] Executed DbCommand (81ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:41:48.062 -03:00 [INF] Executed DbCommand (94ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:41:48.285 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 09:41:48.383 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1629.8855ms.
+16-May-2019 09:41:48.405 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:41:48.439 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2601.1799ms
+16-May-2019 09:41:48.450 -03:00 [INF] Request finished in 2741.8727ms 200 application/json; charset=utf-8
+16-May-2019 09:45:05.718 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 09:45:08.240 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 09:45:08.240 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 09:45:08.491 -03:00 [INF] Request finished in 230.103ms 200 
+16-May-2019 09:45:08.769 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 09:45:09.306 -03:00 [INF] Request finished in 1070.3659ms 404 
+16-May-2019 09:46:08.549 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:46:08.676 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:46:09.480 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:46:09.725 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:46:10.266 -03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:46:10.421 -03:00 [INF] Executed DbCommand (90ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:46:10.701 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 09:46:10.834 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1343.73ms.
+16-May-2019 09:46:10.855 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:46:10.895 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2215.3785000000003ms
+16-May-2019 09:46:10.906 -03:00 [INF] Request finished in 2356.8589ms 200 application/json; charset=utf-8
+16-May-2019 09:48:36.033 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 09:48:37.489 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:48:37.489 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 09:48:37.489 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 09:48:37.634 -03:00 [INF] Request finished in 144.5697ms 200 
+16-May-2019 09:48:37.906 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 09:48:38.305 -03:00 [INF] Request finished in 819.1161ms 404 
+16-May-2019 09:48:38.533 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:48:39.452 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:48:39.756 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:48:40.268 -03:00 [INF] Executed DbCommand (74ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:48:40.441 -03:00 [INF] Executed DbCommand (111ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:48:40.771 -03:00 [INF] Executed DbCommand (116ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 09:48:40.879 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1419.5393000000001ms.
+16-May-2019 09:48:40.900 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:48:40.948 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2407.6361ms
+16-May-2019 09:48:40.961 -03:00 [INF] Request finished in 3475.088ms 200 application/json; charset=utf-8
+16-May-2019 09:50:32.176 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 09:50:33.499 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 09:50:33.499 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 09:50:33.640 -03:00 [INF] Request finished in 142.6342ms 200 
+16-May-2019 09:50:33.825 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 09:50:34.193 -03:00 [INF] Request finished in 698.5729ms 404 
+16-May-2019 09:50:54.388 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:50:54.478 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:50:55.144 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:50:55.438 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:50:55.957 -03:00 [INF] Executed DbCommand (134ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:50:56.129 -03:00 [INF] Executed DbCommand (122ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:50:56.415 -03:00 [INF] Executed DbCommand (102ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 09:50:56.512 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1360.7346ms.
+16-May-2019 09:50:56.532 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:50:56.562 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2078.9882000000002ms
+16-May-2019 09:50:56.573 -03:00 [INF] Request finished in 2185.3872ms 200 application/json; charset=utf-8
+16-May-2019 09:51:48.592 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 73
+16-May-2019 09:51:48.594 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:51:48.661 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:51:48.662 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:51:48.825 -03:00 [INF] Executed DbCommand (160ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:51:48.918 -03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:51:49.012 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 350.53520000000003ms.
+16-May-2019 09:51:49.012 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:51:49.016 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 422.3349ms
+16-May-2019 09:51:49.017 -03:00 [INF] Request finished in 424.2432ms 400 application/json; charset=utf-8
+16-May-2019 09:52:32.495 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 80
+16-May-2019 09:52:32.497 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:52:32.544 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:52:32.544 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:52:32.640 -03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:52:32.758 -03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:52:32.758 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 214.71890000000002ms.
+16-May-2019 09:52:32.759 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:52:32.759 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 261.8336ms
+16-May-2019 09:52:32.759 -03:00 [INF] Request finished in 264.0261ms 400 application/json; charset=utf-8
+16-May-2019 09:53:02.340 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 85
+16-May-2019 09:53:02.341 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:53:02.376 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:53:02.377 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:53:02.431 -03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:53:02.495 -03:00 [INF] Executed DbCommand (53ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:53:02.495 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 119.0742ms.
+16-May-2019 09:53:02.495 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:53:02.496 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 155.0615ms
+16-May-2019 09:53:02.496 -03:00 [INF] Request finished in 155.6564ms 400 application/json; charset=utf-8
+16-May-2019 09:54:37.640 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/diarista application/json 364
+16-May-2019 09:54:37.654 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+16-May-2019 09:54:37.722 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 09:54:37.731 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:54:37.860 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Diarista] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+16-May-2019 09:54:38.096 -03:00 [INF] Executed DbCommand (99ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+16-May-2019 09:54:38.270 -03:00 [INF] Executed DbCommand (91ms) [Parameters=[@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Diarista] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Nota], [PrecoDiaria], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+SELECT [Id]
+FROM [dbo].[Diarista]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+16-May-2019 09:54:38.274 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 552.03140000000008ms.
+16-May-2019 09:54:38.275 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:54:38.275 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 620.703ms
+16-May-2019 09:54:38.275 -03:00 [INF] Request finished in 636.189ms 200 application/json; charset=utf-8
+16-May-2019 09:55:03.618 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:55:03.619 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:55:03.666 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:55:03.666 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:55:03.718 -03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:55:03.849 -03:00 [INF] Executed DbCommand (120ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:55:03.877 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 210.5968ms.
+16-May-2019 09:55:03.877 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:55:03.877 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 257.7463ms
+16-May-2019 09:55:03.877 -03:00 [INF] Request finished in 258.8279ms 400 application/json; charset=utf-8
+16-May-2019 09:56:55.598 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 09:56:57.092 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 09:56:57.092 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 09:56:57.092 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 09:56:57.338 -03:00 [INF] Request finished in 245.4429ms 200 
+16-May-2019 09:56:57.659 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 09:56:58.051 -03:00 [INF] Request finished in 961.9358ms 404 
+16-May-2019 09:56:58.287 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 09:56:59.257 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 09:57:03.402 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:57:04.048 -03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 09:57:18.686 -03:00 [INF] Executed DbCommand (87ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 09:57:18.778 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19513.6041ms.
+16-May-2019 09:57:18.798 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:57:18.830 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 20539.3419ms
+16-May-2019 09:57:18.838 -03:00 [INF] Request finished in 21748.5492ms 200 application/json; charset=utf-8
+16-May-2019 09:58:50.187 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+16-May-2019 09:58:50.263 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+16-May-2019 09:58:50.595 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+16-May-2019 09:58:50.602 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+16-May-2019 09:58:50.610 -03:00 [INF] Authorization failed.
+16-May-2019 09:58:50.613 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+16-May-2019 09:58:50.617 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+16-May-2019 09:58:50.627 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+16-May-2019 09:58:50.627 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 24.394000000000002ms
+16-May-2019 09:58:50.627 -03:00 [INF] Request finished in 440.285ms 401 
+16-May-2019 09:59:05.431 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/BuscaDiarista/PorCidade?cidade=S%C3%A3o%20Paulo  
+16-May-2019 09:59:05.466 -03:00 [INF] Successfully validated the token.
+16-May-2019 09:59:05.470 -03:00 [INF] Route matched with {action = "Get", controller = "BuscaDiarista"}. Executing action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API)
+16-May-2019 09:59:05.470 -03:00 [INF] Authorization was successful.
+16-May-2019 09:59:05.519 -03:00 [INF] Executing action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) with arguments (["São Paulo"]) - Validation state: "Valid"
+16-May-2019 09:59:05.528 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 09:59:05.657 -03:00 [INF] Executed DbCommand (70ms) [Parameters=[@__cidade_0='?' (Size = 150)], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cep], [x].[Cidade], [x].[Complemento], [x].[Estado], [x].[Logradouro], [x].[Numero]
+FROM [dbo].[Endereco] AS [x]
+WHERE [x].[Cidade] = @__cidade_0
+16-May-2019 09:59:05.685 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+16-May-2019 09:59:05.693 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+16-May-2019 09:59:05.695 -03:00 [WRN] The LINQ expression 'where {from Endereco y in __enderecos_0 where ([y].Id == [x].IdEndereco) select [y] => Any()}' could not be translated and will be evaluated locally.
+16-May-2019 09:59:05.695 -03:00 [WRN] The LINQ expression 'where ([y].Id == [x].IdEndereco)' could not be translated and will be evaluated locally.
+16-May-2019 09:59:05.699 -03:00 [WRN] The LINQ expression 'Any()' could not be translated and will be evaluated locally.
+16-May-2019 09:59:05.790 -03:00 [INF] Executed DbCommand (76ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [x].[Id], [x].[Cpf], [x].[DataNascimento], [x].[Email], [x].[IdEndereco], [x].[Nome], [x].[Nota], [x].[PrecoDiaria], [x].[Senha], [x].[Telefone]
+FROM [dbo].[Diarista] AS [x]
+16-May-2019 09:59:05.831 -03:00 [INF] Executed action method AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 312.312ms.
+16-May-2019 09:59:05.831 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 09:59:05.837 -03:00 [INF] Executed action AppDiarista.API.Controllers.BuscaDiaristaController.Get (AppDiarista.API) in 366.8336ms
+16-May-2019 09:59:05.837 -03:00 [INF] Request finished in 405.9379ms 200 application/json; charset=utf-8
+16-May-2019 10:02:00.101 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 10:02:00.102 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:02:00.141 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:02:02.708 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:02:02.792 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:02:02.896 -03:00 [INF] Executed DbCommand (78ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:02:03.017 -03:00 [INF] Executed DbCommand (72ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:02:03.024 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2882.8319ms.
+16-May-2019 10:02:03.024 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:02:03.029 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2927.4206ms
+16-May-2019 10:02:03.029 -03:00 [INF] Request finished in 2928.1742ms 200 application/json; charset=utf-8
+16-May-2019 10:02:28.318 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 440
+16-May-2019 10:02:28.325 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:02:28.325 -03:00 [INF] Authorization failed.
+16-May-2019 10:02:28.325 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+16-May-2019 10:02:28.325 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+16-May-2019 10:02:28.325 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+16-May-2019 10:02:28.325 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) in 0.59210000000000007ms
+16-May-2019 10:02:28.325 -03:00 [INF] Request finished in 7.2584ms 401 
+16-May-2019 10:02:28.332 -03:00 [INF] Connection id "0HLMPVNT3DQPG", Request id "0HLMPVNT3DQPG:00000002": the application completed without reading the entire request body.
+16-May-2019 10:03:00.625 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 440
+16-May-2019 10:03:00.626 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:03:00.626 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:03:00.627 -03:00 [INF] Authorization was successful.
+16-May-2019 10:03:00.711 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:03:10.422 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:03:10.507 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:03:10.711 -03:00 [INF] Executed DbCommand (44ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:03:14.373 -03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:03:14.527 -03:00 [INF] Executed DbCommand (80ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+16-May-2019 10:03:16.324 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15612.7127ms.
+16-May-2019 10:03:16.325 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:03:16.325 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) in 15698.263400000002ms
+16-May-2019 10:03:16.325 -03:00 [INF] Request finished in 15699.4804ms 200 application/json; charset=utf-8
+16-May-2019 10:03:22.074 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 68
+16-May-2019 10:03:22.074 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:03:22.116 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:03:26.959 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:03:27.025 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:03:27.124 -03:00 [INF] Executed DbCommand (85ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:03:27.184 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 5068.4324000000006ms.
+16-May-2019 10:03:27.185 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:03:27.191 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 5116.9453ms
+16-May-2019 10:03:27.192 -03:00 [INF] Request finished in 5117.8406ms 400 application/json; charset=utf-8
+16-May-2019 10:03:54.342 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 440
+16-May-2019 10:03:54.343 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:03:54.343 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:03:54.343 -03:00 [INF] Authorization was successful.
+16-May-2019 10:03:54.384 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:04:16.047 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:04:17.258 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:04:17.258 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:04:17.391 -03:00 [INF] Request finished in 119.9727ms 200 
+16-May-2019 10:04:17.598 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:04:17.891 -03:00 [INF] Request finished in 636.8245ms 404 
+16-May-2019 10:18:19.904 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:18:20.426 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 413
+16-May-2019 10:18:20.620 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:18:20.625 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:18:20.851 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:18:20.869 -03:00 [INF] Authorization was successful.
+16-May-2019 10:18:21.049 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:18:21.314 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:18:21.578 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:18:21.722 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:18:21.765 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:18:21.818 -03:00 [ERR] Failed executing DbCommand (25ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:6c72df2c-569c-4744-b17c-afccef19819b
+Error Number:515,State:2,Class:16
+16-May-2019 10:18:21.892 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+16-May-2019 10:18:21.916 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) in 1061.2869ms
+16-May-2019 10:18:21.923 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+16-May-2019 10:18:21.951 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarContratante, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AppDiarista.Data.UnitOfWork.UOWAppDiarista.SaveChangesAsync() in C:\AppDiaristaAPI\AppDiarista.Data\UnitOfWork\UOWBotAdmin.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarContratanteBanco(Contratante itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 90
+   at AppDiarista.ServiceApplication.PerfilService.AlterarContratante(ContratanteEEnderecoDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Post(ContratanteEEnderecoDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:18:22.008 -03:00 [INF] Request finished in 1583.5918ms 400 application/json
+16-May-2019 10:18:47.210 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 413
+16-May-2019 10:18:47.211 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:18:47.213 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:18:47.215 -03:00 [INF] Authorization was successful.
+16-May-2019 10:18:47.219 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:18:47.222 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:18:47.247 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:18:47.252 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:18:47.258 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:18:47.264 -03:00 [ERR] Failed executing DbCommand (5ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+System.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:6c72df2c-569c-4744-b17c-afccef19819b
+Error Number:515,State:2,Class:16
+16-May-2019 10:18:47.269 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+16-May-2019 10:18:47.272 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) in 59.616600000000005ms
+16-May-2019 10:18:47.273 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+16-May-2019 10:18:47.273 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarContratante, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Cannot insert the value NULL into column 'Senha', table 'AppDiarista.dbo.Contratante'; column does not allow nulls. UPDATE fails.
+The statement has been terminated.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AppDiarista.Data.UnitOfWork.UOWAppDiarista.SaveChangesAsync() in C:\AppDiaristaAPI\AppDiarista.Data\UnitOfWork\UOWBotAdmin.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarContratanteBanco(Contratante itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 90
+   at AppDiarista.ServiceApplication.PerfilService.AlterarContratante(ContratanteEEnderecoDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Post(ContratanteEEnderecoDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 43
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:18:47.277 -03:00 [INF] Request finished in 66.8861ms 400 application/json
+16-May-2019 10:19:20.330 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 440
+16-May-2019 10:19:20.330 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:19:20.330 -03:00 [INF] Route matched with {action = "Post", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API)
+16-May-2019 10:19:20.331 -03:00 [INF] Authorization was successful.
+16-May-2019 10:19:20.332 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:19:20.333 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:19:20.340 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:19:20.347 -03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:19:20.351 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:19:20.359 -03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+16-May-2019 10:19:20.366 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 29.1078ms.
+16-May-2019 10:19:20.379 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:19:20.387 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Post (AppDiarista.API) in 55.9971ms
+16-May-2019 10:19:20.387 -03:00 [INF] Request finished in 57.0918ms 200 application/json; charset=utf-8
+16-May-2019 10:23:09.276 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:23:10.901 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:23:10.901 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:23:11.105 -03:00 [INF] Request finished in 206.153ms 200 
+16-May-2019 10:23:11.415 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:23:11.746 -03:00 [INF] Request finished in 853.6708ms 404 
+16-May-2019 10:23:29.901 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/contratante application/json 391
+16-May-2019 10:23:30.002 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API)
+16-May-2019 10:23:30.780 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:23:31.111 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:23:31.869 -03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Contratante] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+16-May-2019 10:23:32.145 -03:00 [INF] Executed DbCommand (101ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+16-May-2019 10:23:32.320 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+16-May-2019 10:23:32.355 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1555.2621000000001ms.
+16-May-2019 10:23:32.370 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:23:32.400 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 2392.4755ms
+16-May-2019 10:23:32.416 -03:00 [INF] Request finished in 2515.3746ms 200 application/json; charset=utf-8
+16-May-2019 10:23:51.608 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 73
+16-May-2019 10:23:51.624 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:23:51.694 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:23:51.711 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:23:51.971 -03:00 [INF] Executed DbCommand (207ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:23:52.162 -03:00 [INF] Executed DbCommand (115ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:23:52.361 -03:00 [INF] Executed DbCommand (130ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:23:52.465 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 770.33080000000007ms.
+16-May-2019 10:23:52.465 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:23:52.473 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 849.45040000000006ms
+16-May-2019 10:23:52.474 -03:00 [INF] Request finished in 865.2881ms 200 application/json; charset=utf-8
+16-May-2019 10:24:32.890 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 483
+16-May-2019 10:24:32.965 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:24:32.974 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:24:32.984 -03:00 [INF] Authorization was successful.
+16-May-2019 10:24:33.026 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:24:37.016 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:24:37.079 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:24:37.150 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:24:37.228 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:24:37.292 -03:00 [INF] Executed DbCommand (61ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+16-May-2019 10:24:37.295 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4268.3605ms.
+16-May-2019 10:24:37.295 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:24:37.295 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 4321.1325000000006ms
+16-May-2019 10:24:37.295 -03:00 [INF] Request finished in 4405.5289ms 200 application/json; charset=utf-8
+16-May-2019 10:24:53.228 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 73
+16-May-2019 10:24:53.228 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:24:53.278 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:24:53.279 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:24:53.331 -03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:24:53.392 -03:00 [INF] Executed DbCommand (60ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:24:53.530 -03:00 [INF] Executed DbCommand (118ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:24:53.531 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 252.7048ms.
+16-May-2019 10:24:53.532 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:24:53.532 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 303.5015ms
+16-May-2019 10:24:53.532 -03:00 [INF] Request finished in 304.3991ms 200 application/json; charset=utf-8
+16-May-2019 10:25:03.271 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 477
+16-May-2019 10:25:03.272 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:25:03.273 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:25:03.274 -03:00 [INF] Authorization was successful.
+16-May-2019 10:25:03.352 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:25:06.296 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:25:06.362 -03:00 [INF] Executed DbCommand (63ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:25:06.423 -03:00 [INF] Executed DbCommand (61ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:25:06.489 -03:00 [INF] Executed DbCommand (57ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:25:06.571 -03:00 [INF] Executed DbCommand (81ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+16-May-2019 10:25:06.574 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3221.7649ms.
+16-May-2019 10:25:06.574 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:25:06.574 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 3301.0322ms
+16-May-2019 10:25:06.575 -03:00 [INF] Request finished in 3303.2342ms 200 application/json; charset=utf-8
+16-May-2019 10:26:41.414 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 85
+16-May-2019 10:26:41.415 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:26:41.453 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:26:41.453 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:26:41.514 -03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:26:41.660 -03:00 [INF] Executed DbCommand (91ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:26:41.679 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 226.3484ms.
+16-May-2019 10:26:41.679 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:26:41.685 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 270.0513ms
+16-May-2019 10:26:41.685 -03:00 [INF] Request finished in 270.896ms 200 application/json; charset=utf-8
+16-May-2019 10:27:39.446 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarDiarista application/json 490
+16-May-2019 10:27:39.446 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:27:39.447 -03:00 [INF] Request finished in 1.0453ms 404 
+16-May-2019 10:27:39.451 -03:00 [INF] Connection id "0HLMQ06I4RTH2", Request id "0HLMQ06I4RTH2:00000002": the application completed without reading the entire request body.
+16-May-2019 10:28:37.528 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:28:39.626 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:28:39.626 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:28:39.862 -03:00 [INF] Request finished in 238.3968ms 200 
+16-May-2019 10:28:40.165 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:28:40.588 -03:00 [INF] Request finished in 965.0773ms 404 
+16-May-2019 10:32:21.732 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarDiarista application/json 490
+16-May-2019 10:32:22.025 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:32:22.116 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:32:22.131 -03:00 [INF] Authorization was successful.
+16-May-2019 10:32:22.614 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaEEnderecoDTO"]) - Validation state: "Valid"
+16-May-2019 10:32:23.029 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:32:23.500 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:32:23.794 -03:00 [INF] Executed DbCommand (116ms) [Parameters=[@p6='?' (DbType = Int32), @p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Endereco] SET [Cep] = @p0, [Cidade] = @p1, [Complemento] = @p2, [Estado] = @p3, [Logradouro] = @p4, [Numero] = @p5
+WHERE [Id] = @p6;
+SELECT @@ROWCOUNT;
+16-May-2019 10:32:23.974 -03:00 [INF] Executed DbCommand (112ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:32:24.128 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Diarista] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Nota] = @p5, [PrecoDiaria] = @p6, [Senha] = @p7, [Telefone] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+16-May-2019 10:32:24.140 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1514.7173ms.
+16-May-2019 10:32:24.155 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:32:24.180 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 2059.5416ms
+16-May-2019 10:32:24.190 -03:00 [INF] Request finished in 2458.5232ms 200 application/json; charset=utf-8
+16-May-2019 10:32:57.168 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 435
+16-May-2019 10:32:57.168 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:32:57.174 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:32:57.175 -03:00 [INF] Authorization was successful.
+16-May-2019 10:32:57.233 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:32:57.265 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:32:57.427 -03:00 [INF] Executed DbCommand (141ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:32:58.162 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 987.2998ms
+16-May-2019 10:32:58.563 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaDiarista, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiaristaBanco(Diarista itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 102
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiarista(DiaristaDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 66
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass5_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(DiaristaDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:32:58.899 -03:00 [INF] Request finished in 1731.4799ms 400 application/json
+16-May-2019 10:33:13.273 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 258
+16-May-2019 10:33:13.274 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:33:13.274 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:33:13.274 -03:00 [INF] Authorization was successful.
+16-May-2019 10:33:13.332 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:33:13.334 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:33:13.402 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:33:13.961 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 686.3903ms
+16-May-2019 10:33:14.173 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaDiarista, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiaristaBanco(Diarista itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 102
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiarista(DiaristaDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 66
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass5_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(DiaristaDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:33:14.175 -03:00 [INF] Request finished in 901.7768ms 400 application/json
+16-May-2019 10:33:32.164 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 258
+16-May-2019 10:33:32.166 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:33:32.166 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:33:32.166 -03:00 [INF] Authorization was successful.
+16-May-2019 10:33:32.205 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:33:38.127 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:33:38.182 -03:00 [INF] Executed DbCommand (54ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:34:37.967 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:34:39.558 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:34:39.558 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:34:39.655 -03:00 [INF] Request finished in 98.5026ms 200 
+16-May-2019 10:34:40.032 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:34:40.436 -03:00 [INF] Request finished in 882.3752ms 404 
+16-May-2019 10:34:55.076 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 250
+16-May-2019 10:34:55.372 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:34:55.453 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:34:55.468 -03:00 [INF] Authorization was successful.
+16-May-2019 10:34:55.934 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:35:44.045 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:35:44.822 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 272
+16-May-2019 10:35:45.008 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:35:45.022 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:35:45.231 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:35:45.251 -03:00 [INF] Authorization was successful.
+16-May-2019 10:35:45.480 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:35:45.748 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:35:46.012 -03:00 [INF] Executed DbCommand (17ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:35:46.126 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 891.8237ms
+16-May-2019 10:35:46.140 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaDiarista, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiaristaBanco(Diarista itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 102
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiarista(DiaristaDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 66
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass5_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(DiaristaDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:35:46.242 -03:00 [INF] Request finished in 1422.5327ms 400 application/json
+16-May-2019 10:36:01.399 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:36:01.403 -03:00 [INF] Request finished in 3.8859ms 404 
+16-May-2019 10:36:30.160 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaD application/json 272
+16-May-2019 10:36:30.161 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:36:30.161 -03:00 [INF] Request finished in 1.0086ms 404 
+16-May-2019 10:36:30.256 -03:00 [INF] Connection id "0HLMQ0DISJ6VQ", Request id "0HLMQ0DISJ6VQ:00000003": the application completed without reading the entire request body.
+16-May-2019 10:36:50.215 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 272
+16-May-2019 10:36:50.215 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:36:50.216 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:36:50.216 -03:00 [INF] Authorization was successful.
+16-May-2019 10:36:50.418 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:38:25.300 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:38:25.409 -03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:38:26.061 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 95843.0558ms
+16-May-2019 10:38:26.427 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaDiarista, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - joaosilva@gmail.com","jti - e131a35b-21ed-4345-84a4-b81e11f81a29","exp - 1558013523","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiaristaBanco(Diarista itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 102
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiarista(DiaristaDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 66
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass5_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(DiaristaDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:38:26.431 -03:00 [INF] Request finished in 96213.9325ms 400 application/json
+16-May-2019 10:38:30.183 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 287
+16-May-2019 10:38:30.193 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+16-May-2019 10:38:30.281 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+16-May-2019 10:38:30.281 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:38:30.281 -03:00 [INF] Authorization failed.
+16-May-2019 10:38:30.282 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+16-May-2019 10:38:30.287 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+16-May-2019 10:38:30.295 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+16-May-2019 10:38:30.295 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 13.577200000000001ms
+16-May-2019 10:38:30.295 -03:00 [INF] Request finished in 112.543ms 401 
+16-May-2019 10:38:30.296 -03:00 [INF] Connection id "0HLMQ0DISJ6VQ", Request id "0HLMQ0DISJ6VQ:00000005": the application completed without reading the entire request body.
+16-May-2019 10:38:41.294 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 85
+16-May-2019 10:38:41.318 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:38:41.379 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:38:41.391 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:38:41.489 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:38:41.591 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:38:41.638 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 253.6278ms.
+16-May-2019 10:38:41.649 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:38:41.671 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 353.2638ms
+16-May-2019 10:38:41.671 -03:00 [INF] Request finished in 377.7036ms 200 application/json; charset=utf-8
+16-May-2019 10:39:41.035 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 287
+16-May-2019 10:39:41.036 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:39:41.037 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:39:41.037 -03:00 [INF] Authorization was successful.
+16-May-2019 10:39:41.095 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:39:49.469 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:39:49.539 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:40:36.850 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 55811.927200000006ms
+16-May-2019 10:40:37.109 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaDiarista, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - alinemilenacosta-83@prohaska.com.br","jti - 5309c151-f4e2-4000-9bc3-24ac53a15832","exp - 1558015721","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiaristaBanco(Diarista itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 102
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaDiarista(DiaristaDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 66
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass5_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(DiaristaDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 61
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:40:37.111 -03:00 [INF] Request finished in 56074.9036ms 400 application/json
+16-May-2019 10:40:38.971 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 287
+16-May-2019 10:40:38.972 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:40:38.972 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:40:38.972 -03:00 [INF] Authorization was successful.
+16-May-2019 10:40:39.015 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:41:32.778 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:41:34.449 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:41:34.449 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:41:34.449 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 287
+16-May-2019 10:41:34.587 -03:00 [INF] Request finished in 139.2112ms 200 
+16-May-2019 10:41:34.838 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:41:35.319 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:41:35.364 -03:00 [INF] Request finished in 919.6407ms 404 
+16-May-2019 10:41:35.545 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:41:35.590 -03:00 [INF] Authorization was successful.
+16-May-2019 10:41:36.728 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.DiaristaDTO"]) - Validation state: "Valid"
+16-May-2019 10:41:49.368 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:41:50.138 -03:00 [INF] Executed DbCommand (202ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:41:50.985 -03:00 [INF] Executed DbCommand (477ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Diarista] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Nota] = @p5, [PrecoDiaria] = @p6, [Senha] = @p7, [Telefone] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+16-May-2019 10:41:51.022 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 14278.0917ms.
+16-May-2019 10:41:51.109 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:41:51.156 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 15598.5318ms
+16-May-2019 10:41:51.171 -03:00 [INF] Request finished in 16726.489ms 200 application/json; charset=utf-8
+16-May-2019 10:42:05.312 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 84
+16-May-2019 10:42:05.324 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:42:05.374 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:42:05.383 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:42:05.487 -03:00 [INF] Executed DbCommand (86ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:42:05.615 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:42:05.647 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 273.0913ms.
+16-May-2019 10:42:05.648 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:42:05.664 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 340.5368ms
+16-May-2019 10:42:05.665 -03:00 [INF] Request finished in 352.9662ms 200 application/json; charset=utf-8
+16-May-2019 10:43:09.139 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 252
+16-May-2019 10:43:09.140 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:43:09.146 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:43:09.147 -03:00 [INF] Authorization was successful.
+16-May-2019 10:43:09.192 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteDTO"]) - Validation state: "Valid"
+16-May-2019 10:43:09.201 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:43:09.286 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:43:09.869 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 722.7147ms
+16-May-2019 10:43:10.129 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaContratante, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - alinemilenacosta-83@prohaska.com.br","jti - 5309c151-f4e2-4000-9bc3-24ac53a15832","exp - 1558015721","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: password
+   at Microsoft.AspNetCore.Cryptography.KeyDerivation.KeyDerivation.Pbkdf2(String password, Byte[] salt, KeyDerivationPrf prf, Int32 iterationCount, Int32 numBytesRequested)
+   at AppDiarista.ServiceApplication.CriptografiaService.HashearSenha(String senha) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\CriptografiaService.cs:line 28
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratanteBanco(Contratante itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 130
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratante(ContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 71
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass4_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(ContratanteDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:43:10.259 -03:00 [INF] Request finished in 1119.4149ms 400 application/json
+16-May-2019 10:43:53.113 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+16-May-2019 10:43:54.470 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+16-May-2019 10:43:54.470 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+16-May-2019 10:43:54.594 -03:00 [INF] Request finished in 122.6732ms 200 
+16-May-2019 10:43:54.817 -03:00 [WRN] Failed to determine the https port for redirect.
+16-May-2019 10:43:55.169 -03:00 [INF] Request finished in 702.5647ms 404 
+16-May-2019 10:44:08.522 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 252
+16-May-2019 10:44:08.810 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:44:08.970 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:44:08.987 -03:00 [INF] Authorization was successful.
+16-May-2019 10:44:09.431 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteDTO"]) - Validation state: "Valid"
+16-May-2019 10:44:09.762 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:44:10.214 -03:00 [INF] Executed DbCommand (74ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:44:10.881 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 1906.9335ms
+16-May-2019 10:44:11.153 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaContratante, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - alinemilenacosta-83@prohaska.com.br","jti - 5309c151-f4e2-4000-9bc3-24ac53a15832","exp - 1558015721","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratanteBanco(Contratante itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 131
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratante(ContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 71
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass4_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(ContratanteDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:44:11.270 -03:00 [INF] Request finished in 2748.1114ms 400 application/json
+16-May-2019 10:44:29.880 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 252
+16-May-2019 10:44:29.884 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:44:29.885 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:44:29.886 -03:00 [INF] Authorization was successful.
+16-May-2019 10:44:29.952 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteDTO"]) - Validation state: "Valid"
+16-May-2019 10:44:43.423 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:44:43.615 -03:00 [INF] Executed DbCommand (188ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:45:12.726 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 42839.539300000004ms
+16-May-2019 10:45:12.919 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Perfil/AlterarSenhaContratante, metodo = PUT, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - alinemilenacosta-83@prohaska.com.br","jti - 5309c151-f4e2-4000-9bc3-24ac53a15832","exp - 1558015721","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.ArgumentNullException: Value cannot be null.
+Parameter name: entity
+   at Microsoft.EntityFrameworkCore.Utilities.Check.NotNull[T](T value, String parameterName)
+   at Microsoft.EntityFrameworkCore.DbContext.Entry[TEntity](TEntity entity)
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratanteBanco(Contratante itemAlterar) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 131
+   at AppDiarista.ServiceApplication.PerfilService.AlterarSenhaContratante(ContratanteDTO item) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\PerfilService.cs:line 71
+   at AppDiarista.API.Controllers.PerfilController.<>c__DisplayClass4_0.<<Put>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.PerfilController.Put(ContratanteDTO model) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\PerfilController.cs:line 55
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+16-May-2019 10:45:12.923 -03:00 [INF] Request finished in 43042.7333ms 400 application/json
+16-May-2019 10:45:15.350 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 241
+16-May-2019 10:45:15.358 -03:00 [INF] Successfully validated the token.
+16-May-2019 10:45:15.358 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API)
+16-May-2019 10:45:15.358 -03:00 [INF] Authorization was successful.
+16-May-2019 10:45:15.418 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) with arguments (["AppDiarista.DTO.ContratanteDTO"]) - Validation state: "Valid"
+16-May-2019 10:45:23.725 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:45:23.795 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:45:24.064 -03:00 [INF] Executed DbCommand (122ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+16-May-2019 10:45:24.089 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8667.3586ms.
+16-May-2019 10:45:24.110 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:45:24.117 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 8758.4043ms
+16-May-2019 10:45:24.117 -03:00 [INF] Request finished in 8766.5624ms 200 application/json; charset=utf-8
+16-May-2019 10:45:49.960 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 70
+16-May-2019 10:45:49.992 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API)
+16-May-2019 10:45:50.056 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) with arguments (["AppDiarista.DTO.LoginDTO"]) - Validation state: "Valid"
+16-May-2019 10:45:50.067 -03:00 [INF] Entity Framework Core 2.1.8-servicing-32085 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+16-May-2019 10:45:50.170 -03:00 [INF] Executed DbCommand (84ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:45:50.266 -03:00 [INF] Executed DbCommand (67ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+16-May-2019 10:45:50.401 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+16-May-2019 10:45:50.425 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 369.2515ms.
+16-May-2019 10:45:50.425 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+16-May-2019 10:45:50.435 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 443.1892ms
+16-May-2019 10:45:50.435 -03:00 [INF] Request finished in 475.9612ms 200 application/json; charset=utf-8

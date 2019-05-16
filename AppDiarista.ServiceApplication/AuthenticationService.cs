@@ -13,6 +13,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using AppDiarista.Data.Models;
 
 namespace AppDiarista.ServiceApplication
 {
@@ -21,6 +22,7 @@ namespace AppDiarista.ServiceApplication
         #region Propriedades
         private readonly IDiaristaData diaristaData;
         private readonly IContratanteData contratanteData;
+        private readonly IEnderecoData enderecoData;
         private readonly ICriptografiaService criptografiaService;
         private readonly IConfiguration configuration;
         private readonly IMapper mapper;
@@ -30,10 +32,12 @@ namespace AppDiarista.ServiceApplication
         public AuthenticationService(INotificador notificador,
             IDiaristaData diaristaData,
             IContratanteData contratanteData,
+            IEnderecoData enderecoData,
             ICriptografiaService criptografiaService,
             IConfiguration configuration,
             IMapper mapper) : base(notificador)
         {
+            this.enderecoData = enderecoData;
             this.diaristaData = diaristaData;
             this.contratanteData = contratanteData;
             this.criptografiaService = criptografiaService;
@@ -47,12 +51,12 @@ namespace AppDiarista.ServiceApplication
         public async Task<UsuarioLogadoDTO> Autenticar(LoginDTO model)
         {
             var diarista = await this.diaristaData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
-            if (diarista != null && diarista.Senha == criptografiaService.HashearSenha(model.Senha))
-                return LogarDiarista(model, mapper.Map<DiaristaDTO>(diarista));
+            if (diarista != null && diarista.Senha.Trim() == criptografiaService.HashearSenha(model.Senha))
+                return await LogarDiarista(model, diarista);
 
             var contratante = await this.contratanteData.Listar(w => w.Email == model.Email).FirstOrDefaultAsync();
             if (contratante != null && contratante.Senha.Trim() == criptografiaService.HashearSenha(model.Senha))
-                return LogarContratante(model, mapper.Map<ContratanteDTO>(contratante));
+                return await LogarContratante(model, contratante);
 
             return AnalisarErroNoLogin(diarista, contratante);
         }
@@ -61,21 +65,26 @@ namespace AppDiarista.ServiceApplication
 
         #region Métodos Privados
 
-        private UsuarioLogadoDTO LogarContratante(LoginDTO model, ContratanteDTO contratante)
+        private async Task<UsuarioLogadoDTO> LogarContratante(LoginDTO model, Contratante contratante)
         {
+            var contratanteEEndereco = mapper.Map<Contratante ,ContratanteEEnderecoDTO>(contratante);
+            mapper.Map(await this.enderecoData.RetornarPorID(contratante.IdEndereco), contratanteEEndereco);
             return new UsuarioLogadoDTO()
             {
                 Token = GerarTokenString(model),
-                Contratante = contratante
+                Contratante = contratanteEEndereco
             };
         }
 
-        private UsuarioLogadoDTO LogarDiarista(LoginDTO model, DiaristaDTO diarista)
+        private async Task<UsuarioLogadoDTO> LogarDiarista(LoginDTO model, Diarista diarista)
         {
+
+            var diaristaEEndereco = mapper.Map<Diarista, DiaristaEEnderecoDTO>(diarista);
+            mapper.Map(await this.enderecoData.RetornarPorID(diarista.IdEndereco), diaristaEEndereco);
             return new UsuarioLogadoDTO()
             {
                 Token = GerarTokenString(model),
-                Diarista = diarista
+                Diarista = diaristaEEndereco
             };
         }
 

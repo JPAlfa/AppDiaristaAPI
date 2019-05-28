@@ -1,0 +1,1496 @@
+27-May-2019 17:32:21.258 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:32:25.139 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:32:25.139 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:32:25.611 -03:00 [INF] Request finished in 475.2032ms 200 
+27-May-2019 17:32:25.934 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:32:26.537 -03:00 [INF] Request finished in 1402.719ms 404 
+27-May-2019 17:40:33.401 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:40:33.423 -03:00 [INF] Request finished in 20.9912ms 404 
+27-May-2019 17:40:33.441 -03:00 [INF] Connection id "0HLN2S9MNTV0D", Request id "0HLN2S9MNTV0D:00000001": the application completed without reading the entire request body.
+27-May-2019 17:41:24.117 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:41:25.091 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:41:25.091 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:41:25.208 -03:00 [INF] Request finished in 70.225ms 200 
+27-May-2019 17:41:25.352 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:41:25.616 -03:00 [INF] Request finished in 528.7431ms 404 
+27-May-2019 17:42:01.856 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:42:01.956 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.ServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:42:01.998 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 36.9189ms
+27-May-2019 17:42:02.196 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = AgendamentoService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IAgendamentoService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:42:02.605 -03:00 [INF] Request finished in 749.6208ms 400 application/json
+27-May-2019 17:42:02.630 -03:00 [INF] Connection id "0HLN2SENNORK7", Request id "0HLN2SENNORK7:00000002": the application completed without reading the entire request body.
+27-May-2019 17:43:22.011 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:43:23.034 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:43:23.034 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:43:23.182 -03:00 [INF] Request finished in 147.4322ms 200 
+27-May-2019 17:43:23.379 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:43:23.678 -03:00 [INF] Request finished in 647.3382ms 404 
+27-May-2019 17:43:24.232 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:43:24.378 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:43:24.424 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 35.8748ms
+27-May-2019 17:43:24.573 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = AgendamentoService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IAgendamentoService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:43:24.896 -03:00 [INF] Request finished in 663.6512ms 400 application/json
+27-May-2019 17:43:24.927 -03:00 [INF] Connection id "0HLN2SFQS9JPR", Request id "0HLN2SFQS9JPR:00000002": the application completed without reading the entire request body.
+27-May-2019 17:43:27.337 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:43:27.338 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:43:27.363 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 25.1401ms
+27-May-2019 17:43:27.410 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = AgendamentoService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IAgendamentoService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:43:27.412 -03:00 [INF] Request finished in 75.257ms 400 application/json
+27-May-2019 17:43:27.413 -03:00 [INF] Connection id "0HLN2SFQS9JPQ", Request id "0HLN2SFQS9JPQ:00000002": the application completed without reading the entire request body.
+27-May-2019 17:44:21.396 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:44:22.463 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:44:22.463 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:44:22.554 -03:00 [INF] Request finished in 68.1695ms 200 
+27-May-2019 17:44:22.706 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:44:22.997 -03:00 [INF] Request finished in 536.8696ms 404 
+27-May-2019 17:44:29.852 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:44:29.950 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:44:29.985 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 30.438200000000002ms
+27-May-2019 17:44:30.090 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = AgendamentoService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IAgendamentoService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:44:30.297 -03:00 [INF] Request finished in 444.8077ms 400 application/json
+27-May-2019 17:44:30.324 -03:00 [INF] Connection id "0HLN2SGCJ7R44", Request id "0HLN2SGCJ7R44:00000002": the application completed without reading the entire request body.
+27-May-2019 17:44:43.035 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:44:43.036 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:44:43.048 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 12.613700000000001ms
+27-May-2019 17:46:48.699 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario =  }
+Autofac.Core.DependencyResolutionException: An error occurred during the activation of a particular registration. See the inner exception for details. Registration: Activator = AgendamentoService (ReflectionActivator), Services = [AppDiarista.ServiceApplication.Interfaces.IAgendamentoService], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = Shared, Ownership = OwnedByLifetimeScope ---> None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'. (See inner exception for details.) ---> Autofac.Core.DependencyResolutionException: None of the constructors found with 'Autofac.Core.Activators.Reflection.DefaultConstructorFinder' on type 'AppDiarista.ServiceApplication.AgendamentoService' can be invoked with the available services and parameters:
+Cannot resolve parameter 'AppDiarista.Data.Interfaces.IServicoData servicoData' of constructor 'Void .ctor(AppDiarista.Common.Interfaces.INotificador, AppDiarista.Data.Interfaces.IServicoData, AutoMapper.IMapper, AppDiarista.Data.UnitOfWork.Interfaces.IUOWAppDiarista)'.
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.GetValidConstructorBindings(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Activators.Reflection.ReflectionActivator.ActivateInstance(IComponentContext context, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   --- End of inner exception stack trace ---
+   at Autofac.Core.Resolving.InstanceLookup.Activate(IEnumerable`1 parameters)
+   at Autofac.Core.Lifetime.LifetimeScope.GetOrCreateAndShare(Guid id, Func`1 creator)
+   at Autofac.Core.Resolving.InstanceLookup.Execute()
+   at Autofac.Core.Resolving.ResolveOperation.GetOrCreateInstance(ISharingLifetimeScope currentOperationScope, IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.Core.Resolving.ResolveOperation.Execute(IComponentRegistration registration, IEnumerable`1 parameters)
+   at Autofac.ResolutionExtensions.TryResolveService(IComponentContext context, Service service, IEnumerable`1 parameters, Object& instance)
+   at Autofac.ResolutionExtensions.ResolveOptionalService(IComponentContext context, Service service, IEnumerable`1 parameters)
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:46:48.700 -03:00 [INF] Request finished in 125663.9595ms 400 application/json
+27-May-2019 17:46:48.713 -03:00 [INF] Connection id "0HLN2SGCJ7R45", Request id "0HLN2SGCJ7R45:00000002": the application completed without reading the entire request body.
+27-May-2019 17:47:00.251 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarContratante application/json 572
+27-May-2019 17:47:00.376 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+27-May-2019 17:47:00.419 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+27-May-2019 17:47:00.425 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(AppDiarista.DTO.ContratanteEEnderecoDTO) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+27-May-2019 17:47:00.433 -03:00 [INF] Authorization failed.
+27-May-2019 17:47:00.434 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+27-May-2019 17:47:00.442 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+27-May-2019 17:47:00.454 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+27-May-2019 17:47:00.454 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 28.3823ms
+27-May-2019 17:47:00.454 -03:00 [INF] Request finished in 203.7104ms 401 
+27-May-2019 17:47:00.455 -03:00 [INF] Connection id "0HLN2SGCJ7R45", Request id "0HLN2SGCJ7R45:00000003": the application completed without reading the entire request body.
+27-May-2019 17:47:04.515 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 17:47:04.523 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 17:47:05.122 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:47:05.608 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:47:06.271 -03:00 [INF] Executed DbCommand (70ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 17:47:06.440 -03:00 [INF] Executed DbCommand (108ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 17:47:06.495 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1365.3283000000001ms.
+27-May-2019 17:47:06.511 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:47:06.528 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 2003.9969ms
+27-May-2019 17:47:06.535 -03:00 [INF] Request finished in 2019.698ms 400 application/json; charset=utf-8
+27-May-2019 17:47:28.796 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/contratante application/json 365
+27-May-2019 17:47:28.821 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.ContratanteEEnderecoDTO) on controller AppDiarista.API.Controllers.CadastroController (AppDiarista.API).
+27-May-2019 17:47:28.882 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:47:28.903 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:47:29.039 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Contratante] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+27-May-2019 17:47:29.069 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 185.612ms.
+27-May-2019 17:47:29.070 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:47:29.071 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 249.38240000000002ms
+27-May-2019 17:47:29.071 -03:00 [INF] Request finished in 275.0846ms 400 application/json; charset=utf-8
+27-May-2019 17:47:44.636 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/contratante application/json 354
+27-May-2019 17:47:44.637 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.ContratanteEEnderecoDTO) on controller AppDiarista.API.Controllers.CadastroController (AppDiarista.API).
+27-May-2019 17:47:44.674 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:47:44.675 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:47:44.723 -03:00 [INF] Executed DbCommand (47ms) [Parameters=[@__email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Contratante] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+27-May-2019 17:47:45.001 -03:00 [INF] Executed DbCommand (120ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 17:47:45.159 -03:00 [INF] Executed DbCommand (70ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 17:47:45.164 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 489.46700000000004ms.
+27-May-2019 17:47:45.164 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:47:45.165 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 528.06090000000006ms
+27-May-2019 17:47:45.165 -03:00 [INF] Request finished in 528.9858ms 200 application/json; charset=utf-8
+27-May-2019 17:48:11.809 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/cadastro/contratante application/json 345
+27-May-2019 17:48:11.809 -03:00 [INF] Route matched with {action = "Post", controller = "Cadastro"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.ContratanteEEnderecoDTO) on controller AppDiarista.API.Controllers.CadastroController (AppDiarista.API).
+27-May-2019 17:48:11.852 -03:00 [INF] Executing action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:48:11.853 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:48:11.930 -03:00 [INF] Executed DbCommand (62ms) [Parameters=[@__email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [dbo].[Contratante] AS [w]
+        WHERE [w].[Email] = @__email_0)
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+27-May-2019 17:48:12.011 -03:00 [INF] Executed DbCommand (77ms) [Parameters=[@p0='?' (Size = 8), @p1='?' (Size = 150), @p2='?' (Size = 4000), @p3='?' (Size = 50), @p4='?' (Size = 500), @p5='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Endereco] ([Cep], [Cidade], [Complemento], [Estado], [Logradouro], [Numero])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Endereco]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 17:48:12.124 -03:00 [INF] Executed DbCommand (91ms) [Parameters=[@p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Contratante] ([Cpf], [DataNascimento], [Email], [IdEndereco], [Nome], [Senha], [Telefone])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Contratante]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 17:48:12.127 -03:00 [INF] Executed action method AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 275.5824ms.
+27-May-2019 17:48:12.128 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:48:12.128 -03:00 [INF] Executed action AppDiarista.API.Controllers.CadastroController.Post (AppDiarista.API) in 318.51ms
+27-May-2019 17:48:12.128 -03:00 [INF] Request finished in 319.296ms 200 application/json; charset=utf-8
+27-May-2019 17:48:15.840 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 17:48:15.840 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 17:48:15.878 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:48:15.879 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:48:15.946 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 17:48:16.030 -03:00 [INF] Executed DbCommand (83ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 17:48:16.144 -03:00 [INF] Executed DbCommand (66ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 17:48:16.187 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 308.83250000000004ms.
+27-May-2019 17:48:16.187 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:48:16.198 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 357.7162ms
+27-May-2019 17:48:16.198 -03:00 [INF] Request finished in 358.4954ms 200 application/json; charset=utf-8
+27-May-2019 17:48:33.561 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:48:33.599 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:48:33.601 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:48:33.603 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 1.1957ms
+27-May-2019 17:48:55.958 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:48:57.068 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:48:57.068 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:48:57.206 -03:00 [INF] Request finished in 137.6623ms 200 
+27-May-2019 17:48:57.347 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:48:57.598 -03:00 [INF] Request finished in 533.5935ms 404 
+27-May-2019 17:49:12.403 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:49:12.611 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:49:12.711 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:49:13.082 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:49:39.499 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 26404.217500000002ms.
+27-May-2019 17:49:39.511 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 17:49:39.543 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 26828.9474ms
+27-May-2019 17:49:39.545 -03:00 [INF] Request finished in 27142.4302ms 200 application/json; charset=utf-8
+27-May-2019 17:50:01.501 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 105
+27-May-2019 17:50:01.502 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:50:01.506 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:50:01.539 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 17:50:01.544 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 25.859ms
+27-May-2019 17:50:01.544 -03:00 [INF] Request finished in 43.1995ms 400 application/json; charset=utf-8
+27-May-2019 17:50:32.412 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:50:32.412 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:50:32.413 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:50:32.458 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:51:46.652 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:51:50.350 -03:00 [ERR] Failed executing DbCommand (84ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int16), @p4='?' (DbType = Double), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Data], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:a8c8a9ef-144d-4ca7-a43c-2cce1e5f2857
+Error Number:207,State:1,Class:16
+27-May-2019 17:51:50.424 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+27-May-2019 17:51:51.314 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 78900.4949ms
+27-May-2019 17:51:51.324 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 17:51:53.053 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - c97f9157-2f70-4cd5-8192-ad0255c29609","exp - 1558991896","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AppDiarista.Data.UnitOfWork.UOWAppDiarista.SaveChangesAsync() in C:\AppDiaristaAPI\AppDiarista.Data\UnitOfWork\UOWBotAdmin.cs:line 28
+   at AppDiarista.ServiceApplication.AgendamentoService.InserirServicoBanco(AgendamentoServicoDTO servico)
+   at AppDiarista.ServiceApplication.AgendamentoService.AgendarServico(AgendamentoServicoDTO servico)
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ServicoController.Post(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:51:53.076 -03:00 [INF] Request finished in 80663.9978ms 400 application/json
+27-May-2019 17:51:55.993 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 99
+27-May-2019 17:51:55.994 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:51:55.994 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:51:56.052 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:52:00.089 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:52:03.534 -03:00 [ERR] Failed executing DbCommand (65ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (DbType = Int16), @p4='?' (DbType = Double), @p5='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Data], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:a8c8a9ef-144d-4ca7-a43c-2cce1e5f2857
+Error Number:207,State:1,Class:16
+27-May-2019 17:52:03.544 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+27-May-2019 17:52:10.665 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 14669.9578ms
+27-May-2019 17:52:10.670 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 17:54:55.217 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - c97f9157-2f70-4cd5-8192-ad0255c29609","exp - 1558991896","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at AppDiarista.Data.UnitOfWork.UOWAppDiarista.SaveChangesAsync() in C:\AppDiaristaAPI\AppDiarista.Data\UnitOfWork\UOWBotAdmin.cs:line 28
+   at AppDiarista.ServiceApplication.AgendamentoService.InserirServicoBanco(AgendamentoServicoDTO servico)
+   at AppDiarista.ServiceApplication.AgendamentoService.AgendarServico(AgendamentoServicoDTO servico)
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ServicoController.Post(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 17:54:55.221 -03:00 [INF] Request finished in 179226.7781ms 400 application/json
+27-May-2019 17:56:06.208 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:56:07.145 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:56:07.145 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:56:07.223 -03:00 [INF] Request finished in 76.8534ms 200 
+27-May-2019 17:56:07.387 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:56:07.613 -03:00 [INF] Request finished in 470.5798ms 404 
+27-May-2019 17:57:20.176 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 106
+27-May-2019 17:57:20.348 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:57:20.417 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:57:20.800 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:59:04.644 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 17:59:05.802 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 17:59:05.802 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 17:59:05.916 -03:00 [INF] Request finished in 95.5752ms 200 
+27-May-2019 17:59:06.057 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 17:59:06.373 -03:00 [INF] Request finished in 574.1651ms 404 
+27-May-2019 17:59:26.725 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 106
+27-May-2019 17:59:26.915 -03:00 [INF] Successfully validated the token.
+27-May-2019 17:59:27.007 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 17:59:27.384 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 17:59:33.279 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 17:59:34.962 -03:00 [ERR] Failed executing DbCommand (309ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int16), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Confirmado], [Data], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:dd25b5bf-d19a-41a3-84ac-08717ba85502
+Error Number:207,State:1,Class:16
+27-May-2019 17:59:35.073 -03:00 [ERR] An exception occurred in the database while saving changes for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details. ---> System.Data.SqlClient.SqlException: Invalid column name 'Data'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(DbContext _, ValueTuple`2 parameters, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IReadOnlyList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+27-May-2019 17:59:36.152 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 9139.8481000000011ms
+27-May-2019 17:59:36.167 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 18:00:21.791 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 18:00:22.812 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 18:00:22.812 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 18:00:22.900 -03:00 [INF] Request finished in 89.2804ms 200 
+27-May-2019 18:00:23.041 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 18:00:23.256 -03:00 [INF] Request finished in 449.6174ms 404 
+27-May-2019 18:01:38.907 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 106
+27-May-2019 18:01:39.071 -03:00 [INF] Successfully validated the token.
+27-May-2019 18:01:39.181 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 18:01:39.501 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 18:01:44.390 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 18:01:45.899 -03:00 [INF] Executed DbCommand (453ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int16), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Confirmado], [DataServico], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 18:01:50.636 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 11126.0529ms.
+27-May-2019 18:01:50.654 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 18:01:50.683 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 11496.6054ms
+27-May-2019 18:01:50.699 -03:00 [INF] Request finished in 11792.4422ms 200 application/json; charset=utf-8
+27-May-2019 20:01:52.799 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:01:54.530 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 20:01:54.530 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 20:01:54.764 -03:00 [INF] Request finished in 212.0921ms 200 
+27-May-2019 20:01:55.013 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:01:55.503 -03:00 [INF] Request finished in 977.7242ms 404 
+27-May-2019 20:17:40.170 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:17:41.460 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 20:17:41.670 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:17:42.146 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 20:17:42.545 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:17:42.977 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:17:43.415 -03:00 [INF] Executed DbCommand (15ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:17:43.452 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:17:43.559 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:17:43.628 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1075.9272ms.
+27-May-2019 20:17:43.644 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:17:43.673 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 1522.7828000000002ms
+27-May-2019 20:17:43.690 -03:00 [INF] Request finished in 2231.2126ms 200 application/json; charset=utf-8
+27-May-2019 20:18:21.136 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 20
+27-May-2019 20:18:21.205 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:18:21.210 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:18:21.216 -03:00 [INF] Authorization was successful.
+27-May-2019 20:18:21.222 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:18:21.225 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 14.242ms
+27-May-2019 20:18:21.225 -03:00 [INF] Request finished in 89.0055ms 400 application/json; charset=utf-8
+27-May-2019 20:30:53.773 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:30:54.293 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 20
+27-May-2019 20:30:54.499 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:30:54.503 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:30:54.645 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:30:54.660 -03:00 [INF] Authorization was successful.
+27-May-2019 20:30:54.782 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:30:54.796 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 146.0985ms
+27-May-2019 20:30:54.808 -03:00 [INF] Request finished in 518.0571ms 400 application/json; charset=utf-8
+27-May-2019 20:31:30.863 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:31:31.916 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 20:31:31.916 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 20:31:32.076 -03:00 [INF] Request finished in 138.4327ms 200 
+27-May-2019 20:31:32.260 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:31:32.496 -03:00 [INF] Request finished in 582.7271ms 404 
+27-May-2019 20:31:39.271 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 20
+27-May-2019 20:31:39.483 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:31:39.561 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:31:39.581 -03:00 [INF] Authorization was successful.
+27-May-2019 20:31:39.851 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:31:39.861 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 296.5544ms
+27-May-2019 20:31:39.865 -03:00 [INF] Request finished in 594.7609ms 400 application/json; charset=utf-8
+27-May-2019 20:32:04.253 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 20
+27-May-2019 20:32:04.253 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:32:04.254 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:32:04.255 -03:00 [INF] Authorization was successful.
+27-May-2019 20:32:04.265 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:32:04.265 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 10.7847ms
+27-May-2019 20:32:04.265 -03:00 [INF] Request finished in 12.8686ms 400 application/json; charset=utf-8
+27-May-2019 20:32:40.808 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:32:40.810 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:32:40.810 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:32:40.810 -03:00 [INF] Authorization was successful.
+27-May-2019 20:32:40.812 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:32:40.813 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2.3519ms
+27-May-2019 20:32:40.813 -03:00 [INF] Request finished in 4.3249ms 400 application/json; charset=utf-8
+27-May-2019 20:33:07.495 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:33:15.285 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:33:15.285 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:33:15.285 -03:00 [INF] Authorization was successful.
+27-May-2019 20:33:15.288 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:33:15.288 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 3.1785ms
+27-May-2019 20:33:17.093 -03:00 [INF] Request finished in 9598.4479ms 400 application/json; charset=utf-8
+27-May-2019 20:33:21.848 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:33:53.462 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:33:53.462 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:33:53.462 -03:00 [INF] Authorization was successful.
+27-May-2019 20:33:53.464 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:33:53.464 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 1.47ms
+27-May-2019 20:33:53.464 -03:00 [INF] Request finished in 31615.6696ms 400 application/json; charset=utf-8
+27-May-2019 20:34:40.042 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:34:44.425 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:34:44.425 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:34:44.426 -03:00 [INF] Authorization was successful.
+27-May-2019 20:34:44.427 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:34:44.427 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 1.9287ms
+27-May-2019 20:34:44.428 -03:00 [INF] Request finished in 4386.0771ms 400 application/json; charset=utf-8
+27-May-2019 20:34:54.018 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:34:56.829 -03:00 [INF] JwtBearer was not authenticated. Failure message: No SecurityTokenValidator available for token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkZXYiLCJqdGkiOiJlNDRkMWM0Yy04MzE2LTQyYzktOTBlOC00MmVmMzE5MjZhZDIiLCJleHAiOjE1NTkwMDA4NjMsImlzcyI6IkFwcERpYXJpc3RhQVBJIiwiYXVkIjoiQXBwRGlhcmlzdGFNb2JpbGUifQ61es_z1WsmgL9O1V2AcqgwmK_Ms4VdYPPXSYAs8vCgg
+27-May-2019 20:34:56.829 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:34:56.829 -03:00 [INF] Authorization failed.
+27-May-2019 20:34:56.830 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+27-May-2019 20:34:56.834 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+27-May-2019 20:34:56.843 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+27-May-2019 20:34:56.844 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 14.571200000000001ms
+27-May-2019 20:34:56.844 -03:00 [INF] Request finished in 2826.2411ms 401 
+27-May-2019 20:34:56.846 -03:00 [INF] Connection id "0HLN2VDPJ0DSU", Request id "0HLN2VDPJ0DSU:00000007": the application completed without reading the entire request body.
+27-May-2019 20:35:12.446 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 20:35:14.564 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 20:35:14.782 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:35:14.997 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:35:15.422 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:35:15.625 -03:00 [INF] Executed DbCommand (159ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:35:15.817 -03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:35:15.864 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1075.9758000000002ms.
+27-May-2019 20:35:15.897 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:35:15.940 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 1376.4671ms
+27-May-2019 20:35:15.948 -03:00 [INF] Request finished in 3502.2499ms 200 application/json; charset=utf-8
+27-May-2019 20:35:52.617 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar application/json 18
+27-May-2019 20:35:56.186 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:35:56.187 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:35:56.188 -03:00 [INF] Authorization was successful.
+27-May-2019 20:35:56.190 -03:00 [INF] Executing ObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.SerializableError'.
+27-May-2019 20:35:56.190 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2.7885ms
+27-May-2019 20:35:57.927 -03:00 [INF] Request finished in 5310.0729ms 400 application/json; charset=utf-8
+27-May-2019 20:37:42.124 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:37:42.801 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:37:42.905 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:37:43.090 -03:00 [INF] Request finished in 292.6542ms 404 
+27-May-2019 20:37:43.115 -03:00 [INF] Connection id "0HLN2VH850O88", Request id "0HLN2VH850O88:00000001": the application completed without reading the entire request body.
+27-May-2019 20:37:45.510 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:37:45.579 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:37:45.593 -03:00 [INF] Authorization failed.
+27-May-2019 20:37:45.593 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+27-May-2019 20:37:45.598 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+27-May-2019 20:37:45.605 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+27-May-2019 20:37:45.607 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 25.063100000000002ms
+27-May-2019 20:37:45.610 -03:00 [INF] Request finished in 99.8104ms 401 
+27-May-2019 20:37:45.610 -03:00 [INF] Connection id "0HLN2VH850O88", Request id "0HLN2VH850O88:00000002": the application completed without reading the entire request body.
+27-May-2019 20:37:50.899 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 20:37:50.908 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 20:37:51.121 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:37:51.343 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:37:51.541 -03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:37:51.579 -03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:37:51.656 -03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:37:51.715 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 588.9643ms.
+27-May-2019 20:37:51.725 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:37:51.742 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 834.2867ms
+27-May-2019 20:37:51.749 -03:00 [INF] Request finished in 849.7991ms 200 application/json; charset=utf-8
+27-May-2019 20:38:10.868 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:38:10.926 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:38:10.927 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:38:10.927 -03:00 [INF] Authorization was successful.
+27-May-2019 20:38:10.931 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:38:10.937 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:38:10.951 -03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:38:11.125 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+27-May-2019 20:38:11.128 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+27-May-2019 20:38:11.131 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 203.8168ms
+27-May-2019 20:38:11.131 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 20:38:11.154 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Confirmar?idServico=1, metodo = GET, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - 4360a147-2b09-4d65-91c3-41d49a325c0b","exp - 1559002071","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at AppDiarista.Data.RepositorioBase`2.RetornarPorID(TTipoID id) in C:\AppDiaristaAPI\AppDiarista.Data\RepositorioBase.cs:line 72
+   at AppDiarista.ServiceApplication.AgendamentoService.ConfirmarServicoBanco(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 76
+   at AppDiarista.ServiceApplication.AgendamentoService.ConfirmarServico(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 51
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass3_0.<<Post>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.ServicoController.Post(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 20:38:11.182 -03:00 [INF] Request finished in 314.2068ms 400 application/json
+27-May-2019 20:38:11.182 -03:00 [INF] Connection id "0HLN2VH850O88", Request id "0HLN2VH850O88:00000004": the application completed without reading the entire request body.
+27-May-2019 20:38:34.433 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:38:35.628 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 20:38:35.628 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 20:38:55.852 -03:00 [INF] Request finished in 20223.3261ms 200 
+27-May-2019 20:38:56.021 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:38:56.237 -03:00 [INF] Request finished in 20612.3501ms 404 
+27-May-2019 20:39:01.239 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:39:03.528 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:39:03.601 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:39:03.615 -03:00 [INF] Authorization was successful.
+27-May-2019 20:39:03.989 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:39:15.111 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:39:15.526 -03:00 [INF] Executed DbCommand (90ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:39:15.649 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+27-May-2019 20:39:15.654 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+27-May-2019 20:39:16.423 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 12818.8272ms
+27-May-2019 20:39:16.431 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 20:47:26.233 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Confirmar?idServico=1, metodo = GET, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - 4360a147-2b09-4d65-91c3-41d49a325c0b","exp - 1559002071","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+   at AppDiarista.Data.RepositorioBase`2.RetornarPorID(TTipoID id) in C:\AppDiaristaAPI\AppDiarista.Data\RepositorioBase.cs:line 72
+   at AppDiarista.ServiceApplication.AgendamentoService.ConfirmarServicoBanco(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 76
+   at AppDiarista.ServiceApplication.AgendamentoService.ConfirmarServico(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 51
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass3_0.<<Post>b__0>d.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse(Func`1 action) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 52
+   at AppDiarista.API.Controllers.ServicoController.Post(Int32 idServico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 47
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 20:47:26.278 -03:00 [INF] Request finished in 505049.1125ms 400 application/json
+27-May-2019 20:47:29.661 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:47:34.486 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:47:34.487 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:47:34.487 -03:00 [INF] Authorization was successful.
+27-May-2019 20:47:34.531 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:47:43.798 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:47:43.995 -03:00 [INF] Executed DbCommand (194ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:47:43.998 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+27-May-2019 20:47:44.001 -03:00 [ERR] An exception occurred in the database while iterating the results of a query for context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista'.
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+System.InvalidOperationException: An exception occurred while reading a database value for property 'Servico.Nota'. The expected type was 'System.Int16' but the actual value was of type 'System.Int32'. ---> System.InvalidCastException: Unable to cast object of type 'System.Int32' to type 'System.Int16'.
+   at System.Data.SqlClient.SqlBuffer.get_Int16()
+   at System.Data.SqlClient.SqlDataReader.GetInt16(Int32 i)
+   at lambda_method(Closure , DbDataReader )
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Metadata.Internal.EntityMaterializerSource.ThrowReadValueException[TValue](Exception exception, Object value, IPropertyBase property)
+   at lambda_method(Closure , DbDataReader )
+   at Microsoft.EntityFrameworkCore.Storage.Internal.TypedRelationalValueBufferFactory.Create(DbDataReader dataReader)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+27-May-2019 20:47:44.812 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 10325.2872ms
+27-May-2019 20:47:44.813 -03:00 [ERR] The context type 'AppDiarista.Data.UnitOfWork.UOWAppDiarista' was not found in services. This usually means the context was not registered in services during startup. You probably want to call AddScoped<>() inside the UseServices(...) call in your application startup code. Skipping display of the database error page.
+27-May-2019 20:48:28.910 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:48:29.972 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 20:48:29.972 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 20:48:38.683 -03:00 [INF] Request finished in 8710.5934ms 200 
+27-May-2019 20:48:38.837 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:48:39.107 -03:00 [INF] Request finished in 9137.7758ms 404 
+27-May-2019 20:48:46.015 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:48:46.218 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:48:46.286 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:48:46.301 -03:00 [INF] Authorization was successful.
+27-May-2019 20:48:46.631 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:48:54.450 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:48:54.960 -03:00 [INF] Executed DbCommand (103ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:48:58.303 -03:00 [INF] Executed DbCommand (185ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:49:03.089 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 16450.855600000003ms.
+27-May-2019 20:49:03.102 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:49:03.124 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 16833.7889ms
+27-May-2019 20:49:03.133 -03:00 [INF] Request finished in 17118.3423ms 200 application/json; charset=utf-8
+27-May-2019 20:49:03.159 -03:00 [INF] Connection id "0HLN2VN908HMQ", Request id "0HLN2VN908HMQ:00000002": the application completed without reading the entire request body.
+27-May-2019 20:50:38.042 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 20:50:39.246 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 20:50:39.246 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 20:50:39.404 -03:00 [INF] Request finished in 140.0713ms 200 
+27-May-2019 20:50:39.611 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 20:50:39.861 -03:00 [INF] Request finished in 618.9023ms 404 
+27-May-2019 20:51:35.756 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:51:35.956 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:51:36.032 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:51:36.046 -03:00 [INF] Authorization was successful.
+27-May-2019 20:51:36.438 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:51:40.245 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:51:40.657 -03:00 [INF] Executed DbCommand (73ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:51:41.054 -03:00 [INF] Executed DbCommand (208ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:51:41.081 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4635.0704000000005ms.
+27-May-2019 20:51:41.097 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:51:41.120 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 5083.6558ms
+27-May-2019 20:51:41.129 -03:00 [INF] Request finished in 5372.803ms 200 application/json; charset=utf-8
+27-May-2019 20:51:41.152 -03:00 [INF] Connection id "0HLN2VOFGV9U1", Request id "0HLN2VOFGV9U1:00000002": the application completed without reading the entire request body.
+27-May-2019 20:52:05.767 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Avaliar application/json 33
+27-May-2019 20:52:05.767 -03:00 [INF] Request finished in 0.746ms 404 
+27-May-2019 20:52:05.768 -03:00 [INF] Connection id "0HLN2VOFGV9U1", Request id "0HLN2VOFGV9U1:00000003": the application completed without reading the entire request body.
+27-May-2019 20:52:45.564 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Avaliar?idServico=1&nota=4 application/json 33
+27-May-2019 20:52:45.564 -03:00 [INF] Request finished in 0.5716ms 404 
+27-May-2019 20:52:45.568 -03:00 [INF] Connection id "0HLN2VOFGV9U1", Request id "0HLN2VOFGV9U1:00000004": the application completed without reading the entire request body.
+27-May-2019 20:52:57.082 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 20:52:57.089 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 20:52:57.202 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:52:57.210 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:52:57.322 -03:00 [INF] Executed DbCommand (94ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:52:57.421 -03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 20:52:57.573 -03:00 [INF] Executed DbCommand (77ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:52:57.598 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 395.61170000000004ms.
+27-May-2019 20:52:57.598 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:52:57.607 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 517.2412ms
+27-May-2019 20:52:57.607 -03:00 [INF] Request finished in 524.8837ms 200 application/json; charset=utf-8
+27-May-2019 20:53:18.133 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Avaliar?idServico=1&nota=4 application/json 33
+27-May-2019 20:53:18.133 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:53:18.140 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32, Int16) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:53:18.140 -03:00 [INF] Authorization was successful.
+27-May-2019 20:53:18.184 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:53:18.191 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:53:18.275 -03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:53:18.370 -03:00 [INF] Executed DbCommand (77ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:53:18.373 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 188.4572ms.
+27-May-2019 20:53:18.373 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:53:18.373 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 233.31900000000002ms
+27-May-2019 20:53:18.374 -03:00 [INF] Request finished in 241.055ms 200 application/json; charset=utf-8
+27-May-2019 20:53:18.374 -03:00 [INF] Connection id "0HLN2VOFGV9U1", Request id "0HLN2VOFGV9U1:00000006": the application completed without reading the entire request body.
+27-May-2019 20:54:29.390 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 106
+27-May-2019 20:54:29.390 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:54:29.394 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:54:29.435 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:54:31.517 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:54:31.664 -03:00 [INF] Executed DbCommand (112ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Confirmado], [DataServico], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 20:54:31.677 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2242.0755ms.
+27-May-2019 20:54:31.677 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:54:31.678 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2284.2490000000003ms
+27-May-2019 20:54:31.678 -03:00 [INF] Request finished in 2288.5957ms 200 application/json; charset=utf-8
+27-May-2019 20:55:58.262 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=1 application/json 20
+27-May-2019 20:55:58.262 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:55:58.263 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:55:58.264 -03:00 [INF] Authorization was successful.
+27-May-2019 20:55:58.340 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:56:03.685 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:56:03.828 -03:00 [INF] Executed DbCommand (124ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:56:03.884 -03:00 [INF] Executed DbCommand (53ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:56:03.886 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5546.0048000000006ms.
+27-May-2019 20:56:03.887 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:56:03.887 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 5623.0847ms
+27-May-2019 20:56:03.887 -03:00 [INF] Request finished in 5625.4387ms 200 application/json; charset=utf-8
+27-May-2019 20:56:03.888 -03:00 [INF] Connection id "0HLN2VOFGV9U3", Request id "0HLN2VOFGV9U3:00000001": the application completed without reading the entire request body.
+27-May-2019 20:56:10.207 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=2 application/json 20
+27-May-2019 20:56:10.208 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:56:10.208 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:56:10.208 -03:00 [INF] Authorization was successful.
+27-May-2019 20:56:10.255 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:56:13.057 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:56:13.109 -03:00 [INF] Executed DbCommand (50ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:56:13.174 -03:00 [INF] Executed DbCommand (59ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:56:13.191 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2936.0745ms.
+27-May-2019 20:56:13.191 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:56:13.191 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2983.4888ms
+27-May-2019 20:56:13.192 -03:00 [INF] Request finished in 2984.5373ms 200 application/json; charset=utf-8
+27-May-2019 20:56:13.192 -03:00 [INF] Connection id "0HLN2VOFGV9U3", Request id "0HLN2VOFGV9U3:00000002": the application completed without reading the entire request body.
+27-May-2019 20:56:53.005 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Avaliar?idServico=2&nota=4 application/json 
+27-May-2019 20:56:53.006 -03:00 [INF] Successfully validated the token.
+27-May-2019 20:56:53.006 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32, Int16) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 20:56:53.006 -03:00 [INF] Authorization was successful.
+27-May-2019 20:56:53.043 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 20:56:53.044 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 20:56:53.121 -03:00 [INF] Executed DbCommand (77ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 20:56:53.212 -03:00 [INF] Executed DbCommand (69ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 20:56:53.215 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 171.0847ms.
+27-May-2019 20:56:53.215 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 20:56:53.215 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 208.8049ms
+27-May-2019 20:56:53.215 -03:00 [INF] Request finished in 209.8629ms 200 application/json; charset=utf-8
+27-May-2019 21:00:57.043 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+27-May-2019 21:00:58.145 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+27-May-2019 21:00:58.145 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+27-May-2019 21:00:58.292 -03:00 [INF] Request finished in 107.2627ms 200 
+27-May-2019 21:00:58.459 -03:00 [WRN] Failed to determine the https port for redirect.
+27-May-2019 21:00:58.698 -03:00 [INF] Request finished in 555.5662ms 404 
+27-May-2019 21:01:19.510 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 84
+27-May-2019 21:01:19.702 -03:00 [INF] Successfully validated the token.
+27-May-2019 21:01:19.772 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:01:20.188 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:01:22.741 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2965.5297ms
+27-May-2019 21:01:27.450 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - 44e177a9-31c8-4856-8e3f-b51bcc5448c5","exp - 1559002977","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppDiarista.ServiceApplication.AgendamentoService.InserirServicoBanco(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 68
+   at AppDiarista.ServiceApplication.AgendamentoService.AgendarServico(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.ServiceApplication\AgendamentoService.cs:line 48
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ServicoController.Post(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 21:01:27.586 -03:00 [INF] Request finished in 8076.5991ms 400 application/json
+27-May-2019 21:01:31.007 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 84
+27-May-2019 21:01:31.007 -03:00 [INF] Successfully validated the token.
+27-May-2019 21:01:31.008 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:01:31.055 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:01:56.519 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 25510.8086ms
+27-May-2019 21:02:01.489 -03:00 [ERR] API - Erro - @{ url = http://localhost:52807/api/Servico/Agendar, metodo = POST, claimsUsuario = ["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier - dev","jti - 44e177a9-31c8-4856-8e3f-b51bcc5448c5","exp - 1559002977","iss - AppDiaristaAPI","aud - AppDiaristaMobile"] }
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AppDiarista.ServiceApplication.AgendamentoService.InserirServicoBanco(AgendamentoServicoDTO servico)
+   at AppDiarista.ServiceApplication.AgendamentoService.AgendarServico(AgendamentoServicoDTO servico)
+   at AppDiarista.API.Controllers.ServicoController.<>c__DisplayClass2_0.<<Post>b__0>d.MoveNext() in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+--- End of stack trace from previous location where exception was thrown ---
+   at AppDiarista.API.Controllers.ApiBaseController.CreateResponse[T](Func`1 function) in C:\AppDiaristaAPI\AppDiarista.API\Core\ApiBaseController.cs:line 34
+   at AppDiarista.API.Controllers.ServicoController.Post(AgendamentoServicoDTO servico) in C:\AppDiaristaAPI\AppDiarista.API\Controllers\ServicoController.cs:line 41
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at System.Threading.Tasks.ValueTask`1.get_Result()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.MigrationsEndPointMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.DatabaseErrorPageMiddleware.Invoke(HttpContext httpContext)
+   at AppDiarista.API.Middlewares.ErrorHandlingMiddleware.Invoke(HttpContext context) in C:\AppDiaristaAPI\AppDiarista.API\Middlewares\ErrorHandlingMiddleware.cs:line 30
+27-May-2019 21:02:01.491 -03:00 [INF] Request finished in 30484.5908ms 400 application/json
+27-May-2019 21:02:04.411 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 84
+27-May-2019 21:02:04.411 -03:00 [INF] Successfully validated the token.
+27-May-2019 21:02:04.412 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:02:04.472 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:02:06.278 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 21:02:06.699 -03:00 [INF] Executed DbCommand (83ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 21:02:07.016 -03:00 [INF] Executed DbCommand (146ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Confirmado], [DataServico], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 21:02:07.048 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2571.7643000000003ms.
+27-May-2019 21:02:07.066 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 21:02:07.082 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 2670.0759000000003ms
+27-May-2019 21:02:07.094 -03:00 [INF] Request finished in 2682.924ms 200 application/json; charset=utf-8
+27-May-2019 21:22:44.569 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+27-May-2019 21:22:44.582 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+27-May-2019 21:22:44.624 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:22:44.634 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 21:22:44.848 -03:00 [INF] Executed DbCommand (35ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 21:22:44.947 -03:00 [INF] Executed DbCommand (88ms) [Parameters=[@__model_Email_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Contratante] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+27-May-2019 21:22:45.079 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 21:22:45.103 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 479.48260000000005ms.
+27-May-2019 21:22:45.104 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 21:22:45.162 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 579.8809ms
+27-May-2019 21:22:45.162 -03:00 [INF] Request finished in 592.7516ms 200 application/json; charset=utf-8
+27-May-2019 21:23:19.164 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/Servico/Agendar application/json 84
+27-May-2019 21:23:19.165 -03:00 [INF] Successfully validated the token.
+27-May-2019 21:23:19.165 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(AppDiarista.DTO.AgendamentoServicoDTO) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:23:19.217 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:23:22.048 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 21:23:22.112 -03:00 [INF] Executed DbCommand (59ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 21:23:22.172 -03:00 [INF] Executed DbCommand (57ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [dbo].[Servico] ([Confirmado], [DataServico], [IdContratante], [IdDiarista], [Nota], [Preco], [Realizado])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+SELECT [Id]
+FROM [dbo].[Servico]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+27-May-2019 21:23:22.175 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2957.6148000000003ms.
+27-May-2019 21:23:22.175 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 21:23:22.175 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 3009.6123000000002ms
+27-May-2019 21:23:22.175 -03:00 [INF] Request finished in 3011.7254ms 200 application/json; charset=utf-8
+27-May-2019 21:23:59.141 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=4 application/json 
+27-May-2019 21:23:59.143 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+27-May-2019 21:23:59.184 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+27-May-2019 21:23:59.189 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:23:59.196 -03:00 [INF] Authorization failed.
+27-May-2019 21:23:59.196 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+27-May-2019 21:23:59.201 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+27-May-2019 21:23:59.208 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+27-May-2019 21:23:59.208 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 19.4129ms
+27-May-2019 21:23:59.209 -03:00 [INF] Request finished in 67.9405ms 401 
+27-May-2019 21:24:05.750 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/api/Servico/Confirmar?idServico=4 application/json 
+27-May-2019 21:24:05.751 -03:00 [INF] Successfully validated the token.
+27-May-2019 21:24:05.753 -03:00 [INF] Route matched with {action = "Post", controller = "Servico"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Post(Int32) on controller AppDiarista.API.Controllers.ServicoController (AppDiarista.API).
+27-May-2019 21:24:05.753 -03:00 [INF] Authorization was successful.
+27-May-2019 21:24:05.794 -03:00 [INF] Executing action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) - Validation state: "Valid"
+27-May-2019 21:24:09.015 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+27-May-2019 21:24:09.139 -03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Confirmado], [e].[DataServico], [e].[IdContratante], [e].[IdDiarista], [e].[Nota], [e].[Preco], [e].[Realizado]
+FROM [dbo].[Servico] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+27-May-2019 21:24:09.221 -03:00 [INF] Executed DbCommand (68ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32), @p5='?' (DbType = Double), @p6='?' (DbType = Boolean)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Servico] SET [Confirmado] = @p0, [DataServico] = @p1, [IdContratante] = @p2, [IdDiarista] = @p3, [Nota] = @p4, [Preco] = @p5, [Realizado] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+27-May-2019 21:24:09.223 -03:00 [INF] Executed action method AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3428.6462ms.
+27-May-2019 21:24:09.223 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+27-May-2019 21:24:09.223 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.Post (AppDiarista.API) in 3470.8576000000003ms
+27-May-2019 21:24:09.224 -03:00 [INF] Request finished in 3473.3813ms 200 application/json; charset=utf-8

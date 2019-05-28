@@ -12,8 +12,9 @@ namespace AppDiarista.Data.Models
         public int IdContratante { get; set; }
         public int IdDiarista { get; set; }
         public double Preco { get; set; }
-        public DateTime Data { get; set; }
-        public short Nota { get; set; }
+        public DateTime DataServico { get; set; }
+        public bool Confirmado { get; set; }
         public bool Realizado { get; set; }
+        public int Nota { get; set; }
     }
 }

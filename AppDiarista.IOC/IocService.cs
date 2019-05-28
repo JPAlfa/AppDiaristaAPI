@@ -33,9 +33,6 @@ namespace AppDiarista.IOC
             // Proxy
             RegistrarProxy(builder);
 
-            //WCF
-            RegistrarWCF(builder);
-
             // Factory
             RegistrarFactory(builder);
 
@@ -54,6 +51,7 @@ namespace AppDiarista.IOC
             builder.RegisterType<CadastroService>().As<ICadastroService>().InstancePerLifetimeScope();
             builder.RegisterType<CriptografiaService>().As<ICriptografiaService>().InstancePerLifetimeScope();
             builder.RegisterType<AuthenticationService>().As<IAuthenticationService>().InstancePerLifetimeScope();
+            builder.RegisterType<AgendamentoService>().As<IAgendamentoService>().InstancePerLifetimeScope();
         }
 
         private static void RegistrarFactory(ContainerBuilder builder)
@@ -73,6 +71,7 @@ namespace AppDiarista.IOC
             builder.RegisterType<ContratanteData>().As<IContratanteData>().InstancePerLifetimeScope();
             builder.RegisterType<DiaristaData>().As<IDiaristaData>().InstancePerLifetimeScope();
             builder.RegisterType<EnderecoData>().As<IEnderecoData>().InstancePerLifetimeScope();
+            builder.RegisterType<ServicoData>().As<IServicoData>().InstancePerLifetimeScope();
             builder.RegisterGeneric(typeof(RepositorioBase<,>)).As(typeof(IRepositorioBase<,>)).InstancePerLifetimeScope();
         }
 
@@ -85,12 +84,6 @@ namespace AppDiarista.IOC
         private static void RegistrarProxy(ContainerBuilder builder)
         {
             //builder.RegisterType<ApplicationProxy>().As<IApplicationProxy>().InstancePerLifetimeScope();
-        }
-
-        // todo verificar se precisa ser estático e verificar solução para obter configuracoes
-        private void RegistrarWCF(ContainerBuilder builder)
-        {
-            
         }
     }
 }

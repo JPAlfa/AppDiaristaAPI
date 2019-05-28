@@ -43,29 +43,6 @@ namespace AppDiarista.API.Controllers
             return await CreateResponse(async () => await buscaService.ListarDiaristasPorCidade(cidade));
         }
 
-        //[HttpGet]
-        //public async Task<IActionResult> Get()
-        //{
-        //    return await CreateResponse(async () => await intencaoService.Listar());
-        //}
-
-        //[HttpGet("filtrar/{botId}")]
-        //public async Task<IActionResult> GetFilteredIntents(string botId)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.ListarPorBot(botId));
-        //}
-
-        //[HttpGet("{id}")]
-        //public async Task<IActionResult> Get(int id)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.RetornarPorId(id));
-        //}
-
-        //[HttpPut("{id}")]
-        //public async Task<IActionResult> Put(int id, IntencaoDTO model)
-        //{
-        //    return await CreateResponse(async () => await intencaoService.Alterar(id, model));
-        //}
         #endregion
     }
 }

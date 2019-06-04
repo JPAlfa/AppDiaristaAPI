@@ -17,6 +17,8 @@ namespace AppDiarista.Mapping.Profiles
             CreateMap<DiaristaEEnderecoDTO, Endereco>()
                 .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.IdEndereco))
                 .ReverseMap();
+            CreateMap<CadastroDTO, Endereco>().ReverseMap();
+            CreateMap<EnderecoDTO, Endereco>().ReverseMap();
         }
     }
 }

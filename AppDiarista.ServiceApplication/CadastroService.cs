@@ -45,29 +45,35 @@ namespace AppDiarista.ServiceApplication
 
         #region Métodos Públicos
 
-        public async Task<int> InserirContratante(ContratanteEEnderecoDTO item)
+        public async Task<int> InserirUsuario(CadastroDTO item)
         {
-            if (!(await cadastroBusiness.VerificaPermiteCadastrarContratanteBanco(item.Email)))
-                return 0; 
-
-            Data.Models.Endereco enderecoCriar = await InserirEnderecoBanco(item);
-            return await InserirContratanteBanco(item, enderecoCriar); ;
-        }
-
-        public async Task<int> InserirDiarista(DiaristaEEnderecoDTO item)
-        {
-            if (!(await cadastroBusiness.VerificaPermiteCadastrarDiaristaBanco(item.Email)))
-                return 0;
-
-            Data.Models.Endereco enderecoCriar = await InserirEnderecoBanco(item);
-            return await InserirDiaristaBanco(item, enderecoCriar);
+            if (item.Contratante)
+                return await InserirContratante(item);
+            else
+                return await InserirDiarista(item);
         }
 
         #endregion
 
         #region Métodos Privados
 
-        private async Task<int> InserirContratanteBanco(ContratanteEEnderecoDTO item, Data.Models.Endereco enderecoCriar)
+        private async Task<int> InserirContratante(CadastroDTO item)
+        {
+            if (!(await cadastroBusiness.VerificaPermiteCadastrarContratanteBanco(item.Email)))
+                return 0;
+            Data.Models.Endereco enderecoCriar = await InserirEnderecoBanco(item);
+            return await InserirContratanteBanco(item, enderecoCriar);
+        }
+
+        private async Task<int> InserirDiarista(CadastroDTO item)
+        {
+            if (!(await cadastroBusiness.VerificaPermiteCadastrarDiaristaBanco(item.Email)))
+                return 0;
+            Data.Models.Endereco enderecoCriar = await InserirEnderecoBanco(item);
+            return await InserirDiaristaBanco(item, enderecoCriar);
+        }
+
+        private async Task<int> InserirContratanteBanco(CadastroDTO item, Data.Models.Endereco enderecoCriar)
         {
             var contratanteCriar = mapper.Map<Data.Models.Contratante>(item);
             contratanteCriar.IdEndereco = enderecoCriar.Id;
@@ -77,26 +83,17 @@ namespace AppDiarista.ServiceApplication
             return contratanteCriar.Id;
         }
 
-        private async Task<int> InserirDiaristaBanco(DiaristaEEnderecoDTO item, Data.Models.Endereco enderecoCriar)
+        private async Task<int> InserirDiaristaBanco(CadastroDTO item, Data.Models.Endereco enderecoCriar)
         {
             var diaristaCriar = mapper.Map<Data.Models.Diarista>(item);
             diaristaCriar.IdEndereco = enderecoCriar.Id;
             diaristaCriar.Senha = criptografiaService.HashearSenha(item.Senha);
-            diaristaCriar.Nota = 0;
             this.uowAppDiarista.Diarista.Add(diaristaCriar);
             await this.uowAppDiarista.SaveChangesAsync();
             return diaristaCriar.Id;
         }
 
-        private async Task<Data.Models.Endereco> InserirEnderecoBanco(ContratanteEEnderecoDTO item)
-        {
-            var enderecoCriar = mapper.Map<Data.Models.Endereco>(item);
-            this.uowAppDiarista.Endereco.Add(enderecoCriar);
-            await this.uowAppDiarista.SaveChangesAsync();
-            return enderecoCriar;
-        }
-
-        private async Task<Data.Models.Endereco> InserirEnderecoBanco(DiaristaEEnderecoDTO item)
+        private async Task<Data.Models.Endereco> InserirEnderecoBanco(CadastroDTO item)
         {
             var enderecoCriar = mapper.Map<Data.Models.Endereco>(item);
             this.uowAppDiarista.Endereco.Add(enderecoCriar);

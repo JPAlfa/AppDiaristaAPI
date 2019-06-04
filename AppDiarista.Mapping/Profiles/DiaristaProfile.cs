@@ -15,6 +15,7 @@ namespace AppDiarista.Mapping.Profiles
                 .ForMember(dest => dest.Id, opts => opts.MapFrom(src => src.IdDiarista))
                 .ReverseMap();
             CreateMap<DiaristaDTO, Diarista>().ReverseMap();
+            CreateMap<CadastroDTO, Diarista>().ReverseMap();
         }
     }
 }

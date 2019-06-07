@@ -8,9 +8,11 @@ namespace AppDiarista.ServiceApplication.Interfaces
 {
     public interface IPerfilService
     {
-        Task AlterarContratante(ContratanteEEnderecoDTO item);
-        Task AlterarDiarista(DiaristaEEnderecoDTO item);
-        Task AlterarSenhaDiarista(DiaristaDTO item);
-        Task AlterarSenhaContratante(ContratanteDTO item);
+        Task<bool> AlterarContratante(ContratanteDTO item);
+        Task<bool> AlterarDiarista(DiaristaDTO item);
+        Task<bool> AlterarEndereco(EnderecoDTO item);
+        Task<bool> AlterarSenhaDiarista(AlteraSenhaDTO model);
+        Task<bool> AlterarSenhaContratante(AlteraSenhaDTO model);
+        Task<bool> AlterarPrecoDiariaDiarista(int idDiarista, double precoDiaria);
     }
 }

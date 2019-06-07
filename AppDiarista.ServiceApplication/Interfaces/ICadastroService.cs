@@ -6,7 +6,6 @@ namespace AppDiarista.ServiceApplication.Interfaces
 {
     public interface ICadastroService
     {
-        Task<int> InserirContratante(ContratanteEEnderecoDTO item);
-        Task<int> InserirDiarista(DiaristaEEnderecoDTO item);
+        Task<int> InserirUsuario(CadastroDTO item);
     }
 }

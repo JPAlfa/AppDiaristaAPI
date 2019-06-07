@@ -34,7 +34,6 @@ namespace AppDiarista.API.Controllers
 
 
         #region Métodos Públicos
-        [AllowAnonymous]
         [HttpPost("Agendar")]
         public async Task<IActionResult> Post([FromBody]AgendamentoServicoDTO servico)
         {

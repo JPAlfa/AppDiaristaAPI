@@ -37,44 +37,38 @@ namespace AppDiarista.API.Controllers
 
         #region Métodos Públicos
 
-        [AllowAnonymous]
         [HttpPut("AlterarContratante")]
         public async Task<IActionResult> Put([FromBody]ContratanteDTO model)
         {
             return await CreateResponse(async () => await perfilService.AlterarContratante(model));
         }
 
-        [AllowAnonymous]
         [HttpPut("AlterarDiarista")]
         public async Task<IActionResult> Put([FromBody]DiaristaDTO model)
         {
             return await CreateResponse(async () => await perfilService.AlterarDiarista(model));
         }
 
-        [AllowAnonymous]
         [HttpPut("AlterarEndereco")]
         public async Task<IActionResult> Put([FromBody]EnderecoDTO model)
         {
             return await CreateResponse(async () => await perfilService.AlterarEndereco(model));
         }
 
-        [AllowAnonymous]
-        [HttpPost("AlterarSenhaContratante")]
-        public async Task<IActionResult> PutContratante([FromQuery]int idContratante, [FromBody]string senha)
+        [HttpPut("AlterarSenhaContratante")]
+        public async Task<IActionResult> PutContratante([FromBody]AlteraSenhaDTO model)
         {
-            return await CreateResponse(async () => await perfilService.AlterarSenhaContratante(idContratante, senha));
+            return await CreateResponse(async () => await perfilService.AlterarSenhaContratante(model));
         }
 
-        [AllowAnonymous]
-        [HttpPost("AlterarSenhaDiarista")]
-        public async Task<IActionResult> PutDiarista([FromQuery]int idDiarista, [FromBody]string senha)
+        [HttpPut("AlterarSenhaDiarista")]
+        public async Task<IActionResult> PutDiarista([FromBody]AlteraSenhaDTO model)
         {
-            return await CreateResponse(async () => await perfilService.AlterarSenhaDiarista(idDiarista, senha));
+            return await CreateResponse(async () => await perfilService.AlterarSenhaDiarista(model));
         }
 
-        [AllowAnonymous]
-        [HttpPost("AlterarPrecoDiarista")]
-        public async Task<IActionResult> Put([FromQuery]int idDiarista, [FromBody]double precoDiaria)
+        [HttpPut("AlterarPrecoDiarista")]
+        public async Task<IActionResult> Put([FromQuery]int idDiarista, [FromQuery]double precoDiaria)
         {
             return await CreateResponse(async () => await perfilService.AlterarPrecoDiariaDiarista(idDiarista, precoDiaria));
         }

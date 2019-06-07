@@ -34,21 +34,18 @@ namespace AppDiarista.API.Controllers
 
 
         #region Métodos Públicos
-        [AllowAnonymous]
         [HttpPost("Agendar")]
         public async Task<IActionResult> Post([FromBody]AgendamentoServicoDTO servico)
         {
             return await CreateResponse(async () => await agendamentoService.AgendarServico(servico));
         }
 
-        [AllowAnonymous]
         [HttpGet("Confirmar")]
         public async Task<IActionResult> Post([FromQuery]int idServico)
         {
             return await CreateResponse(async () => await agendamentoService.ConfirmarServico(idServico));
         }
 
-        [AllowAnonymous]
         [HttpGet("Avaliar")]
         public async Task<IActionResult> Post([FromQuery]int idServico, short nota)
         {

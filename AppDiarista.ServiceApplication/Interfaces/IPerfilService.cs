@@ -11,8 +11,8 @@ namespace AppDiarista.ServiceApplication.Interfaces
         Task<bool> AlterarContratante(ContratanteDTO item);
         Task<bool> AlterarDiarista(DiaristaDTO item);
         Task<bool> AlterarEndereco(EnderecoDTO item);
-        Task<bool> AlterarSenhaDiarista(int idDiarista, string senha);
-        Task<bool> AlterarSenhaContratante(int idContratante, string senha);
+        Task<bool> AlterarSenhaDiarista(AlteraSenhaDTO model);
+        Task<bool> AlterarSenhaContratante(AlteraSenhaDTO model);
         Task<bool> AlterarPrecoDiariaDiarista(int idDiarista, double precoDiaria);
     }
 }

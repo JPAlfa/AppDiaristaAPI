@@ -36,7 +36,6 @@ namespace AppDiarista.API.Controllers
         #endregion
 
         #region Métodos Públicos
-        [AllowAnonymous]
         [HttpGet("PorCidade")]
         public async Task<IActionResult> Get([FromQuery]string cidade)
         {

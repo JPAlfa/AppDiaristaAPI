@@ -64,14 +64,14 @@ namespace AppDiarista.ServiceApplication
             return await AlterarEnderecoBanco(mapper.Map<Endereco>(item));
         }
 
-        public async Task<bool> AlterarSenhaDiarista(int idDiarista, string senha)
+        public async Task<bool> AlterarSenhaDiarista(AlteraSenhaDTO model)
         {
-            return await AlterarSenhaDiaristaBanco(idDiarista, senha);
+            return await AlterarSenhaDiaristaBanco(model);
         }
 
-        public async Task<bool> AlterarSenhaContratante(int idContratante, string senha)
+        public async Task<bool> AlterarSenhaContratante(AlteraSenhaDTO model)
         {
-            return await AlterarSenhaContratanteBanco(idContratante, senha);
+            return await AlterarSenhaContratanteBanco(model);
         }
 
         public async Task<bool> AlterarPrecoDiariaDiarista(int idDiarista, double precoDiaria)
@@ -114,27 +114,27 @@ namespace AppDiarista.ServiceApplication
             return true;
         }
 
-        private async Task<bool> AlterarSenhaDiaristaBanco(int idDiarista, string senha)
+        private async Task<bool> AlterarSenhaDiaristaBanco(AlteraSenhaDTO model)
         {
-            Diarista itemLocalizado = await this.diaristaData.RetornarPorID(idDiarista);
+            Diarista itemLocalizado = await this.diaristaData.RetornarPorID(model.IdDiarista);
 
             if (itemLocalizado == null)
                 return EnviarErro();
 
-            itemLocalizado.Senha = criptografiaService.HashearSenha(senha);
+            itemLocalizado.Senha = criptografiaService.HashearSenha(model.Senha);
             uowAppDiarista.Entry(itemLocalizado).State = EntityState.Modified;
             await uowAppDiarista.SaveChangesAsync();
             return true;
         }
 
-        private async Task<bool> AlterarSenhaContratanteBanco(int idContratante, string senha)
+        private async Task<bool> AlterarSenhaContratanteBanco(AlteraSenhaDTO model)
         {
-            Contratante itemLocalizado = await this.contratanteData.RetornarPorID(idContratante);
+            Contratante itemLocalizado = await this.contratanteData.RetornarPorID(model.IdContratante);
 
             if (itemLocalizado == null)
                 return EnviarErro();
 
-            itemLocalizado.Senha = criptografiaService.HashearSenha(senha);
+            itemLocalizado.Senha = criptografiaService.HashearSenha(model.Senha);
             uowAppDiarista.Entry(itemLocalizado).State = EntityState.Modified;
             await uowAppDiarista.SaveChangesAsync();
             return true;

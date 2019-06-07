@@ -1,0 +1,112 @@
+06-Jun-2019 17:33:09.176 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+06-Jun-2019 17:33:19.055 -03:00 [INF] Request starting HTTP/1.1 DEBUG http://localhost:52807/  0
+06-Jun-2019 17:33:19.055 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+06-Jun-2019 17:33:19.571 -03:00 [INF] Request finished in 505.3286ms 200 
+06-Jun-2019 17:33:20.279 -03:00 [WRN] Failed to determine the https port for redirect.
+06-Jun-2019 17:33:21.358 -03:00 [INF] Request finished in 2308.3169ms 404 
+06-Jun-2019 17:34:32.220 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 42
+06-Jun-2019 17:34:32.573 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+06-Jun-2019 17:34:32.865 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+06-Jun-2019 17:34:32.983 -03:00 [INF] Route matched with {action = "PutContratante", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutContratante(AppDiarista.DTO.AlteraSenhaDTO) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+06-Jun-2019 17:34:33.002 -03:00 [INF] Authorization failed.
+06-Jun-2019 17:34:33.002 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+06-Jun-2019 17:34:33.009 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+06-Jun-2019 17:34:33.018 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+06-Jun-2019 17:34:33.021 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.PutContratante (AppDiarista.API) in 34.5885ms
+06-Jun-2019 17:34:33.024 -03:00 [INF] Request finished in 803.6013ms 401 
+06-Jun-2019 17:34:33.078 -03:00 [INF] Connection id "0HLNANOQQKE76", Request id "0HLNANOQQKE76:00000001": the application completed without reading the entire request body.
+06-Jun-2019 17:34:38.281 -03:00 [INF] Request starting HTTP/1.1 POST http://localhost:52807/api/login application/json 46
+06-Jun-2019 17:34:38.305 -03:00 [INF] Route matched with {action = "Token", controller = "Login"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Token(AppDiarista.DTO.LoginDTO) on controller AppDiarista.API.Controllers.LoginController (AppDiarista.API).
+06-Jun-2019 17:34:39.021 -03:00 [INF] Executing action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) - Validation state: "Valid"
+06-Jun-2019 17:34:39.447 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+06-Jun-2019 17:34:48.003 -03:00 [INF] Executed DbCommand (202ms) [Parameters=[@__model_Email_0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [w].[Id], [w].[Cpf], [w].[DataNascimento], [w].[Email], [w].[IdEndereco], [w].[Nome], [w].[Nota], [w].[PrecoDiaria], [w].[Senha], [w].[Telefone]
+FROM [dbo].[Diarista] AS [w]
+WHERE [w].[Email] = @__model_Email_0
+06-Jun-2019 17:34:48.523 -03:00 [INF] Executed DbCommand (167ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cep], [e].[Cidade], [e].[Complemento], [e].[Estado], [e].[Logradouro], [e].[Numero]
+FROM [dbo].[Endereco] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+06-Jun-2019 17:34:48.643 -03:00 [INF] Executed action method AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9615.8333ms.
+06-Jun-2019 17:34:48.663 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+06-Jun-2019 17:34:48.710 -03:00 [INF] Executed action AppDiarista.API.Controllers.LoginController.Token (AppDiarista.API) in 10404.7374ms
+06-Jun-2019 17:34:48.721 -03:00 [INF] Request finished in 10439.7018ms 200 application/json; charset=utf-8
+06-Jun-2019 17:35:12.061 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaDiarista application/json 46
+06-Jun-2019 17:35:12.126 -03:00 [INF] Successfully validated the token.
+06-Jun-2019 17:35:12.135 -03:00 [INF] Route matched with {action = "PutDiarista", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutDiarista(AppDiarista.DTO.AlteraSenhaDTO) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+06-Jun-2019 17:35:12.136 -03:00 [INF] Authorization was successful.
+06-Jun-2019 17:35:12.213 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.PutDiarista (AppDiarista.API) - Validation state: "Valid"
+06-Jun-2019 17:35:34.010 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+06-Jun-2019 17:35:34.141 -03:00 [INF] Executed DbCommand (121ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+06-Jun-2019 17:35:34.497 -03:00 [INF] Executed DbCommand (176ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Diarista] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Nota] = @p5, [PrecoDiaria] = @p6, [Senha] = @p7, [Telefone] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+06-Jun-2019 17:35:34.516 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.PutDiarista (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 22303.0587ms.
+06-Jun-2019 17:35:34.517 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+06-Jun-2019 17:35:34.517 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.PutDiarista (AppDiarista.API) in 22381.885700000003ms
+06-Jun-2019 17:35:34.517 -03:00 [INF] Request finished in 22456.7755ms 200 application/json; charset=utf-8
+06-Jun-2019 17:35:51.035 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarSenhaContratante application/json 42
+06-Jun-2019 17:35:51.036 -03:00 [INF] Successfully validated the token.
+06-Jun-2019 17:35:51.036 -03:00 [INF] Route matched with {action = "PutContratante", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PutContratante(AppDiarista.DTO.AlteraSenhaDTO) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+06-Jun-2019 17:35:51.036 -03:00 [INF] Authorization was successful.
+06-Jun-2019 17:35:51.118 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.PutContratante (AppDiarista.API) - Validation state: "Valid"
+06-Jun-2019 17:35:58.466 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+06-Jun-2019 17:35:58.579 -03:00 [INF] Executed DbCommand (85ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Contratante] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+06-Jun-2019 17:35:58.736 -03:00 [INF] Executed DbCommand (129ms) [Parameters=[@p7='?' (DbType = Int32), @p0='?' (Size = 11), @p1='?' (DbType = DateTime2), @p2='?' (Size = 100), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 64), @p6='?' (Size = 15)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Contratante] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Senha] = @p5, [Telefone] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+06-Jun-2019 17:35:58.770 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.PutContratante (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7651.8521ms.
+06-Jun-2019 17:35:58.771 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+06-Jun-2019 17:35:58.771 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.PutContratante (AppDiarista.API) in 7734.5532ms
+06-Jun-2019 17:35:58.771 -03:00 [INF] Request finished in 7735.8172ms 200 application/json; charset=utf-8
+06-Jun-2019 17:36:09.093 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarPrecoDiarista?idDiarista=2&precoDiaria=95.50 application/x-www-form-urlencoded 0
+06-Jun-2019 17:36:09.094 -03:00 [INF] Failed to validate the token.
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1182
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 739
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent1\_work\109\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 723
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+06-Jun-2019 17:36:09.094 -03:00 [INF] JwtBearer was not authenticated. Failure message: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+06-Jun-2019 17:36:09.105 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, Double) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+06-Jun-2019 17:36:09.105 -03:00 [INF] Authorization failed.
+06-Jun-2019 17:36:09.106 -03:00 [INF] Authorization failed for the request at filter 'Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter'.
+06-Jun-2019 17:36:09.106 -03:00 [INF] Executing ChallengeResult with authentication schemes ([]).
+06-Jun-2019 17:36:09.107 -03:00 [INF] AuthenticationScheme: JwtBearer was challenged.
+06-Jun-2019 17:36:09.107 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 1.504ms
+06-Jun-2019 17:36:09.107 -03:00 [INF] Request finished in 14.3723ms 401 
+06-Jun-2019 17:36:15.725 -03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:52807/api/Perfil/AlterarPrecoDiarista?idDiarista=2&precoDiaria=95.50 application/x-www-form-urlencoded 0
+06-Jun-2019 17:36:15.726 -03:00 [INF] Successfully validated the token.
+06-Jun-2019 17:36:15.726 -03:00 [INF] Route matched with {action = "Put", controller = "Perfil"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Put(Int32, Double) on controller AppDiarista.API.Controllers.PerfilController (AppDiarista.API).
+06-Jun-2019 17:36:15.726 -03:00 [INF] Authorization was successful.
+06-Jun-2019 17:36:15.929 -03:00 [INF] Executing action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) - Validation state: "Valid"
+06-Jun-2019 17:36:21.750 -03:00 [INF] Entity Framework Core 2.1.11-servicing-32099 initialized 'UOWAppDiarista' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+06-Jun-2019 17:36:21.838 -03:00 [INF] Executed DbCommand (82ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [e].[Id], [e].[Cpf], [e].[DataNascimento], [e].[Email], [e].[IdEndereco], [e].[Nome], [e].[Nota], [e].[PrecoDiaria], [e].[Senha], [e].[Telefone]
+FROM [dbo].[Diarista] AS [e]
+WHERE [e].[Id] = @__get_Item_0
+06-Jun-2019 17:36:21.914 -03:00 [INF] Executed DbCommand (75ms) [Parameters=[@p9='?' (DbType = Int32), @p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (DbType = Int32), @p4='?' (Size = 4000), @p5='?' (DbType = Double), @p6='?' (DbType = Double), @p7='?' (Size = 4000), @p8='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [dbo].[Diarista] SET [Cpf] = @p0, [DataNascimento] = @p1, [Email] = @p2, [IdEndereco] = @p3, [Nome] = @p4, [Nota] = @p5, [PrecoDiaria] = @p6, [Senha] = @p7, [Telefone] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+06-Jun-2019 17:36:21.915 -03:00 [INF] Executed action method AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5985.028ms.
+06-Jun-2019 17:36:21.915 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
+06-Jun-2019 17:36:21.915 -03:00 [INF] Executed action AppDiarista.API.Controllers.PerfilController.Put (AppDiarista.API) in 6189.0241000000005ms
+06-Jun-2019 17:36:21.915 -03:00 [INF] Request finished in 6190.1973ms 200 application/json; charset=utf-8

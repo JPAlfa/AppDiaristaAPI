@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -59,6 +60,11 @@ namespace AppDiarista.ServiceApplication
             await AvaliarServicoBanco(idServico, nota);
         }
 
+        public async Task<List<DateTime>> BuscarDiasOcupados(int idDiarista)
+        {
+            return await BuscarDiasOcupadosBanco(idDiarista);
+        }
+
         #endregion
 
         #region Métodos Privados
@@ -93,6 +99,13 @@ namespace AppDiarista.ServiceApplication
             servicoConfirmar.Nota = nota;
             uowAppDiarista.Entry(servicoConfirmar).State = EntityState.Modified;
             await uowAppDiarista.SaveChangesAsync();
+        }
+
+        private async Task<List<DateTime>> BuscarDiasOcupadosBanco(int idDiarista)
+        {
+            var servicosMarcados = await servicoData.Listar(x => x.IdDiarista == idDiarista && x.DataServico > DateTime.Now).ToListAsync();
+            var listaDatas = servicosMarcados.Select(x => x.DataServico).OrderBy(data => data).ToList();
+            return listaDatas;
         }
 
         #endregion

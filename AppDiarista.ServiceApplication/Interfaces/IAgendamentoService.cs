@@ -11,5 +11,6 @@ namespace AppDiarista.ServiceApplication.Interfaces
         Task<int> AgendarServico(AgendamentoServicoDTO servico);
         Task ConfirmarServico(int idServico);
         Task AvaliarServico(int idServico, short nota);
+        Task<List<DateTime>> BuscarDiasOcupados(int idDiarista);
     }
 }

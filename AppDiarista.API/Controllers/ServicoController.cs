@@ -41,15 +41,21 @@ namespace AppDiarista.API.Controllers
         }
 
         [HttpGet("Confirmar")]
-        public async Task<IActionResult> Post([FromQuery]int idServico)
+        public async Task<IActionResult> Get([FromQuery]int idServico)
         {
             return await CreateResponse(async () => await agendamentoService.ConfirmarServico(idServico));
         }
 
         [HttpGet("Avaliar")]
-        public async Task<IActionResult> Post([FromQuery]int idServico, short nota)
+        public async Task<IActionResult> Get([FromQuery]int idServico, short nota)
         {
             return await CreateResponse(async () => await agendamentoService.AvaliarServico(idServico, nota));
+        }
+
+        [HttpGet("DiasOcupados")]
+        public async Task<IActionResult> GetDiasOcupados([FromQuery]int idDiarista)
+        {
+            return await CreateResponse(async () => await agendamentoService.BuscarDiasOcupados(idDiarista));
         }
 
         #endregion

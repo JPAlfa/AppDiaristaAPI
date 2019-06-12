@@ -58,6 +58,18 @@ namespace AppDiarista.API.Controllers
             return await CreateResponse(async () => await agendamentoService.BuscarDiasOcupados(idDiarista));
         }
 
+        [HttpGet("ServicosDiarista")]
+        public async Task<IActionResult> GetServicosDiarista([FromQuery]int idDiarista)
+        {
+            return await CreateResponse(async () => await agendamentoService.BuscarRequisicoesServicosDiarista(idDiarista));
+        }
+
+        [HttpGet("ServicosAgendados")]
+        public async Task<IActionResult> GetServicosAgendados([FromQuery]int idContratante)
+        {
+            return await CreateResponse(async () => await agendamentoService.BuscarServicosConfirmadosContratante(idContratante));
+        }
+
         #endregion
     }
 }

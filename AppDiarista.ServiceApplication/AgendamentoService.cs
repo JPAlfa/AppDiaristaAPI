@@ -65,6 +65,16 @@ namespace AppDiarista.ServiceApplication
             return await BuscarDiasOcupadosBanco(idDiarista);
         }
 
+        public async Task<List<ServicoDTO>> BuscarRequisicoesServicosDiarista(int idDiarista)
+        {
+            return await BuscarRequisicoesServicosDiaristaBanco(idDiarista);
+        }
+
+        public async Task<List<ServicoDTO>> BuscarServicosConfirmadosContratante(int idContratante)
+        {
+            return await BuscarServicosConfirmadoBanco(idContratante);
+        }
+
         #endregion
 
         #region Métodos Privados
@@ -106,6 +116,26 @@ namespace AppDiarista.ServiceApplication
             var servicosMarcados = await servicoData.Listar(x => x.IdDiarista == idDiarista && x.DataServico > DateTime.Now).ToListAsync();
             var listaDatas = servicosMarcados.Select(x => x.DataServico).OrderBy(data => data).ToList();
             return listaDatas;
+        }
+
+        private async Task<List<ServicoDTO>> BuscarRequisicoesServicosDiaristaBanco(int idDiarista)
+        {
+            List<ServicoDTO> retorno = new List<ServicoDTO>();
+            var servicosAAprovar = await servicoData.Listar(x => x.IdDiarista == idDiarista && x.DataServico > DateTime.Now && x.Confirmado == false).ToListAsync();
+            foreach (var item in servicosAAprovar)
+                retorno.Add(mapper.Map<ServicoDTO>(item));
+            
+            return retorno;
+        }
+
+        private async Task<List<ServicoDTO>> BuscarServicosConfirmadoBanco(int idContratante)
+        {
+            List<ServicoDTO> retorno = new List<ServicoDTO>();
+            var servicosAAprovar = await servicoData.Listar(x => x.IdContratante == idContratante && x.DataServico > DateTime.Now && x.Confirmado == true).ToListAsync();
+            foreach (var item in servicosAAprovar)
+                retorno.Add(mapper.Map<ServicoDTO>(item));
+
+            return retorno;
         }
 
         #endregion

@@ -12,6 +12,7 @@ namespace AppDiarista.Mapping.Profiles
         public ServicoProfile()
         {
             CreateMap<AgendamentoServicoDTO, Servico>().ReverseMap();
+            CreateMap<ServicoDTO, Servico>().ReverseMap();
         }
     }
 }

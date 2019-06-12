@@ -13,5 +13,6 @@ namespace AppDiarista.DTO
         public DateTime DataNascimento { get; set; }
         public string Telefone { get; set; }
         public double PrecoDiaria { get; set; }
+        public int Nota { get; set; }
     }
 }

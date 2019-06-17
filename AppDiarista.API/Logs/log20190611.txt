@@ -356,3 +356,9 @@ WHERE (([x].[IdContratante] = @__idContratante_0) AND ([x].[DataServico] > GETDA
 11-Jun-2019 21:32:56.650 -03:00 [INF] Executing ObjectResult, writing value of type 'AppDiarista.API.Core.ApiResponse'.
 11-Jun-2019 21:32:56.653 -03:00 [INF] Executed action AppDiarista.API.Controllers.ServicoController.GetServicosAgendados (AppDiarista.API) in 120.7308ms
 11-Jun-2019 21:32:56.653 -03:00 [INF] Request finished in 121.8219ms 200 application/json; charset=utf-8
+11-Jun-2019 21:35:11.275 -03:00 [INF] User profile is available. Using 'C:\Users\joa.silva\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+11-Jun-2019 21:35:13.759 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/  
+11-Jun-2019 21:35:14.387 -03:00 [WRN] Failed to determine the https port for redirect.
+11-Jun-2019 21:35:14.905 -03:00 [INF] Request finished in 1148.843ms 404 
+11-Jun-2019 21:35:15.001 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:52807/favicon.ico  
+11-Jun-2019 21:35:15.004 -03:00 [INF] Request finished in 2.92ms 404 

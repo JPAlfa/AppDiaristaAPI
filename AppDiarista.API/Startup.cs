@@ -44,7 +44,7 @@ namespace AppDiarista.API
             });
 
             // Setar o Assembly de um Mapper para resolver para todos         
-            services.AddAutoMapper(typeof(Mapping.Profiles.IntencaoProfile).GetTypeInfo().Assembly);
+            services.AddAutoMapper(typeof(Mapping.Profiles.ContratanteProfile).GetTypeInfo().Assembly);
 
             services.AddMvc(options =>
             {
